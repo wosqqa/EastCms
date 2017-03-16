@@ -1,0 +1,32 @@
+@charset "utf-8";
+/**
+ * 7654流量平台 - 注册页样式
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-06
+ */
+.content-wrap{border: 1px solid #eee; padding: 15px 30px; min-height: 600px;}
+.content-wrap h4{padding: 5px 0 5px 10px;}
+.content-wrap h4 .tag{position: absolute; left: 0; _left: -10px; top: 6px; _top: 2px; width: 4px; height: 25px; background-color: #ff5400;}
+/* 注册表单 - start */
+.register-form{margin: 50px auto; width: 770px;}
+.register-form table{margin-left: 50px; width: 100%;}
+.register-form table tr{line-height: 50px;}
+.register-form p.tips{font-size: 12px;}
+.register-form input.phone,
+.register-form input.password{width: 283px; height: 21px;}
+.register-form input.code{width: 150px; height: 21px;}
+.register-form .getCode{background-color: #FF5400; border-radius: 5px; padding: 5px 10px; _padding: 4px 0; _width: 120px; color: white; transition: background-color .25s; _border: 0 none; _cursor: pointer;}
+.register-form .getCodeing{border-radius: 5px; color: #666; cursor: not-allowed;}
+.register-form .submit{background-color: #FF5400; border-radius: 5px; padding: 10px; width: 300px; color: white; transition: background-color .25s; _border: 0 none; _cursor: pointer;}
+.register-form .getCode:hover,
+.register-form .submit:hover{background-color: #E24C03;}
+.input-error{border-color: red !important; }
+.text-error{color: red !important;}
+.input-success{border-color: green !important; }
+.text-success{color: green !important;}
+/* 注册表单 - end */
+
+/* 注册成功弹窗 start */
+.window{position: absolute; background-color: white; width: 500px; border-radius: 5px; box-shadow: 0 0 8px; padding: 30px; left: 50%; margin-left: -280px; top: 50%; margin-top: -115px; z-index: 10;}
+.window-bg{position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 9; background-color: #000; opacity: 0.6; filter: alpha(opacity=60);}
+/* 注册成功弹窗 end */

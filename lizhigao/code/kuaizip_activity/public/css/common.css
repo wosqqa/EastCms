@@ -1,0 +1,119 @@
+@charset "utf-8";
+/**
+ * 快压官网通用样式
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-25
+ */
+body{color: #666; position: relative;}
+a{color: #666; transition: color .25s, background-color .25s;}
+a:hover{color: red;}
+.w990{width: 1112px;}
+.wp100{width: 100%;}
+.clblack{color: black;}
+.clred{color: red;}
+.clgray{color: #999;}
+.clblue{color: #0092ef;}
+.input-fixIe6{_border: 1px solid #ccc; _padding: 5px 10px; _overflow: visible; _outline: 0 none;} /*input 兼容ie6*/
+.input-submit-fixIe6{_padding: 5px 10px; _overflow: visible; _outline: 0 none; border: none;} /*input 兼容ie6*/
+input[type="text"],input[type="password"],select,textarea{border: 1px solid #ccc; padding: 5px 10px; border-radius: 5px; transition: border-color .25s ease-in-out, box-shadow .25s ease-in-out;}
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus{box-shadow: 0 0 8px #66AFE9; border-color: #66AFE9;}
+button, input[type="submit"]{border: 0 none; padding: 5px 10px; cursor: pointer;}
+table th, table td{text-align: center; padding: 5px}
+input{color: #666;}
+h1, h2, h3, h4, h5, h6 {font-weight: 400; color: black;}
+
+.container{width: 990px; margin: 30px auto;}
+
+/* header - start */
+.header-wrap{background-color: #005CD3;}
+.header{width: 990px; height: 65px; margin: 0 auto;}
+.header .logo{height: 65px;}
+.nav-list{margin-left: 50px;}
+.nav-list li{float: left;}
+.nav-list li a{color: white; display: inline-block; height: 65px; width: 120px; font-size: 16px; line-height: 65px; text-align: center;}
+.nav-list li a:hover{text-decoration: none; background-color: #0053BD; color: yellow;}
+.nav-list li a.active{background-color: #0053BD;}
+/* header - end */
+
+/* footer - start */
+.footer{padding: 15px 0; background-color: #F8F8F8;}
+.footer p{text-align: center; line-height: 2em;}
+/* footer - end */
+
+/* 分割线 - start */
+.sep{color: #ccc; font-family: sans-serif; margin: 0 5px;}
+/* 分割线 - end */
+
+/* 分页样式 - start */
+.jpages-holder{text-align: center; margin: 15px 0;}
+.jpages-holder a{border: 1px solid #eee;padding: 3px 8px;margin-right: 10px;cursor: pointer;}
+.jpages-holder a:hover{border-color: #0092EF;}
+.jpages-holder a.jp-current{background-color: #0092EF; border-color: #0092EF; color: white;}
+.jpages-holder a.jp-disabled{color: #bbb; cursor: not-allowed;}
+.jpages-holder a.jp-disabled:hover{border-color: #eee;}
+/* 分页样式 - end */
+
+/* 表单校验通用样式 start */
+label.error{color: red !important; margin-left: 5px;}
+input.error,
+textarea.error{border: 1px solid red;}
+/* 表单校验通用样式 end */
+
+/* 快压活动页面 公共样式 */
+.pd20{padding: 20px;}
+body{background-image: url("../img/body_bg_line.jpg"); background-position: left top; min-height: 1045px; background-color: white; background-repeat: repeat-x; position: relative;}
+.section{width: 990px; margin: 0 auto;}
+
+.logo-wrap{height: 50px; line-height: 50px;}
+.banner-wrap{background-image: url("../img/banner_new.png"); background-repeat: no-repeat; background-position: center top; height: 277px;}
+.nav-wrap{background-color: #005CD3; height: 45px; line-height: 45px;}
+.nav-wrap ul li{float: left;}
+.nav-wrap a{color: white; display: inline-block; padding: 0 15px; font-size: 18px;}
+.nav-wrap a:hover{color: yellow;}
+.nav-wrap a.fast-login{font-size: 14px;}
+.nav-wrap .user-name{color: white; margin-right: 15px;}
+
+.content{background-color: white;}
+.download-wrap{padding: 10px 0;}
+
+/* 登录窗口 */
+.login-win{background-color: white; width: 500px; top: 48%; left: 50%; margin-left: -250px; margin-top: -165px; border-radius: 5px; box-shadow: 0 0 10px #666; z-index: 100;}
+.login-win .login-hd{padding: 5px 15px; background-color: #005CD3; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center;}
+.login-win .login-hd h3{color: white; height: 40px; line-height: 40px;}
+.login-win .login-hd a.close{color: white; float: right; margin-top: -35px; font-size: 18px;}
+.login-win .login-hd a.close:hover{color: red;}
+.login-win .login-bd{padding: 15px 15px 30px;}
+.login-win .login-bd form table{width: 100%;}
+.login-win .login-bd form table td{padding: 10px 5px;}
+/* 获取验证码按钮 */
+.login-win .login-bd form table .get-yzm{display: inline-block; margin-left: 15px; text-align: center; padding: 6px 10px;     color: #fff; background-color: #5cb85c; border-color: #4cae4c; border-radius: 5px;}
+.login-win .login-bd form table .get-yzm{background-image: -webkit-linear-gradient(top,#5cb85c 0,#419641 100%); background-image: -o-linear-gradient(top,#5cb85c 0,#419641 100%); background-image: -webkit-gradient(linear,left top,left bottom,from(#5cb85c),to(#419641)); background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0); filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); background-repeat: repeat-x; border-color: #3e8f3e;}
+.login-win .login-bd form table .get-yzm:hover{color: #fff;  background-color: #449d44;  border-color: #398439;}
+.login-win .login-bd form table .get-yzm:hover{background-color: #419641; background-position: 0 -15px;}
+.login-win .login-bd form table .get-yzm.active{background-color: #bbb; cursor: not-allowed; background-image: none;}
+.login-win .login-bd form table .get-yzm.active span{color: red;}
+/* 图片验证码 */
+.login-win .login-bd form table a.img-yzm-link{margin-left: 5px; color: red;}
+.login-win .login-bd form table a.img-yzm-link:hover{text-decoration: underline;}
+.login-win .login-bd form .phone{width: 195px; height: 21px;}
+.login-win .login-bd form .yzm{width: 90px; height: 21px;}
+.login-win .login-bd form .img-yzm{border: 1px solid #eee; display: inline-block; width: 100px; height: 28px; text-align: center; line-height: 28px; cursor: pointer;}
+.login-win .login-bd form .img-yzm img{vertical-align: middle;}
+/* 登录按钮 */
+.login-win .login-bd form .submit{background-color: #54A6FD; border-color: #2e6da4; color: white; border-radius: 5px; width: 216px; padding: 6px 10px;}
+.login-win .login-bd form .submit{background-image: -webkit-linear-gradient(top,#54A6FD 0,#2176CF 100%); background-image: -o-linear-gradient(top,#54A6FD 0,#2176CF 100%); background-image: -webkit-gradient(linear,left top,left bottom,from(#54A6FD),to(#2176CF));
+    background-image: linear-gradient(to bottom,#54A6FD 0,#2176CF 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff54A6FD', endColorstr='#ff2176CF', GradientType=0); filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); background-repeat: repeat-x; border-color: #245580;}
+.login-win .login-bd form .submit:hover{color: #fff; background-color: #2176CF; border-color: #204d74;}
+.login-win .login-bd form .submit:hover{background-color: #2176CF; background-position: 0 -15px;}
+
+.login-win .login-bd form .label{width: 30%;}
+.login-win .login-bd form .error-info{color: red;}
+
+.login-win-bg-shadow{background-color: #333; opacity: 0.6; filter: alpha(opacity=60); width: 100%; height: 100%; position: fixed; z-index: 99; left: 0; top: 0;}
+
+/* 快压活动页面 footer样式 */
+.footer-wrap{color: #839bb5;}
+.footer-wrap p{line-height: 30px;}

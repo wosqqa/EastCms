@@ -1,0 +1,32 @@
+@charset "utf-8";
+/**
+ * 注册页面样式文件
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-23
+ */
+.redLine{width: 100%; background-color: #CA141D; height: 2px;}
+
+.loginMain{width: 100%; min-height: 650px; _height: 650px;}
+.loginContent{width: 1210px; margin: 100px auto 0; height: 480px;}
+.loginPanel{margin-left: 20px;}
+.loginPanel-h h4{ color: #E4393C; font-size: 20px; height: 40px; padding-left: 10px; padding-top: 10px; width: 150px;}
+
+.username { font-size: 12px; color: #999; width: 350px; height: 28px; border: 1px solid #EEEEEE; padding-left: 10px;
+    background: url("../../../img/web/reglogin/unn.png") no-repeat; }
+.password { font-size: 12px; color: #999; width: 350px; height: 28px; border: 1px solid #EEEEEE; margin: 15px 0;
+    padding-left: 10px; background: url("../../../img/web/reglogin/pss.png") no-repeat; }
+.showPwd{width: 350px; height: 28px; margin: 15px 0; padding-left: 10px; border: 1px solid rgb(238, 238, 238);
+    font-size: 12px; color: rgb(153, 153, 153); display: inline-block; background: url("../../../img/web/reglogin/pss.png");}
+.yzmInput { width: 150px; height: 28px; border: 1px solid #EEEEEE; margin: 15px 0; float: left; font-size: 12px; color: #999; }
+.yzmWrap{margin: 15px 0;}
+.yzmWrap span{ font-size: 12px; color: #999999; width: 200px; }
+.yzmWrap .yzmCode{ padding-left: 10px; padding-right: 10px; height: 40px; width: 80px; }
+.yzmWrap .changeCode{ color: #E43939; }
+.loginBtn{ width: 360px; height: 40px; border: 0px solid #FFFFFF; background: url("../../../img/web/reglogin/dll.png");}
+.accounts {height: 28px; margin-top: 30px; }
+.accounts a { text-decoration: underline; font-size: 14px; color: #EB6A6B; }
+.forgot a { font-size: 14px; color: #EB6A6B; text-decoration: underline; }
+.forgot { margin-right: 22px; height: 28px; margin-top: 30px; margin-left: 178px;}
+
+label.error{margin-left: 5px; color: red;}
+

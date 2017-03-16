@@ -1,0 +1,30 @@
+@charset "utf-8";
+/**
+ * 7654流量平台 - 联盟公告页面样式
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-05
+ */
+.content-wrap{}
+/* 联盟公告 - start */
+.crumbs-wrap .crumbs {height: 41px; line-height: 41px;}
+.announcement-list-wrap{border: 1px solid #eee; padding: 15px 30px;}
+.announcement-list .title{position: relative; padding-left: 10px;}
+.announcement-list .title i.chev{position: absolute; left:0; top:7px; background: url("../../img/chev_r.png") no-repeat; width: 4px; height: 6px;}
+.announcement-list li{padding: 15px 0; border-bottom: 1px dashed #eee;}
+
+/* 联盟公告 - end */
+
+/* 公告详情 - start */
+.announcement-left{margin-right: 276px; border: 1px solid #eee; padding: 15px 30px; min-height: 600px;}
+*html .announcement-left{height: expression( this.scrollHeight < 601 ? "600px" : "auto" );} /* min-height 兼容ie6、7 */
+.announcement-left .announcement-details{line-height: 1.8em;}
+.announcement-left .announcement-details p{text-indent: 2em;}
+
+.announcement-right{position: absolute; right: 0; top: 0; border: 1px solid #eee; width: 264px;}
+.announcement-right .announcement-h{border-bottom: 1px solid #eee; padding: 6px 15px; line-height: 27px;}
+.announcement-right .announcement-b{padding: 6px 15px;}
+.announcement-right .announcement-b ul li{line-height: 30px;}
+.announcement-right .announcement-b ul li a{width: 210px; white-space:nowrap; overflow: hidden; text-overflow:ellipsis;}
+.announcement-right .announcement-b ul li i.new{background: url("../../img/new_icon.gif") no-repeat; width: 22px; height: 9px; margin-left: 2px; margin-top: 10px;}
+/* 公告详情 - end */
+

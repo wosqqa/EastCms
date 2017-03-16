@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="sAFXQRvteI">
+    <title>技术员联盟_装机联盟_电脑技术员联盟_收益最高的7654技术员联盟</title>
+    <meta name="keywords" content="装机联盟,技术员联盟,电脑技术员联盟,7654联盟" />
+    <meta name="description" content="最好的电脑装机联盟,技术员联盟,是中国收益最高的装机技术联盟,不扣量结算快的装机联盟网站,装机联盟哪个好,首选7654技术员联盟。" />
+    <meta name="author" content="Cleam Lee">
+    <link rel="shortcut icon" type="image/ico" href="../../../Public/img/web/favicon.ico">
+    <link rel="stylesheet" href="../../../Public/css/base.css"/>
+    <link rel="stylesheet" href="../../../Public/css/web/common_web.css"/>
+    <link rel="stylesheet" href="../../../Public/css/web/reglogin/page_reg.css"/>
+</head>
+<body>
+    <!-- header start -->
+    <div class="header-wrap">
+        <div class="headerTop-wrap">
+            <div class="headerTop clearfix">
+                <div class="toMangerPlatform">
+                    <a href="javascript:void(0);">去市场经理平台<img src="../../../Public/img/web/homepage/to_right.png" alt=""/></a>
+                </div>
+                <div class="toPersonCenter">
+                    <a href="javascript:void(0);">登录</a>
+                    <span>|</span>
+                    <a href="javascript:void(0);">注册</a>
+                    <span>|</span>
+                    <a href="javascript:void(0);">我的业绩</a>
+                    <span>|</span>
+                    <a href="javascript:void(0);">我的收支</a>
+                    <span>|</span>
+                    <a href="javascript:void(0);">我要兑换</a>
+                    <span>|</span>
+                    <a href="javascript:void(0);">我的问答</a>
+                </div>
+            </div>
+        </div>
+        <div class="headerBottom-wrap">
+            <div class="headerBottom clearfix">
+                <div class="logo"><img src="../../../Public/img/web/homepage/logo.png" alt="7654技术员联盟"/></div>
+                <div class="logoRight">
+                    <span>已有<span class="num">119,989</span>技术员已加入</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!-- 注册页面主体 start -->
+    <div class="regMain">
+        <div class="redLine"></div>
+        <div class="regContent">
+            <div class="reg4Steps"></div>
+            <div class="register-page">
+                <div class="reg-hd">
+                    <h2>欢迎注册7654技术员帐号<span>(带<em class="must-icon">*</em>为必填项)</span></h2>
+                </div>
+                <div class="reg-bd">
+                    <form name="userregister" action="" method="post">
+                        <input type="hidden" id="submitURL" value="{:U('register/success')}" />  <!-- 提交地址.-->
+                        <input type="hidden" id="successURL" value="{$Think.USER_URL}{:U('Register/register_success')}/type/1" />  <!-- 提交成功跳转地址.-->
+                        <ul class="reg-list" id="registerform">
+                            <li>
+                                <div class="reg-list-hd"><span class="must-icon">*</span></div>
+                                <div class="input-area b-bottom-none">
+                                    <em data-label="label" class="label" id="msgregist">手机号：</em>
+                                    <input type="text" data-type="phone" class="pulicitem" maxlength="11" style="width:132px; _width:120px;" tabindex="1" id="phone" autocomplete="off">
+                                    <a href="javascript:void(0)" class="get-phone-code" tabindex="2" id="getPhoneCode">获取验证码</a></div>
+                                <div data-error="error" class="error-massage">
+                                    <i class="wrong-icon hint-icon"></i>
+                                    <span>手机号不能为空</span>
+                                </div>
+                                <div data-hint="hint" class="hint-massage" style="display: none;">
+                                    <span class="trigon-border png-bg"></span>
+                                    <span class="trigon-bg"></span>
+                                    <span class="txt">输入常用手机号码，以保障帐号及财产安全</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="reg-list-hd">
+                                    <span class="must-icon">*</span>
+                                </div>
+                                <div class="input-area b-bottom-none">
+                                    <input type="hidden" data-url="code" value="/register/phonenum_validate.action" id="codeURL">
+                                    <em data-label="label" class="label">短信验证码：</em>
+                                    <input type="text" data-type="code" data-code="0" class="pulicitem codeImport" maxlength="6" tabindex="3" style="width:241px; _width:200px;" autocomplete="off">
+                                </div>
+                                <div data-error="error" class="error-massage">
+                                    <i class="wrong-icon hint-icon"></i>
+                                    <span>短信验证码不能为空</span>
+                                </div>
+                                <div data-hint="hint" class="hint-massage" style="display: none;">
+                                    <span class="trigon-border png-bg"></span>
+                                    <span class="trigon-bg"></span>
+                                    <span class="txt txt-30">6位数字验证码</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="reg-list-hd">
+                                    <span class="must-icon">*</span>
+                                    <span data-error="error" class="error-massage hide" style="display: inline;"></span>
+                                </div>
+                                <div class="input-area b-bottom-none">
+                                    <em data-label="label" class="label">密码：</em>
+                                    <input type="password" data-type="password" style="width:277px; _width:240px;" id="password" class="pulicitem" maxlength="16" ajaxurl="/ajax/password.action" tabindex="4" autocomplete="off">
+                                </div>
+                                <div data-error="error" class="error-massage">
+                                    <i class="wrong-icon hint-icon"></i>
+                                    <span>密码不能为空</span>
+                                </div>
+                                <div data-hint="hint" class="hint-massage" style="display: none;">
+                                    <span class="trigon-border png-bg"></span>
+                                    <span class="trigon-bg"></span>
+                                    <span class="txt">密码是由6～16个数字、字母组成，字母区分大小写</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="reg-list-hd"></div>
+                                <div class="input-area">
+                                    <em data-label="label" class="label">激活码：</em>
+                                    <input class="pulicitem key" data-key="0" data-type="key" type="text" name="invitecode" style="width: 266px; color: rgb(159, 158, 159);" maxlength="8" tabindex="5" id="invitecode" value="建议填写" data="">
+                                </div>
+                                <div data-error="error" class="error-massage">
+                                    <i class="wrong-icon hint-icon"></i>
+                                    <span>激活码不正确</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" data-submit="submit" class="login-submit reg-submit" tabindex="6" id="regSubmit">立即注册</a>
+                                <input name="isubmit" value="1" type="hidden"><span id="regresult"></span><input name="tn" value="" type="hidden" id="tn">
+                            </li>
+                            <li>
+                                <p class="accord-txt">点击“立即注册”即表示同意<a href="javascript:void(0);" id="btn_reg_license" style="color:red;">《7654用户注册协议》</a></p>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 注册页面主体 end -->
+
+    <!--注册协议弹窗-->
+    <div class="pop-massage" id="popWrap">
+        <!--hd-->
+        <div class="pop-hd">
+            <h3 class="t-massage">7654用户注册协议</h3>
+            <a href="javascript:void(0)" class="clone-btn" data-close="0" title="关闭"></a>
+        </div>
+        <!--bd-->
+        <div class="pop-bd agreement-wrap">
+            <h3>一、总则</h3>
+            <p>•1．1　用户应当同意本协议的条款并按照页面上的提示完成全部的注册程序。用户点击"立即注册"按钮即表示用户与展盟公司达成协议，完全接受本协议项下的全部条款。</p>
+            <p>•1．2　用户注册成功后，7654将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当妥善保管账号和密码，以其用户帐号进行的所有活动和事件负法律责任。</p>
+            <p>•1．3　用户一经注册7654平台帐号，除非子页面要求单独开通权限，用户有权利用该账号使用7654各个页面的单项服务，当用户使用7654各单项服务时，用户的使用行为视为其对该单项服务的服务条款以及7654在该单项服务中发出的各类公告的同意。</p>
+            <p>•1．4　7654会员服务协议以及各个页面单项服务条款和公告可由7654公司随时更新，且无需另行通知。您每次在登陆7654使用相关服务之前，,均应关注所适用的相关条款。</p>
+            <p>•如您不同意本服务协议及/或7654对相关条款的修改，您可以主动取消7654提供的服务；您一旦使用7654服务，即视为您已了解并完全同意本服务协议各项内容，包括7654对服务协议随时所做的任何修改，并成为7654用户。</p>
+            <p>•1．5  展盟旗下所有产品账号通用，一经注册视为同意两平台：7654技术员联盟（www.7654.com）及7654推广平台（http://t.7654.com）全部条款。</p>
+            <h3>二、注册信息和隐私保护</h3>
+            <p>•2．1　7654帐号（即7654用户ID）的所有权归7654，用户完成注册申请手续后，获得7654帐号的使用权。用户应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、详尽、准确的要求。所有原始输入的资料将引用为注册资料。如果因注册信息不真实而引起的问题，并对问题发生所带来的后果，7654不负任何责任。</p>
+            <p>•2．2　用户不应将其帐号、密码转让、出售或出借予他人使用；若用户授权他人使用账户，应对被授权人在该账户下发生所有行为负全部责任。如您发现您的账号遭他人非法使用应立即通知7654。互联网上不排除因黑客行为或用户的保管疏忽导致帐号、密码遭他人非法使用，此类情况与7654无关。</p>
+            <p>•2．3　您向7654提供的信息。为了向您提供更好的用户服务,7654会在您自愿选择服务或提供信息的情况下自动存储注册信息。</p>
+            <h3>三、使用规则</h3>
+            <p>•3．1　用户在使用7654服务时，必须遵守中华人民共和国相关法律法规的规定，用户同意不会利用其进行任何违法或不正当的活动，包括但不限于下列行为∶</p>
+            <p>•（1）上载、展示、张贴、传播或以其它方式传送含有下列内容之一的信息：</p>
+            <p>a.反对宪法所确定的基本原则的；</p>
+            <p>b.危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
+            <p>c.损害国家荣誉和利益的；</p>
+            <p>d.煽动民族仇恨、民族歧视、破坏民族团结的；</p>
+            <p>e.破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
+            <p>f.散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
+            <p>g.散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p>
+            <p>h.侮辱或者诽谤他人，侵害他人合法权利的；</p>
+            <p>i.含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其它道德上令人反感的内容；</p>
+            <p>j.含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的；
+            <p>•（2）为任何非法目的而使用网络服务系统；</p>
+            <p>•（3）利用7654服务从事以下活动：</p>
+            <p>a)    未经允许，从事有损于7654声誉的活动；</p>
+            <p>b)    未经7654书面同意，对任何第三方透露其在协议履行过程中所获得的7654资料和信息；</p>
+            <p>c)    用户采取的推广方式或渠道违反国家的法律法规，或侵害任何第三方的合法权益；</p>
+            <p>d)    在推广7654软件的过程中强制用户安装或卸载7654软件。</p>
+            <p> (3）其他危害计算机信息网络安全的行为。</p>
+            <p>•3．2　用户违反本协议或相关的服务条款的规定，导致或产生来自于第三方主张的任何索赔、要求或损失，包括合理的律师费，您同意赔偿7654与合作公司等受损方。7654还有权视用户的行为性质，采取包括但不限于暂停使用许可、终止服务、限制使用、回收7654帐号、追究法律责任等措施。对恶意注册7654帐号或利用7654帐号进行违法活动、捣乱、骚扰、欺骗、其他用户以及其他违反本协议的行为，7654有权回收其帐号。同时，7654公司会视司法部门的要求，协助调查。</p>
+            <p>•3．3　用户不得对本服务任何部分或本服务之使用或获得，进行复制、拷贝、出售、转售或用于任何其它商业目的。</p>
+            <p>•3．4　用户须对自己在使用7654服务过程中的行为承担法律责任。用户承担法律责任的形式包括但不限于：对受到侵害者进行赔偿，或者在展盟公司首先承担了因用户行为导致的行政处罚或侵权损害赔偿责任后，用户应给予7654公司等额的赔偿。</p>
+            <h3>四、服务内容</h3>
+            <p>•4．1　7654网络服务的具体内容由7654根据实际情况提供。</p>
+            <p>•4．2　除非本服务协议另有其它明示规定，7654所推出的新产品、新功能、新服务，均受到本服务协议之规范。</p>
+            <p>•4．3　鉴于网络服务的特殊性，用户同意7654有权不经事先通知，随时变更、中断或终止部分或全部的网络服务（包括收费网络服务）。7654不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。</p>
+            <p>•4．4　7654需要定期或不定期地对提供网络服务的平台或相关的设备进行检修或者维护，如因此类情况而造成网络服务（包括收费网络服务）在合理时间内的中断，7654无需为此承担任何责任。7654保留不经事先通知为维修保养、升级或其它目的暂停本服务任何部分的权利。</p>
+            <p>•4．5　6个月未登陆的帐号，7654保留关闭的权利。</p>
+            <p>•4．6　7654有权于任何时间暂时或永久修改或终止本服务（或其任何部分），而无论其通知与否，7654对用户和任何第三人均无需承担任何责任。</p>
+            <p>•4．7　终止服务</p>
+            <p>•因任何理由，包含但不限于长时间未使用，或7654认为您已经违反本服务协议的文字及精神，7654有权终止您的密码、帐号或本服务之使用（或服务之任何部分），并将您在本服务内任何内容加以移除并删除。您同意依本服务协议任何规定提供之本服务，无需进行事先通知即可中断或终止；您承认并同意，7654可立即关闭或删除您的帐号及您帐号中所有相关信息及文件，及/或禁止继续使用前述文件或本服务。此外，您同意若本服务之使用被中断或终止或您的帐号及相关信息和文件被关闭或删除，7654对您或任何第三人均不承担任何责任。</p>
+            <h3>五、其他</h3>
+            <p>•5．1　本协议的订立、执行和解释及争议的解决均应适用中华人民共和国法律。</p>
+            <p>•5．2　如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向7654所在地的人民法院提起诉讼。</p>
+            <p>•5．3　7654未行使或执行本服务协议任何权利或规定，不构成对前述权利或权利之放弃。</p>
+            <p>•5．4　如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。</p>
+            <p>•请您在发现任何违反本服务协议以及其他任何单项服务的服务条款、7654各类公告之情形时，通知7654。您可以通过如下联络方式同7654联系：</p>
+            <p>•中国上海浦东新区祖冲之路2277弄5号楼</p>
+            <p>•上海展盟网络科技有限公司　7654项目组</p>
+            <p>•邮政编码：200120</p>
+        </div>
+        <div class="p-footer">
+            <a href="javascript:void(0)" data-close="0" class="confirm-btn">确定</a>
+        </div>　
+    </div>
+    <!-- 注册协议 end -->
+
+    <!-- 尾部footer start -->
+    <div class="J-footer footer-wrap mt20">
+        <div class="footer">
+            <p class="footer-copyright">
+                <a href="javascript:void(0);">关于我们</a>
+                <span>|</span>
+                <a href="javascript:void(0);">联系我们</a>
+                <span>|</span>
+                <a href="javascript:void(0);">加入7654</a>
+                <span>|</span>
+                <a href="javascript:void(0);">沪ICP备14004717号-1</a>
+                <span>|</span>
+                客服电话：400-009-8356（工作日接听）
+            </p>
+            <p class="footer-img">
+                <span><img src="../../../Public/img/web/rz1.png" alt=""/></span>
+                <span><img src="../../../Public/img/web/rz2.gif" alt=""/></span>
+                <span><img src="../../../Public/img/web/rz3.gif" alt=""/></span>
+                <span><img src="../../../Public/img/web/rz4.gif" alt=""/></span>
+            </p>
+        </div>
+    </div>
+    <!-- footer end -->
+    <!-- 右侧固定菜单栏（下载软件、在线客服、经理招聘、返回顶部） -->
+    <div class="J-rightSidebar rightSidebar">
+        <ul class="rightSidebarList">
+            <li class="rightSidebarItem">
+                <a class="downloadSoftware" href="javascript:void(0);">
+                    <i></i>
+                    <em>下载软件</em>
+                </a>
+            </li>
+            <li class="rightSidebarItem">
+                <a class="onlineService" href="javascript:void(0);">
+                    <i></i>
+                    <em>在线客服</em>
+                </a>
+            </li>
+            <li class="rightSidebarItem">
+                <a class="managerRecruit" href="javascript:void(0);">
+                    <i></i>
+                    <em>经理招聘</em>
+                </a>
+            </li>
+            <li class="rightSidebarItem J-toTop">
+                <a class="toTop" href="javascript:void(0);">
+                    <i title="返回顶部"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../Public/js/base.js"></script>
+    <script type="text/javascript" src="../../../Public/js/plugin/jquery.public.js"></script>
+    <script type="text/javascript" src="../../../Public/js/web/common_web.js"></script>
+    <script type="text/javascript" src="../../../Public/js/web/reglogin/page_reg.js"></script>
+    <!-- 解决IE6透明图片问题 -->
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="../../../Public/js/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('*');
+    </script>
+    <![endif]-->
+</body>
+</html>

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/**
+ * 快压 - 关于我们页面样式文件
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-26
+ */
+.img-wrap,
+.text-wrap{width: 50%;}
+.img-wrap{text-align: center;}
+.text-wrap{line-height: 2em;}
+.text-wrap h2{line-height: 3em;}
+.text-wrap p{text-indent: 2em;}
+.container hr{margin: 50px 0;}
+
+

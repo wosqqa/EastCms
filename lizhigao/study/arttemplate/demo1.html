@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>arttemplate示例一</title>
+    <script src="http://od7s58doe.bkt.clouddn.com/js/lib/template.js"></script>
+    <style>
+    .active {
+        color: red;
+        font-weight: 600;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>========未使用模板=========</h2>
+    <ul>
+        <li class="active"><a href="javascript:;">一级菜单1</a></li>
+        <ul>
+            <li class="active"><a href="javascript:;">二级菜单1-1</a></li>
+            <ul>
+                <li class="active"><a href="javascript:;">三级菜单a</a></li>
+                <li><a href="javascript:;">三级菜单b</a></li>
+                <li><a href="javascript:;">三级菜单c</a></li>
+            </ul>
+            <li><a href="javascript:;">二级菜单1-2</a></li>
+            <ul>
+                <li><a href="javascript:;">三级菜单a</a></li>
+                <li><a href="javascript:;">三级菜单b</a></li>
+                <li><a href="javascript:;">三级菜单c</a></li>
+            </ul>
+        </ul>
+        <li><a href="javascript:;">一级菜单2</a></li>
+        <ul>
+            <li><a href="javascript:;">二级菜单2-1</a></li>
+            <ul>
+                <li><a href="javascript:;">三级菜单a</a></li>
+                <li><a href="javascript:;">三级菜单b</a></li>
+                <li><a href="javascript:;">三级菜单c</a></li>
+            </ul>
+            <li><a href="javascript:;">二级菜单2-2</a></li>
+            <ul>
+                <li><a href="javascript:;">三级菜单a</a></li>
+                <li><a href="javascript:;">三级菜单b</a></li>
+                <li><a href="javascript:;">三级菜单c</a></li>
+            </ul>
+        </ul>
+        <li><a href="javascript:;">一级菜单3</a></li>
+        <ul>
+            <li><a href="javascript:;">二级菜单2-1</a></li>
+            <ul>
+                <li><a href="javascript:;">三级菜单a</a></li>
+                <li><a href="javascript:;">三级菜单b</a></li>
+                <li><a href="javascript:;">三级菜单c</a></li>
+            </ul>
+            <li><a href="javascript:;">二级菜单2-2</a></li>
+        </ul>
+    </ul>
+    <h2>========使用模板=========</h2>
+    <div id="template">
+        <script type="text/html" id="three">
+            <ul>
+                {{each children}} {{if $value.active}}
+                <li class="active"><a href="javascript:;">{{$value.name}}</a></li>
+                {{else}}
+                <li><a href="javascript:;">{{$value.name}}</a></li>
+                {{/if}} {{/each}}
+            </ul>
+        </script>
+        <script type="text/html" id="two">
+            <ul>
+                {{each children}} {{if $value.children && $value.children.length > 0}} {{if $value.active}}
+                <li class="active"><a href="javascript:;">{{$value.name}}</a></li>
+                {{else}}
+                <li><a href="javascript:;">{{$value.name}}</a></li>
+                {{/if}} {{include 'three' $value}} {{else}} {{if $value.active}}
+                <li class="active"><a href="javascript:;">{{$value.name}}</a></li>
+                {{else}}
+                <li><a href="javascript:;">{{$value.name}}</a></li>
+                {{/if}} {{/if}} {{/each}}
+            </ul>
+        </script>
+        <script type="text/html" id="one">
+            <ul>
+                {{each root}} {{if $value.active}}
+                <li class="active"><a href="javascript:;">{{$value.name}}</a></li>
+                {{else}}
+                <li><a href="javascript:;">{{$value.name}}</a></li>
+                {{/if}} {{include 'two' $value}} {{/each}}
+            </ul>
+        </script>
+    </div>
+    <script>
+    var data = {
+        root: [{
+            active: true,
+            name: '一级菜单1',
+            children: [{
+                active: true,
+                name: '二级菜单1-1',
+                children: [{
+                    active: true,
+                    name: '三级菜单a'
+                }, {
+                    name: '三级菜单b'
+                }, {
+                    name: '三级菜单c'
+                }]
+            }, {
+                name: '二级菜单1-2',
+                children: [{
+                    name: '三级菜单a'
+                }, {
+                    name: '三级菜单b'
+                }, {
+                    name: '三级菜单c'
+                }]
+            }]
+        }, {
+            name: '一级菜单2',
+            children: [{
+                name: '二级菜单2-1',
+                children: [{
+                    name: '三级菜单a'
+                }, {
+                    name: '三级菜单b'
+                }, {
+                    name: '三级菜单c'
+                }]
+            }, {
+                name: '二级菜单2-2',
+                children: [{
+                    name: '三级菜单a'
+                }, {
+                    name: '三级菜单b'
+                }, {
+                    name: '三级菜单c'
+                }]
+            }]
+        }, {
+            name: '一级菜单3',
+            children: [{
+                name: '二级菜单2-1',
+                children: [{
+                    name: '三级菜单a'
+                }, {
+                    name: '三级菜单b'
+                }, {
+                    name: '三级菜单c'
+                }]
+            }, {
+                name: '二级菜单2-2'
+            }]
+        }]
+    };
+    var html = template('one', data);
+    document.getElementById('template').innerHTML = html;
+    </script>
+</body>
+
+</html>

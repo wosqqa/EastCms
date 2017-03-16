@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="sAFXQRvteI">
+    <title>技术员联盟_装机联盟_电脑技术员联盟_收益最高的7654技术员联盟</title>
+    <meta name="keywords" content="装机联盟,技术员联盟,电脑技术员联盟,7654联盟" />
+    <meta name="description" content="最好的电脑装机联盟,技术员联盟,是中国收益最高的装机技术联盟,不扣量结算快的装机联盟网站,装机联盟哪个好,首选7654技术员联盟。" />
+    <meta name="author" content="Cleam Lee">
+    <link rel="shortcut icon" type="image/ico" href="../../../Public/img/web/favicon.ico">
+    <link rel="stylesheet" href="../../../Public/js/plugin/tip-yellowsimple/tip-yellowsimple.css"/>
+    <link rel="stylesheet" href="../../../Public/css/base.css"/>
+    <link rel="stylesheet" href="../../../Public/css/user/common_user.css"/>
+    <link rel="stylesheet" href="../../../Public/css/user/homepage/page.css"/>
+</head>
+<body>
+    <!-- Header.-->
+    <div class="headerWrap">
+        <div class="header clearfix">
+            <div class="logo fl ib"><img src="../../../Public/img/user/logo.png" alt="7654账户个人中心"></div>
+            <div class="userOpt fr ib">
+                    <span class="userInfo">
+                        <img class="userHead" src="../../../Public/img/user/homepage/head.png" alt=""/>
+                        您好，<a href="#" class="userName">LangDesign</a>
+                        <i class="lettersIcon ib"></i>【&nbsp;<a href="#" class="lettersNum">7</a>&nbsp;】
+                        <a href="#" class="signOut">退出</a>
+                    </span>
+                <span class="splitLine">&nbsp;|&nbsp;</span>
+                <a class="to7654" href="###">技术员联盟首页</a>
+                <span class="splitLine">&nbsp;|&nbsp;</span>
+                <a class="toManagerPlatform" href="###">市场经理平台</a>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Header.-->
+
+    <div class="userNavWrap">
+        <div class="container userNav clearfix">
+            <h4 class="title titleBank fl">设置银行卡</h4>
+            <a class="backToUserCenter fr" href="../homepage/index.html"><img src="../../../Public/img/user/back.png"/>&nbsp;返回个人中心首页</a>
+        </div>
+    </div>
+
+    <!-- 手机号码绑定 start -->
+    <div class="container set-contanier">
+        <h3>设置银行卡</h3>
+        <p class="set-bank-txt">请准确填写您的个人信息以及银行卡信息，以保证您能正常收取款项。</p>
+        <ul class="set-msg-wrap set-bank" id="setUserMsg">
+            <li>
+                <label for="setName"><i>*</i>开户人姓名：</label>
+                <input type="text" name="name" class="set-name" id="setName" data-type="name" data-Judge="true" value="{$banklist.username}">
+                <span class="hint-msg" data-hint="0">姓名输入不正确</span>
+            </li>
+            <li>
+                <label for="setIDCard"><i>*</i>开户人身份证：</label>
+                <input type="text" name="name" class="set-name" id="setIDCard" data-type="name" data-Judge="true" value="{$banklist.usernumb}">
+                <span class="hint-msg" data-hint="0">姓名输入不正确</span>
+            </li>
+            <li>
+                <label for="setBankName"><i>*</i>银行名称：</label>
+                <select name="name" class="set-name" id="setBankName" data-type="name" data-Judge="true">
+                    <option value="0">全部</option>
+                </select>
+                <span class="hint-msg" data-hint="0">姓名输入不正确</span>
+            </li>
+            <li>
+                <label for="setProvince"><i>*</i>开户所在地：</label>
+                <select name="province" id="setProvince">
+                    <option value="0">全部</option>
+                </select>
+                <select name="city" id="setCity">
+                    <option value="0">全部</option>
+                </select>
+                <span class="hint-msg" data-hint="0">姓名输入不正确</span>
+            </li>
+            <li>
+                <label for="setOpenBankName"><i>*</i>开户所名称：</label>
+                <input type="text" name="name" class="set-name" id="setOpenBankName" data-type="name" data-Judge="true" value="{$banklist.banksubname}">
+                <span class="hint-msg" data-hint="0">姓名输入不正确</span>
+                <span>如：中国工商银行上海分行张江支行</span>
+            </li>
+            <li>
+                <label for="setBankAccount"><i>*</i>银行卡帐号：</label>
+                <input type="text" name="name" class="set-name" id="setBankAccount" data-type="name" data-Judge="true" value="{$banklist.bankaccount}">
+                <span class="hint-msg" data-hint="0">姓名输入不正确</span>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="submit set-msg-btn" id="setSubmit">保存信息</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 手机号码绑定 end -->
+
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../Public/js/plugin/jquery.poshytip.min.js"></script>
+    <script type="text/javascript" src="../../../Public/js/plugin/jquery.public.js"></script>
+    <script type="text/javascript" src="../../../Public/js/base.js"></script>
+    <script type="text/javascript" src="../../../Public/js/user/common_user.js"></script>
+    <script type="text/javascript" src="../../../Public/js/user/homepage/provinceCityData.js"></script>
+    <script type="text/javascript" src="../../../Public/js/user/homepage/page_change_bankcard.js"></script>
+    <!-- 解决IE6透明图片问题 -->
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="../../../Public/js/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('*');
+    </script>
+    <![endif]-->
+</body>
+</html>

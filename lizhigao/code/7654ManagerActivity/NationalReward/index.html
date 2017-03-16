@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zg-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="迎双节,集徽章,7654装机联盟,技术员联盟">
+	<meta name="description" content="迎双节-集徽章-7654双节活动">
+	<meta name="author" content="Cleam Lee">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>赏金猎人活动</title>
+	<link rel="stylesheet" href="../public/css/common_activity.css">
+	<link rel="stylesheet" href="../public/css/jquery.zgwindow.css">
+	<style>
+		body{background-color: #FFF7E3;}
+		.banner{background-image: url("./img/banner.jpg"); background-repeat: no-repeat; background-position: center top; min-width: 990px; height: 812px;}
+		.content-wrap{width: 990px; margin: 0 auto; position: relative;}
+		/* 登录注册 */
+		.log-reg{position: absolute; top: 0; text-align: center; width: 100%;}
+		.log-reg span, .log-reg a{color: #b21a17; font-size: 16px;}
+		.log-reg a:hover{text-decoration: underline;}
+
+		/* 活动说明 */
+		.explain-bd{background-color: #E6453B; color: #fff; font-size: 16px; line-height: 2em; padding: 10px 20px;}
+
+		.section{background-color: #E6453B; margin-top: 15px; color: #fff;}
+		.section h2{padding-top: 15px; padding-left: 10px;}
+		.section-bd{padding: 15px 30px;}
+
+		/*活动概述*/
+		.overview-bd table{width: 100%;}
+		.overview-bd table td{color: #fff; font-size: 15px; text-align: left; height: 30px; line-height: 30px;}
+		.overview-bd table td.title{width: 80px; color: #ffe156; font-size: 16px; font-weight: bold; text-align: right; vertical-align: top;}
+		
+		/* 任务列表 */
+		.reward-list-bd h3{color: #ffe156; font-size: 20px;}
+		.reward-list-bd h3 em{color: #fff; font-size: 16px; font-weight: normal;}
+		.reward-list-bd h3 span{position: absolute; right: 0;}
+		.reward-list-bd table{width: 100%; margin-bottom: 30px; text-align: center; font-size: 14px; margin-top: 15px; line-height: 1.5em;}
+		.reward-list-bd table .col1{width: 20%;}
+		.reward-list-bd table .col2{width: 15%;}
+		.reward-list-bd table .col3{width: 15%;}
+		.reward-list-bd table .col4{width: 15%;}
+		.reward-list-bd table .col5{width: 20%;}
+		.reward-list-bd table .col6{width: 15%;}
+		.reward-list-bd table th,.reward-list-bd table td{padding: 8px; border: 1px solid #FFBCB8;}
+		.reward-list-bd table .thd{background-color: #D64037;}
+		
+		.reward-list-bd table a:hover{text-decoration: none;}
+		.reward-list-bd table a.btn-active{display: inline-block; background-image: url('./img/btn_sm.png'); background-repeat: no-repeat; width: 125px; height: 40px; line-height: 40px; color: #a52131;}
+		.reward-list-bd table a.btn-disable{display: inline-block; background-image: url('./img/btn_dis.png'); background-repeat: no-repeat; width: 125px; height: 41px; color: #666666; padding: 2px 0; cursor: not-allowed;}
+		.reward-list-bd table a.btn-disable-sm{display: inline-block; background-image: url('./img/btn_sm_dis.png'); background-repeat: no-repeat; width: 127px; height: 40px; line-height: 40px; color: #666666; cursor: not-allowed;}
+
+		/* faq */
+		.faq{margin-bottom: 100px;}
+		.faq-bd p{line-height: 1.6em; font-size: 16px;}
+
+		/* 菜单 */
+		.sidebar{position: absolute; right: -200px; top: 150px; background-image: url("./img/sidebar_bg.png"); background-repeat: no-repeat; width: 190px; height: 256px;}
+		.sidebar p{padding: 0 30px; text-align: center;}
+		.sidebar .p-first{margin-top: 45px;}
+		.sidebar a{display: inline-block; width: 100%; color: #ffeebb; font-size: 20px; height: 64px; line-height: 64px;}
+		.sidebar a:hover{text-decoration: none;}
+	</style>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner"></div>
+	<!-- content -->
+	<div class="content-wrap">
+		<!-- 登录注册 -->
+		<div class="log-reg">
+			<a href="javascrip:;">登录</a><a href="{$Think.USER_URL}/register" class="ml20">注册</a>
+			<!-- <span>账号：</span><a href="javascrip:;">lizhigao</a><a href="{$Think.USER_URL}/logout" class="ml20">退出</a> -->
+		</div>
+		<!-- 活动说明 -->
+		<div class="explain">
+			<h2 class="explain-hd"><img class="png-fixIe6" src="./img/top_title.png" alt="7654征集优秀猎人发赏金"></h2>
+			<div class="explain-bd mt5">
+				<p>国庆来临，又到了总结的时候了！</p>
+				<p>回首往事，月月发展维护技术员，都是靠提成和KPI讨生活，收入来源一成不变。</p>
+				<p>举国欢庆之际，7654给各位猎人发赏金，助您丰富收入来源，关键是让您在悠闲发展和维护的同时，拿到额外福利。</p>
+				<p>赶紧参与活动抢任务，完成任务抢赏金！</p>
+			</div>
+		</div>
+
+		<!-- 活动概述 -->
+		<a name="anchor-overview"></a>
+		<div class="section overview">
+			<h2 class="overview-hd"><img class="png-fixIe6" src="./img/section_title_1.png" alt="活动概述"></h2>
+			<div class="section-bd overview-bd">
+				<table>
+					<tr>
+						<td class="title">活动时间：</td><td>10月1日——10月31日</td>
+					</tr>
+					<tr>
+						<td class="title">活动对象：</td><td>所有正式市场经理</td>
+					</tr>
+					<tr>
+						<td class="title">活动细则：</td>
+						<td>
+							<p>1、本次活动共发布6个不同的赏金任务，可同时抢领开始哦。</p>
+							<p>2、赏金任务从抢领成功以后，才开始计算本次任务完成进度，一定要记得哇！</p>
+							<p>3、任务完成后一定要眼疾手快及时抢领赏金，先到先得，领完就没啦。</p>
+							<p>4、每次抢领赏金后，如总赏金仍有剩余，可再次抢领该任务完成哦，哇咔咔！</p>
+							<p>5、所有赏金均在次月15个工作日之前发送到提现账户，绝对妥妥的！</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="title">活动流程：</td><td><img class="png-fixIe6" src="./img/three_steps.png" alt="每月抢任务->做任务->抢赏金"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- 悬赏任务表 -->
+		<a name="anchor-reward-list"></a>
+		<div class="section reward-list">
+			<h2 class="reward-list-hd"><img class="png-fixIe6" src="./img/section_title_2.png" alt="悬赏任务表"></h2>
+			<div class="section-bd reward-list-bd">
+				<!-- 任务1：拓市场 -->
+				<h3 class="pr">任务1：拓市场<em>（适合市场挖掘能力较强的猎人）</em><span>剩余赏金：1000元</span></h3>
+				<table>
+					<tr class="thd">
+						<th class="col1">任务指标</th><th class="col2">任务要求</th><th class="col3">本次任务完成进度</th>
+						<th class="col4">单项任务奖金</th><th class="col5">任务状态</th><th class="col6">累计已领奖金</th>
+					</tr>
+					<tr>
+						<td class="tl">开拓新渠道：本次新增且资料信息完整的技术员</td><td>10个</td><td>0个</td>
+						<td>10元</td><td><a class="png-fixIe6 btn-active" href="javascript:;">我要抢</a></td><td>0元</td>
+					</tr>
+				</table>
+				<!-- 任务2：夺精英 -->
+				<h3 class="pr">任务2：夺精英<em>（适合拥有精英下属积极投身装机事业的猎人）</em><span>剩余赏金：1000元</span></h3>
+				<table>
+					<tr class="thd">
+						<th class="col1">任务指标</th><th class="col2">任务要求</th><th class="col3">本次任务完成进度</th>
+						<th class="col4">单项任务奖金</th><th class="col5">任务状态</th><th class="col6">累计已领奖金</th>
+					</tr>
+					<tr>
+						<td class="tl">下属有业绩：本次有业绩且资料完整技术员数</td><td>10个</td><td>0个</td>
+						<td>10元</td><td><a class="png-fixIe6 btn-disable" href="javascript:;">任务进行中，加油额，么么哒</a></td><td>0元</td>
+					</tr>
+				</table>
+				<!-- 任务3：比耐心 -->
+				<h3 class="pr">任务3：比耐心<em>（适合下属持之以恒地投身装机事业的猎人）</em><span>剩余赏金：2000元</span></h3>
+				<table>
+					<tr class="thd">
+						<th class="col1">任务指标</th><th class="col2">任务要求</th><th class="col3">本次任务完成进度</th>
+						<th class="col4">单项任务奖金</th><th class="col5">任务状态</th><th class="col6">累计已领奖金</th>
+					</tr>
+					<tr>
+						<td class="tl">持之以恒：本次累计5天装机且资料完整技术员数</td><td>10个</td><td>0个</td>
+						<td>10元</td><td><a class="png-fixIe6 btn-disable-sm" href="javascript:;">任务完成，抢领赏金</a></td><td>0元</td>
+					</tr>
+				</table>
+				<!-- 任务4：拼实力 -->
+				<h3 class="pr">任务4：拼实力<em>（适合下属爱好广泛的猎人）</em><span>剩余赏金：0元</span></h3>
+				<table>
+					<tr class="thd">
+						<th class="col1">任务指标</th><th class="col2">任务要求</th><th class="col3">本次任务完成进度</th>
+						<th class="col4">单项任务奖金</th><th class="col5">任务状态</th><th class="col6">累计已领奖金</th>
+					</tr>
+					<tr>
+						<td class="tl">实力雄厚：本次指定软件（QQ管家、百度浏览器、快压线下包、快压线上包）总安装量</td><td>10个</td><td>0个</td>
+						<td>10元</td><td><a class="png-fixIe6 btn-disable-sm" href="javascript:;">赏金已抢完</a></td><td>0元</td>
+					</tr>
+				</table>
+				<!-- 任务5：争持久 -->
+				<h3 class="pr">任务5：争持久<em>（适合下属爱好广泛，且能持之以恒的猎人）</em><span>剩余赏金：100元</span></h3>
+				<table>
+					<tr class="thd">
+						<th class="col1">任务指标</th><th class="col2">任务要求</th><th class="col3">本次任务完成进度</th>
+						<th class="col4">单项任务奖金</th><th class="col5">任务状态</th><th class="col6">累计已领奖金</th>
+					</tr>
+					<tr>
+						<td class="tl">持久装机：本次指定软件（QQ管家、百度浏览器、快压线下包、快压线上包）累计安装10天的技术员数</td><td>10个</td><td>0个</td>
+						<td>10元</td><td><a class="png-fixIe6 btn-disable-sm" href="javascript:;">任务到期，抢领结束</a></td><td>0元</td>
+					</tr>
+				</table>
+				<!-- 任务6：证恒心 -->
+				<h3 class="pr">任务6：证恒心<em>（适合勇于坚持的猎人）</em><span>剩余赏金：2000元</span></h3>
+				<table>
+					<tr class="thd">
+						<th class="col1">任务指标</th><th class="col2">任务要求</th><th class="col3">本次任务完成进度</th>
+						<th class="col4">单项任务奖金</th><th class="col5">任务状态</th><th class="col6">累计已领奖金</th>
+					</tr>
+					<tr>
+						<td class="tl">脚踏实地，勇于坚持：打卡签到</td><td>10个</td><td>0个</td>
+						<td>10元</td><td><a class="png-fixIe6 btn-disable-sm" href="javascript:;">任务到期,抢领结束</a></td><td>0元</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- FAQ -->
+		<a name="anchor-faq"></a>
+		<div class="section faq">
+			<h2 class="faq-hd"><img class="png-fixIe6" src="./img/section_title_3.png" alt="FAQ"></h2>
+			<div class="section-bd faq-bd">
+				<p>Q. 此活动是所有市场经理都可以参加吗？</p>
+				<p>A. 只有正式市场经理才可以参加哦，见习期市场经理，转正以后就可以抢任务了。</p>
+				<br>
+				<p>Q. 这个活动只有领取任务以后才算开始吗？</p>
+				<p>A. 是的，未能成功领取任务是不能抢赏金的，一定要第一时间抢取任务哦。</p>
+				<br>
+				<p>Q. 没有领取任务之前产生的数据可以在领取任务以后计算进本次任务吗？</p>
+				<p>A. 不可以，当次任务进度是根据任务领取成功以后才开始计算本次任务数据的，任务开始之前的数据是不计算入当次任务的，所以还是要及时抢取任务开始哦。</p>
+				<br>
+				<p>Q. 可以同时领取多个任务一起开始吗？</p>
+				<p>A. 不同的任务可以同时抢领开始的，但是同一任务只能领取一个开始哦，只有任务完成以后，才可继续抢取下一次任务。</p>
+				<br>
+				<p>Q. 任务抢领的次数有限制吗？</p>
+				<p>A. 这个是没有限制，只要任务的总赏金未被抢完，可以一直抢领任务完成。</p>
+				<br>
+				<p>Q. 任务抢取成功以后，完成时间有限制吗？</p>
+				<p>A. 任务完成时间截止到本月底，因为赏金是固定的，先完成先领取，抢完了就没有了哦。</p>
+				<br>
+				<p>Q. 只要完成任务就可以领到赏金吗？</p>
+				<p>A. 不一定哦，因为是赏金总额是固定的，先完成先领取，总赏金抢完了就没有了，所以任务完成以后一定要眼疾手快及时抢领赏金，慢了可能就没了哦！</p>
+				<br>
+				<p>Q. 如果总赏金未被领完，最晚什么时候可以领取赏金？</p>
+				<p>A. 在总赏金有剩余，且任务已完成，最迟领取奖金的时间是10月7日，超期将无法领取。</p>
+				<br>
+				<p>Q. 领取的奖金是什么时候发放？</p>
+				<p>A. 所有赏金均在次月15个工作日之前发送到提现账户，可直接提取现金。</p>
+			</div>
+		</div>
+		
+		<!-- 菜单 -->
+		<div id="J_sidebar" class="sidebar">
+			<p class="p-first"><a href="#anchor-overview">活动概述</a></p>
+			<p><a href="#anchor-reward-list">悬赏任务表</a></p>
+			<p><a href="#anchor-faq">FAQ</a></p>
+		</div>
+
+	</div>
+
+	<div id="J_zgwindow" class="zg-window"></div>
+
+	<script src="../public/js/jquery.min.js"></script>
+	<script src="../public/js/jquery.zgwindow.js"></script>
+	<script>
+		$(function(){
+			// 实时更新菜单栏位置
+			var $sidebar = $('#J_sidebar'),
+				ot = $sidebar.offset().top;
+	        $(window).scroll(function(event) {
+	        	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop || 0;
+	        	if(scrollTop + 100 - ot > 0){
+	        		var t = $sidebar.position().top + (scrollTop - $sidebar.offset().top) + 100;
+	        		$sidebar.css('top', t);
+	        	} else {
+	        		$sidebar.css('top', 150);
+	        	}
+	        });
+
+	        // 按钮点击事件
+	        $('.btn-active').on('click', function(event) {
+	        	$('#J_zgwindow').zgwindow({
+	        		width: 400,
+	        		height: 220,
+	        		title: '温馨提示',
+		            content: '<p style="font-size: 16px; color: #666; line-height: 1.5em;">所有任务都是针对正式市场经理哦！您还未转正，不可参与活动哦！</p>',
+		            okBtnText: '知道了',
+		            shade: true,
+		            okBtnClick: function(){
+		            	alert('点击知道了');
+		            	// 销毁窗口
+		            	$('#J_zgwindow').zgwindow('destructor');
+		            }
+	        	});
+	        });
+		});
+	</script>
+
+	<!-- 解决IE6透明图片问题 -->
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="../public/js/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.png-fixIe6');
+    </script>
+    <![endif]-->
+</body>
+</html>

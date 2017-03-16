@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="sAFXQRvteI">
+    <title>技术员联盟_装机联盟_电脑技术员联盟_收益最高的7654技术员联盟</title>
+    <meta name="keywords" content="装机联盟,技术员联盟,电脑技术员联盟,7654联盟" />
+    <meta name="description" content="最好的电脑装机联盟,技术员联盟,是中国收益最高的装机技术联盟,不扣量结算快的装机联盟网站,装机联盟哪个好,首选7654技术员联盟。" />
+    <meta name="author" content="Cleam Lee">
+    <link rel="shortcut icon" type="image/ico" href="../../../Public/img/web/favicon.ico">
+    <link rel="stylesheet" href="../../../Public/js/plugin/tip-yellowsimple/tip-yellowsimple.css"/>
+    <link rel="stylesheet" href="../../../Public/css/base.css"/>
+    <link rel="stylesheet" href="../../../Public/css/user/common_user.css"/>
+    <link rel="stylesheet" href="../../../Public/css/user/homepage/page.css"/>
+    <link rel="stylesheet" href="../../../Public/js/plugin/uploadify/uploadify.css"/>
+    <link rel="stylesheet" href="../../../Public/css/plugin/jquery.Jcrop.css"/>
+</head>
+<body>
+    <!-- Header.-->
+    <div class="headerWrap">
+        <div class="header clearfix">
+            <div class="logo fl ib"><img src="../../../Public/img/user/logo.png" alt="7654账户个人中心"></div>
+            <div class="userOpt fr ib">
+                    <span class="userInfo">
+                        <img class="userHead" src="../../../Public/img/user/homepage/head.png" alt=""/>
+                        您好，<a href="#" class="userName">LangDesign</a>
+                        <i class="lettersIcon ib"></i>【&nbsp;<a href="#" class="lettersNum">7</a>&nbsp;】
+                        <a href="#" class="signOut">退出</a>
+                    </span>
+                <span class="splitLine">&nbsp;|&nbsp;</span>
+                <a class="to7654" href="###">技术员联盟首页</a>
+                <span class="splitLine">&nbsp;|&nbsp;</span>
+                <a class="toManagerPlatform" href="###">市场经理平台</a>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Header.-->
+
+    <div class="userNavWrap">
+        <div class="container userNav clearfix">
+            <h4 class="title titleHead fl">头像设置</h4>
+            <a class="backToUserCenter fr" href="../homepage/index.html"><img src="../../../Public/img/user/back.png"/>&nbsp;返回个人中心首页</a>
+        </div>
+    </div>
+
+    <!-- 头像设置 start -->
+    <div class="container set-contanier">
+        <!-- 设置头像. -->
+        <div class="set-header-wrap">
+            <div class="head-pic-wrap">
+                <!-- 裁剪头像.-->
+                <div class="clip-pic-box">
+                    <img src="{$Think.SHICHANG}/Public/Images/Userset/head/head-pic-001.jpg" class="show-pic" id="show_pic" />
+                    <img src="{$Think.SHICHANG}/Public/Images/Userset/head/head-pic-001.jpg" id="target" class="clip-pic" alt="" />
+                    <!-- 原始图像宽高.-->
+                    <input type="hidden" id="original_w" value="">
+                    <input type="hidden" id="original_h" value="">
+                    <input type="hidden" id="userPic" value="">
+                </div>
+                <!-- 生成头像.-->
+                <div class="create-pic-box">
+                    <ul class="upload-type-btn-list">
+                        <li>
+                            <input type="file" id="localityUploadify" name="uploadify" class="file user-question" />
+                            <input type="hidden" id="localityPic" value="0"/>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                    <p>仅支持JPG,GIF,PNG格式，文件小于2M。<br>（使用高质量图片，可生成高清头像）</p>
+                    <ul class="c-pic-list" id="preview-pane">
+                        <li>
+                            <div class="pic-wrap">
+                                <div class="h-pic-120 preview-container">
+                                    <if condition="!empty($view['userinfo']['avatar'])">
+                                        <img onerror="javascript:this.src = SHICHANG+'/Public/Images/Userset/head/headX4.png';this.onerror = null;" src="{$Think.USER_URL}/{$view['userinfo']['avatar']}" class="jcrop-preview" alt="Preview" style="width:120px;height:120px;"/>
+                                        <else />
+                                        <img onerror="javascript:this.src = SHICHANG+'/Public/Images/Userset/head/headX4.png';this.onerror = null;" src="{$Think.SHICHANG}/Public/Images/Userset/head/headX4.png?1421654071" class="jcrop-preview" alt="Preview" style="width:120px;height:120px;"/>
+                                    </if>
+                                    <input type="hidden" value="" id="coordX1" />
+                                    <input type="hidden" value="" id="coordY1" />
+                                    <input type="hidden" value="" id="coordX2" />
+                                    <input type="hidden" value="" id="coordY2" />
+                                    <input type="hidden" value="" id="picWidth" />
+                                    <input type="hidden" value="" id="picHeight" />
+                                </div>
+                            </div>
+                            <div class="h-pic-txt">
+                                当前头像
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 提交裁剪.-->
+            <div class="clip-btn">
+                <a href="javascript:void(0);" id="clip_submit">保存</a>
+            </div>
+        </div>
+    </div>
+    <!-- 头像设置 end -->
+
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../Public/js/plugin/jquery.poshytip.min.js"></script>
+    <script type="text/javascript" src="../../../Public/js/plugin/uploadify/jquery.uploadify.min.js?" + new Date()></script>
+    <script type="text/javascript" src="../../../Public/js/plugin/jquery.Jcrop.js"></script>
+    <script type="text/javascript" src="../../../Public/js/plugin/jquery.public.js"></script>
+    <script type="text/javascript" src="../../../Public/js/base.js"></script>
+    <script type="text/javascript" src="../../../Public/js/user/common_user.js"></script>
+    <script type="text/javascript" src="../../../Public/js/user/homepage/provinceCityData.js"></script>
+    <script type="text/javascript" src="../../../Public/js/user/homepage/page_change_head.js"></script>
+    <!-- 解决IE6透明图片问题 -->
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="../../../Public/js/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('*');
+    </script>
+    <![endif]-->
+</body>
+</html>

@@ -1,0 +1,14 @@
+@charset "utf-8";
+/**
+ * 快压 - 联系我们页面样式文件
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-26
+ */
+.w100{width: 100%;}
+.w25{width: 25%;}
+.w75{width: 75%;}
+form{margin: 30px 0 50px;}
+form table tr{line-height: 4em;}
+form input[type="text"]{width: 300px;}
+form textarea{width: 400px; resize: none;}
+form input.submit{width: 200px; border: 0 none; background-color: #0098F4; color: white; height: 40px; border-radius: 5px; cursor: pointer;}

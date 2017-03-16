@@ -1,0 +1,24 @@
+@charset "utf-8";
+/**
+ * 快压更新日志页面样式文件
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-24
+ */
+.container{position: relative;}
+/* 年份菜单 */
+.year-list{position: absolute; left: 0; top: 0;}
+.year-list li a{display: inline-block; font-size: 18px; width: 60px; height: 40px; line-height: 40px; text-align: center; padding-right: 7px;}
+.year-list li a.active{background: url("../../img/bg_with_chev_blue.png") no-repeat; color: white;}
+/* 更新日志 */
+.updateLog-wrap{/*height: 800px;*/ overflow: hidden; background: url("../../img/log_line.jpg") repeat-y 80px; margin-left: 100px;}
+.updateLog-wrap .year{margin-left: 90px; color: #0092ef;}
+.updateLog-wrap .year:before{background: url("../../img/log_circle.png") no-repeat; content: ''; width: 14px; height: 14px; display: inline-block; margin-left: -15px; margin-right: 15px;}
+
+.log-list{margin-bottom: 30px;}
+.log-list li{margin-top: 15px;}
+.log-list li p.date{width: 65px; text-align: right; line-height: 51px; position: relative;}
+.log-list li p.date:after{content: ''; position: absolute; right: -20px; top: 20px; width: 7px; height: 7px; background-color: #999; border-radius: 50%;}
+.log-list li p.intro{position: relative; background: url("../../img/bg_with_chev.png") no-repeat; width: 752px; height: 51px; line-height: 51px; margin-left: 28px; padding-left: 30px; font-size: 16px; color: #0092ef; cursor: pointer;}
+.log-list li p.intro i.chev-right{position: absolute; right: 15px; top: 18px; background: url("../../img/chev_right.png") no-repeat; display: inline-block; width: 8px; height: 13px;}
+.log-list li p.intro i.chev-down{position: absolute; right: 15px; top: 18px; background: url("../../img/chev_down.png") no-repeat; display: inline-block; width: 13px; height: 8px;}
+.log-list li div.intro-info{position: relative; float: left; background-color: #F4F4F4; /*display: none;*/; margin-left: 104px; margin-top: -5px; padding-left: 14px; width: 756px; z-index: 2; border-radius: 5px;}

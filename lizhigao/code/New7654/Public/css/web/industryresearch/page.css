@@ -1,0 +1,46 @@
+/**
+ * 行业研究首页样式文件
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-26
+ */
+/* 统一编码格式 */
+@charset "utf-8";
+.irMain{width: 1210px; margin: 0 auto;}
+.crumbWrap{margin: 15px 0;}
+.irContentLeft{float: left; width: 950px; border: 1px solid #E4E4E4;}
+.irContentRight{float: right; width: 250px;}
+
+/* 行业研究首页 */
+.irItem{margin: 0 20px;}
+.irContent{border-bottom: 1px dotted #DCDCDC; padding: 10px 0;}
+.irContent h4{height: 40px; line-height: 40px;}
+.irContent h4 a{font-size: 18px; color: black; *float: left;}
+.irContent h4 a:hover{color: #F55659;}
+.irContent h4 i{margin-right: 5px; width: 6px; height: 9px; background: url("../../../img/icon1.png") scroll no-repeat -182px -475px;
+    vertical-align: middle; margin-bottom: 3px; *margin-bottom: 0;}
+.irContent h4 em{font-size: 12px; float: right; color: #999999;}
+.irContent p{text-indent: 2em;}
+.irListHandler{margin: 25px; text-align: center;}
+.irListHandler a{border: 1px solid #EAEAEA;margin: 0 5px; padding: 5px 10px; cursor: pointer;}
+.irListHandler a:hover{border-color: #F55659;}
+.irListHandler a.jp-current{color: #F55659; border-color: #F55659;}
+
+/* 联盟公告 和 帮助指南 样式在common.css 属于公共模块 */
+
+/* 行业资讯详情 */
+.articleWrap,.prevNextArticleWrap,.relatedReadingWrap{ padding: 10px 30px;}
+.article-h{text-align: center;}
+.article-h h1{ font-size: 18px; color: black; height: 50px; line-height: 50px;}
+.article-h em{ font-size: 12px; margin-bottom: 10px; display: inline-block;}
+.article-b{min-height: 200px;}
+/* 上一条、下一条 */
+.prevArticle{float: left;}
+.nextArticle{float: right;}
+.prevArticle label, .nextArticle label{font-weight: bold; cursor: default;}
+/* 相关阅读 */
+.relatedReadingWrap h5{font-size: 15px; color: black; font-weight: bold; margin-bottom: 10px;}
+.relatedReadingList{list-style: disc; margin-left: 20px; margin-bottom: 20px;}
+
+
+
+

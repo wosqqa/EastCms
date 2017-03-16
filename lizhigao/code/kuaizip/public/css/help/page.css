@@ -1,0 +1,13 @@
+@charset "utf-8";
+/**
+ * 快压 - 帮助页面样式文件
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-27
+ */
+
+.help-left{position: absolute; width: 160px; line-height: 2em;}
+.help-left .menu{font-size: 16px; color: #0092ef; background-color: #eee; text-indent: 1em;}
+.help-left .menu-list{text-indent: 1em; margin-bottom: 10px;}
+.help-left .menu-list a.active{color: red;}
+.help-right{min-height: 680px; margin-left: 220px; line-height: 2em;}
+

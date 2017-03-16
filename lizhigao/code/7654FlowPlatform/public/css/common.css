@@ -1,0 +1,50 @@
+@charset "utf-8";
+/**
+ * 7654流量平台通用样式
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-04
+ */
+body{color: #666; position: relative;}
+a{color: #666; transition: color .25s, background-color .25s;}
+a:hover{color: #ff5400;}
+.w1112{width: 1112px;}
+.wp100{width: 100%;}
+.clb{color: black;}
+.clr{color: red;}
+.clo{color: #ff5400;}
+.cls{color: #999;}
+.input-fixIe6{_border: 1px solid #ccc; _padding: 5px 10px; _overflow: visible; _outline: 0 none;} /*input 兼容ie6*/
+.input-submit-fixIe6{_padding: 5px 10px; _overflow: visible; _outline: 0 none; border: none;} /*input 兼容ie6*/
+input[type="text"],input[type="password"],select{border: 1px solid #ccc; padding: 5px 10px; border-radius: 5px; transition: border-color .25s ease-in-out, box-shadow .25s ease-in-out;}
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus{box-shadow: 0 0 8px #66AFE9; border-color: #66AFE9;}
+button, input[type="submit"]{border: 0 none; padding: 5px 10px; cursor: pointer;}
+table th, table td{text-align: center; padding: 5px}
+input{color: #666;}
+
+/* header - start */
+.header-wrap{border-bottom: 1px solid #EAEAEA;}
+.header,.logo{height: 100px;}
+.nav-list,.logged-in,.logged-out{padding-top: 18px;}
+.nav-list li a{color: black;}
+.nav-list li a:hover{text-decoration: none; color: #ff5400;}
+.nav-list li a.active{color: #ff5400}
+/* header - end */
+
+/* footer - start */
+.footer{padding: 30px 0; background-color: #FAFAFA;}
+.footer-content img{vertical-align: middle;}
+/* footer - end */
+
+/* 分割线 - start */
+.sep{color: #ccc; font-family: sans-serif; margin: 0 5px;}
+/* 分割线 - end */
+
+/* 分页样式 - start */
+.jpages-holder a{border: 1px solid #eee;padding: 3px 8px;margin-right: 10px;cursor: pointer;}
+.jpages-holder a:hover{border-color: #FF5400;}
+.jpages-holder a.jp-current{background-color: #FF5400; border-color: #FF5400; color: white;}
+.jpages-holder a.jp-disabled{color: #bbb; cursor: not-allowed;}
+.jpages-holder a.jp-disabled:hover{border-color: #eee;}
+/* 分页样式 - end */

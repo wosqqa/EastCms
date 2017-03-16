@@ -1,0 +1,61 @@
+@charset "utf-8";
+/**
+ * 注意：“我的账户”相关页面使用此样式文件。
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-28
+ */
+.question-icon{vertical-align: middle; margin-bottom: 2px; *margin-bottom: 0; cursor: pointer;}
+
+.myAccountContentWrap{width: 770px; padding-bottom: 50px;}
+.myAccountContent{border-top: 2px solid #3E7FCD;}
+.myAccount-top{width: 720px; margin: 10px auto 0;}
+.headWrap img{padding: 5px; border: 1px solid #999999;}
+.integralInfoWrap{margin-top: 20px;}
+.integralInfoWrap .userName,.integralInfoWrap em{float: left;}
+.integralInfoWrap .userName{height: 30px; line-height: 30px; color: black; font-size: 22px;}
+.integralInfoWrap em a{color: white;}
+.integralInfoWrap em.label{background: url("../../../img/user/myaccount/round-icon.png") no-repeat; margin: 2px; font-size: 12px; width: 24px; height: 24px; line-height: 24px; display: inline-block; text-align: center;}
+.integralInfoWrap em.level{background-position: 0 0;}
+.integralInfoWrap em.shop{background-position: -24px 0;}
+.integralInfoWrap em.no-shop{background: url("../../../img/user/myaccount/silver-bg.png") no-repeat;}
+.integralInfoWrap em.box{background-position: -48px 0;}
+.integralInfoWrap em.no-box{background: url("../../../img/user/myaccount/silver-bg.png") no-repeat;}
+.integralInfoWrap em.vip{background-position: 0 0;}
+.integralInfoWrap em.no-vip{background: url("../../../img/user/myaccount/silver-bg.png") no-repeat;}
+.progressBar{ width: 550px; height: 18px; background: #f6f6f6; border-radius: 10px; margin: 10px 0 0; padding: 0 10px; line-height: 18px;}
+.progressBar *{display: inline-block;}
+.progressBar .bar{width: 490px; height: 8px; border: 1px solid #d2d2d2; border-radius: 10px; position: relative; margin: 0 5px;}
+.progressBar .percentage{ height: 100%; background-color: #F39800; border-radius: 10px; position: absolute; left: 0; top: 0;}
+
+.integralList{ margin: 30px 0;}
+.integralList .integralItem{float: left; text-align: center; width: 100px; margin-left: 20px;}
+.integralItem .integralNum *{color: white; font-size: 18px;}
+.integralItem .integralLabel span{color: black;}
+.integralItem .integralNum{background: url("../../../img/user/myaccount/sprites_yuan_bg.png") no-repeat; width: 84px; height: 84px; line-height: 84px; text-align: center; margin: 0 auto;}
+.integralItem .yuan1{background-position: 0 0;}
+.integralItem .yuan2{background-position: -84px 0;}
+.integralItem .yuan3{background-position: -168px 0;}
+.integralItem .yuan4{background-position: -252px 0;}
+.integralItem .yuan5{background-position: -336px 0;}
+.integralItem .yuan6{background-position: -420px 0;}
+
+.todayPromote,.integralDetails,.echartWrap{border: 1px solid #E4E4E4; padding: 15px;}
+.todayPromote-h,.integralDetails-h,.echart-h{font-size: 18px; color: black; border-left: 5px solid #3E7FCD; padding-left: 10px;}
+.todayPromote-b,.integralDetails-b,.echart-b{padding: 10px;}
+/* 今日推广 + 实际充入积分明细 */
+.todayPromote-b p{margin-bottom: 10px;}
+.todayPromote-b .lastUpdateTime,
+.integralDetails-tableWrap .lastUpdateTime{margin-top: 10px; margin-bottom: 0;font-size: 12px;}
+.todayPromote-table,
+.integralDetails-table{width: 100%;}
+.todayPromote-table th,
+.todayPromote-table td,
+.integralDetails-table th,
+.integralDetails-table td{border: 1px solid #eeeeee; font-size: 12px;}
+.todayPromote-table-head,
+.integralDetails-table-head{background-color: #EEEEEE;}
+.integralDetails-b .searchFormWrap .searchBtn,
+.echart-b .searchBtn{background: url("../../../img/user/search_btn.png") no-repeat; margin-left: 5px; width: 66px; height: 30px; border: 0 none;}
+
+
+

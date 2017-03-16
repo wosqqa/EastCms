@@ -1,0 +1,72 @@
+@charset "utf-8";
+/**
+ * 快压活动我的业绩页面样式文件
+ * @author Cleam Lee
+ * @date 2015-09-15
+ */
+.search-form .date{background-image: url("../plugin/My97DatePicker/skin/datePicker.gif"); background-repeat: no-repeat; background-position: 156px center; height: 21px; width: 160px;}
+.download-wrap{padding: 0;}
+.history-wrap{width: 730px;}
+.history-wrap .total-income{font-size: 18px; color: #005cd3; height: 40px; line-height: 40px; background-color: #F5F5F5; border-radius: 5px; padding: 8px 10px; margin-bottom: 15px;}
+.history-wrap .total-income span{color: red;}
+.history-wrap .total-income span.sp1{margin-right: 30px;}
+.history-wrap .total-income label{color: #999; font-size: 14px; cursor: default; margin-left: 10px;}
+
+.history-wrap h3{color: #005cd3; border-bottom: 1px solid #c9c9c9; padding-bottom: 5px; margin-bottom: 15px;}
+.history-wrap .search-form label{color: black;}
+/* 搜索按钮 */
+.history-wrap .search-form .search{background-color: #54A6FD; border-color: #2e6da4; color: white; border-radius: 5px; width: 120px; padding: 6px 10px;}
+.history-wrap .search-form .search{background-image: -webkit-linear-gradient(top,#54A6FD 0,#2176CF 100%); background-image: -o-linear-gradient(top,#54A6FD 0,#2176CF 100%); background-image: -webkit-gradient(linear,left top,left bottom,from(#54A6FD),to(#2176CF));
+    background-image: linear-gradient(to bottom,#54A6FD 0,#2176CF 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff54A6FD', endColorstr='#ff2176CF', GradientType=0); filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); background-repeat: repeat-x; border-color: #245580;}
+.history-wrap .search-form .search:hover{color: #fff; background-color: #2176CF; border-color: #204d74;}
+.history-wrap .search-form .search:hover{background-color: #2176CF; background-position: 0 -15px;}
+
+.history-wrap table{width: 100%; margin: 15px 0;}
+.history-wrap table thead tr{background-color: #eee;}
+.history-wrap table td{border: 1px solid #c9c9c9; padding: 10px;}
+
+.withdraw h3{color: #005cd3; margin-bottom: 5px;}
+.withdraw .withdraw-form-wrap{border: 1px solid #c9c9c9;}
+.withdraw .withdraw-form-wrap table{margin: 15px 0 15px 200px;}
+.withdraw .withdraw-form-wrap .money{color: red;}
+.withdraw .withdraw-form-wrap input{width: 200px;}
+.withdraw .withdraw-form-wrap input.phone{width: 120px;}
+/* 发送短信验证码 */
+.withdraw .withdraw-form-wrap .get-phone-yzm{display: inline-block; margin-left: 10px; text-align: center; padding: 6px 10px;     color: #fff; background-color: #5cb85c; border-color: #4cae4c; border-radius: 5px;}
+.withdraw .withdraw-form-wrap .get-phone-yzm{background-image: -webkit-linear-gradient(top,#5cb85c 0,#419641 100%); background-image: -o-linear-gradient(top,#5cb85c 0,#419641 100%); background-image: -webkit-gradient(linear,left top,left bottom,from(#5cb85c),to(#419641)); background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0); filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); background-repeat: repeat-x; border-color: #3e8f3e;}
+.withdraw .withdraw-form-wrap .get-phone-yzm:hover{color: #fff;  background-color: #449d44;  border-color: #398439;}
+.withdraw .withdraw-form-wrap .get-phone-yzm:hover{background-color: #419641; background-position: 0 -15px;}
+.withdraw .withdraw-form-wrap .get-phone-yzm.active{background-color: #bbb; cursor: not-allowed; background-image: none;}
+.withdraw .withdraw-form-wrap .get-phone-yzm.active span{color: red;}
+/* 确认提交 */
+.withdraw .withdraw-form-wrap .submit{background-color: #54A6FD; border-color: #2e6da4; color: white; border-radius: 5px; width: 216px; padding: 6px 10px;}
+.withdraw .withdraw-form-wrap .submit{background-image: -webkit-linear-gradient(top,#54A6FD 0,#2176CF 100%); background-image: -o-linear-gradient(top,#54A6FD 0,#2176CF 100%); background-image: -webkit-gradient(linear,left top,left bottom,from(#54A6FD),to(#2176CF));
+    background-image: linear-gradient(to bottom,#54A6FD 0,#2176CF 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff54A6FD', endColorstr='#ff2176CF', GradientType=0); filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); background-repeat: repeat-x; border-color: #245580;}
+.withdraw .withdraw-form-wrap .submit:hover{color: #fff; background-color: #2176CF; border-color: #204d74;}
+.withdraw .withdraw-form-wrap .submit:hover{background-color: #2176CF; background-position: 0 -15px;}
+
+/* 兑现须知 */
+.withdraw .withdraw-form-wrap .exchange-info{margin: 15px 0 15px 200px;}
+.withdraw .withdraw-form-wrap .exchange-info h5{color: #005cd3;}
+.withdraw .withdraw-form-wrap .exchange-info ul{list-style-type: square; padding-left: 18px; color: #999;}
+
+/* 确认提现窗口 */
+.confirm-win{background-color: white; width: 500px; top: 48%; left: 50%; margin-left: -250px; margin-top: -115px; border-radius: 5px; box-shadow: 0 0 10px #666; z-index: 100;}
+.confirm-win .confirm-hd{padding: 5px 15px; background-color: #005CD3; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center;}
+.confirm-win .confirm-hd h3{color: white; height: 40px; line-height: 40px;}
+.confirm-win .confirm-hd a.close{color: white; float: right; margin-top: -35px; font-size: 18px;}
+.confirm-win .confirm-hd a.close:hover{color: red;}
+.confirm-win .confirm-bd{padding: 15px;}
+.confirm-win .confirm-bd table{width: 100%;}
+.confirm-win .confirm-bd table td.label{width: 50%;}
+.confirm-win .confirm-footer{text-align: center; padding: 5px 15px 20px;}
+/* 取消按钮 #D6D6D6 #A7A7A7 bd: #CFCFCF*/
+.confirm-win .confirm-footer .cancel{display: inline-block; text-align: center; padding: 6px 15px; color: #fff; background-color: #D6D6D6; border-color: #CFCFCF; border-radius: 5px;}
+.confirm-win .confirm-footer .cancel:hover{color: #fff;  background-color: #A7A7A7;  border-color: #CFCFCF;}
+.confirm-win .confirm-footer .cancel{background-image: -webkit-linear-gradient(top,#D6D6D6 0,#A7A7A7 100%); background-image: -o-linear-gradient(top,#D6D6D6 0,#A7A7A7 100%); background-image: -webkit-gradient(linear,left top,left bottom,from(#D6D6D6),to(#A7A7A7)); background-image: linear-gradient(to bottom,#D6D6D6 0,#A7A7A7 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffD6D6D6', endColorstr='#ffA7A7A7', GradientType=0); filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); background-repeat: repeat-x; border-color: #CFCFCF;}
+.confirm-win .confirm-footer .cancel:hover{background-color: #A7A7A7; background-position: 0 -15px;}
+/* 确认提现按钮 #D6D6D6 #A7A7A7 bd: #CFCFCF*/
+.confirm-win .confirm-footer .ok{display: inline-block; margin-left: 15px; text-align: center; padding: 6px 15px; color: #fff; background-color: #54A6FD; border-color: #CFCFCF; border-radius: 5px;}
+.confirm-win .confirm-footer .ok:hover{color: #fff;  background-color: #2176CF;  border-color: #204d74;}
+.confirm-win .confirm-footer .ok{background-image: -webkit-linear-gradient(top,#54A6FD 0,#2176CF 100%); background-image: -o-linear-gradient(top,#D6D6D6 0,#2176CF 100%); background-image: -webkit-gradient(linear,left top,left bottom,from(#54A6FD),to(#2176CF)); background-image: linear-gradient(to bottom,#54A6FD 0,#2176CF 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff54A6FD', endColorstr='#ff2176CF', GradientType=0); filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); background-repeat: repeat-x; border-color: #204d74;}
+.confirm-win .confirm-footer .ok:hover{background-color: #2176CF; background-position: 0 -15px;}

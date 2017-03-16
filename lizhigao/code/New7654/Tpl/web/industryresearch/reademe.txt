@@ -1,0 +1,6 @@
+《行业研究栏目》
+约定：
+1、行业研究（IndustryResearch）简写：ir
+
+说明：
+ir_details.html：行业研究详情页

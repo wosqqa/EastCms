@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>搜索</title>
+	<style>
+	body{margin: 0; padding: 0; width: 300px;}
+	.input-wrap {position: relative; border: 1px solid #DBDBDB; background-color: #fff; height: 26px; line-height: 26px; overflow: hidden; }
+	.input-wrap input.txt { padding: 5px 6px; width: 258px; border: 0 none; background-color: transparent; outline: none;color: #666;}
+	.input-wrap a.submit { position: absolute; top: 1px; right: 0; background-image: url("../assets/images/icon_search.png"); background-repeat: no-repeat; background-position: center center; height: 26px; text-indent: -999px; width: 40px; cursor: pointer; border: 0 none; background-color: transparent; border-left: 1px solid #DCDCDC;}
+	</style>
+	<script type="text/javascript" src="../assets/v1/js/search_word.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+	<script src="http://dup.baidustatic.com/js/ds.js"></script>
+</head>
+<body>
+		<div class="input-wrap">
+			<form action="http://s.eastday.com/" target='_blank'>
+				<input id="bdcsMain" class="txt" type="text" value="" name="kw"/>
+				<a id='search_btn' class="submit png-fixIe6"  target="_blank" href='http://s.eastday.com/?kw='></a>
+			</form>			
+          <script type="text/javascript">
+              (function(){
+                  var $input = $('#bdcsMain');
+                  var $btn_a = $('#search_btn');
+                  $input.val(JS_SEARCH_WORD);
+                  $btn_a.attr('href','http://s.eastday.com/?kw='+encodeURI(JS_SEARCH_WORD));
+                  $input.focus(function(){
+                    if($.trim($(this).val()) == JS_SEARCH_WORD){
+                      $(this).val('');
+                    }
+                  });
+                  $input.blur(function(){
+                    if($.trim($(this).val()) == ''){
+                      $(this).val(JS_SEARCH_WORD);
+                    }
+                    $btn_a.attr('href','http://s.eastday.com/?kw='+encodeURI($input.val()));
+                  });                         
+              })();
+          </script>
+		</div>
+	<!-- 解决IE6透明图片问题 -->
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="/resources/javascripts_v2/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.png-fixIe6');
+    </script>
+    <![endif]-->
+</body>
+</html>

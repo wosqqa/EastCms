@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+/* author sirius */
+.clear{clear:both;}
+body{
+    background-color:#fff;
+    color:#333;
+    font:12px/1.8 \5FAE\8F6F\96C5\9ED1,arial,tahoma,simsun,sans-serif;
+    min-height:100%;
+    position:relative;
+}
+body{}
+/*头部*/
+.dwl_mpns{
+    min-width:1020px;
+    min-height:970px;
+    position:relative;
+    overflow:hidden;
+}
+.dwl_main{
+    width:100%;
+    z-index:9;
+    position:relative;
+    background:url(../images/error_bg.jpg);
+    overflow:hidden;
+}
+.dwl_malo{
+    margin:auto;
+    width:1000px;
+    height:60px;
+    padding:20px 0;
+}
+.dwl_maloa1{
+    display:block;
+    width:344px;
+    height:71px;
+    background:url(../images/logoNew.png) no-repeat;
+    float:left;
+}
+.error_m{width:1000px;margin:20px auto;overflow:hidden;}
+.error_ml{
+    width:525px;
+    height:221px;
+    background:url(../images/error.png) no-repeat;
+    float:left;
+}
+.error_mr{
+    text-align: center;
+}
+.error_mrp1{
+    display:block;
+    line-height:1.8em;
+    font-size:26px;
+    color:#333;
+}
+.error_mrp2{
+    display:block;
+    line-height:1.8em;
+    font-size:18px;
+    color:#666;
+}
+.error_mrp3{
+    display:block;
+    line-height:1.8em;
+    font-size:14px;
+    color:#444;
+}
+.error_mrd{overflow:hidden;margin-top:20px;}
+.error_mrd a{
+    display:block;
+    color:#fff;
+    font-size:18px;
+    width:120px;
+    height:36px;
+    text-align:center;
+    line-height:36px;
+    background:#DA4A4A;
+    margin: 0 auto;
+    border-radius:5px;
+}
+.error_mxq{
+    margin:30px auto;
+    width:940px;
+    padding:30px;
+    background:#fff;
+}
+.st_mbt{width:100%;padding:20px 0;background:#F9F9F9;}
+.st_mbt pre{
+    color:#333;
+    font-size:12px;
+    line-height:1.5em;
+    text-align:center;
+}
+.st_mbt pre a{color:#333}
+.error_mxq p{
+    font-size: 20px;
+    color: #444444;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #eeeeee;
+    text-indent: 5px;
+    margin-bottom: 40px;
+}

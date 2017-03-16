@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="快压（kuaizip）是一款免费、方便、快速的压缩和解压缩利器。" />
+    <meta name="Keywords" content="快压,快速压缩，快速解压" />
+    <meta name="author" content="Cleam Lee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>快压 - 压缩率最高的压缩和解压缩利器</title>
+    <!--[if lt IE 8]><script>window.location.href='notice/update_ie.html?ref='+location.href;</script><![endif]-->
+    <link rel="stylesheet" href="../public/css/base.css">
+    <link rel="stylesheet" href="../public/css/common.css">
+</head>
+<body>
+    <!-- header start -->
+    <div class="banner-wrap">
+        <div class="section">
+            <div class="logo-wrap pa">
+                <img class="vm" src="../public/img/logo.png" alt="快压，十年磨一剑，压缩行业良心之作。">
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    
+    <!-- nav start -->
+    <div class="section nav-wrap clearfix">
+        <ul class="fl">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="performance.html">我的业绩</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="http://www.kuaizip.com/" target="_blank">快压官网</a></li>
+        </ul>
+        <div class="fr"><a id="J_fast_login" class="fast-login" href="javascript:void(0);">快速登录</a></div>
+    </div>
+    <!-- nav end -->
+    <!-- body - start -->
+    <div class="ct">
+        <div class="section content">
+            <div class="pd20">
+                <p>Q：今天安装的什么时候给我返工资？</p>
+                <p>A：今天安装的，明日17：00左右会返回安装量和工资到账户，周末、国家法定假日顺延至工作日返回。</p>
+                <br>
+                <p>Q：返回给我的工资什么时候能提现？</p>
+                <p>A：本月的工资次月15日便可提现。</p>
+                <br>
+                <p>Q：我自己安装的快压会算入我的收入吗？</p>
+                <p>A：算有效的。</p>
+                <br>
+                <p>Q：推广业绩如何计算？</p>
+                <p>
+                    A：当用户下载您用快压压缩的资料后，通过引导使用快压成功打开资料后，则为推广成功，但也需要满足以下条件：
+                    <ol class="pl20">
+                        <li>1、联网情况下安装成功，即为有效；</li>
+                        <li>2、用户电脑3月内安装过该软件，则覆盖安装或重复安装无效；</li>
+                        <li>3、网吧机房环境下安装无效；</li>
+                        <li>4、系统封装无效；</li>
+                    </ol>
+                </p>
+                <br>
+                <p>Q：我的收入怎么提现？</p>
+                <p>A：收入采用提取到支付宝账户的方式提现。</p>
+                <br>
+                <p>Q：提现后多长时间能拿到钱？</p>
+                <p>A：提现后5个工作日内完成审核并转账。</p>
+                <br>
+                <p>Q：快压的官方包更新的情况下，我这边需要重新下载包吗？</p>
+                <p>A：需要重新下载安装包的。</p>
+            </div>
+        </div>
+    </div>
+    <!-- body - end -->
+
+    <!-- footer start -->
+    <div class="footer-wrap mt30 mb30 tc">
+        <div class="section">
+            <p>客服电话：400-009-8356（工作日接听）</p>
+            <p>Copyright &copy; 2010-2014 by KuaiZip.com All Rights Reserved</p>
+        </div>
+    </div>
+
+    <!-- 登录窗口 -->
+    <div id="J_fast_login_win" class="login-win pa none">
+        <div class="login-hd clearfix">
+            <h3>用户登录</h3><a class="close" href="javascript:void(0);">x</a>
+        </div>
+        <div class="login-bd">
+            <form id="J_login_form" action="" onsubmit="return false;">
+                <table>
+                    <tr>
+                        <td class="label tr">手机号码：</td>
+                        <td class="tl"><input class="phone" name="phone" type="text" placeholder="请输入手机号码"></td>
+                    </tr>
+                    <tr>
+                        <td class="label tr">短信验证码：</td>
+                        <td class="tl">
+                            <input class="yzm" type="text" name="yzm" placeholder="短信验证码">
+                            <button type="button" id="J_get_yzm" class="get-yzm">获取验证码</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label tr">验证码：</td>
+                        <td class="tl"><span class="img-yzm">验证码内容</span>&nbsp;&nbsp;看不清?<a id="J_img_yzm" class="img-yzm-link" href="javascript:void(0);">刷新</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tr"></td>
+                        <td class="tl"><input id="J_login_submit" class="submit" type="submit" value="登录"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="tl"><p id="form_error_info" class="error-info"></p></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="J_login_win_bg_shadow" class="login-win-bg-shadow none"></div>
+
+    <!-- footer end -->
+    <script src="../public/lib/jquery/jquery.min.js"></script>
+    <script src="../public/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@charset "utf-8";
+/**
+ * 注意：7654首页引用此文件
+ * 此文件仅为首页样式。
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-22
+ */
+.main{width: 1210px; margin: 0 auto;}
+/* 针对首页对导航菜单进行调整 */
+.nav-allProducts-b{display: block !important;}
+.nav-allProducts-h i{display: none !important;}
+
+/* banner */
+.banner-wrap{height: 277px; padding-left: 210px;}
+.banner-wrap .banner{ width: 731px; height: 265px; position: absolute; padding: 12px 10px 0 10px;}
+.banner-wrap .banner .bannerList{position: relative;}
+.banner-wrap .banner .bannerItem{position: absolute; left: 0; top: 0;}
+.banner-wrap .banner .i-wrap{  position: absolute; left: 346px; bottom: 7px; *bottom: 13px;}
+.banner-wrap .banner .i-wrap span{ display: inline-block; width: 10px; *width: 14px; height: 10px; background: url("../../../img/web/homepage/i_no_active.png") no-repeat center; margin: 0 1px; zoom: 1; cursor: pointer;}
+.banner-wrap .banner .i-wrap span.on{background: url("../../../img/web/homepage/i_active.png") no-repeat center;}
+
+/* 联盟公告-其他的样式使用了公共样式common.css中的panel样式 */
+.announcement{float: right; margin-top: 12px;}
+
+/* 赚钱4步骤 */
+/*.mkMoneySteps{background: url("../../../img/web/homepage/mkMoney_4_step.png") no-repeat center; height: 134px;}*/
+
+/* 核心优势 */
+
+/* 常见问题 */
+.faq{float: left;}
+
+/* 技术员排名 */
+.technicianRanking-wrap .technicianRanking{ float: left; width: 688px; margin-left: 9px;}
+.technicianRanking-wrap .technicianRanking table{width: 100%;}
+.technicianRanking-wrap .technicianRanking table tr.gray{background-color: #F5F5F5;}
+.technicianRanking-wrap .technicianRanking-b{ padding: 0;}
+
+/* 行业快报 */
+.technicianRanking-wrap .industryNews{float: right;}
+
+/* 认证店铺 */
+.authenticationShop-wrap .authenticationShop{width: 100%; height: 220px;}
+.authenticationShop-wrap .authenticationShop-b{ padding: 20px 0;}
+.authenticationShop-wrap .authenticationShop-b div.shop{float: left; margin-left: 40px; text-align: center;}
+
+/* 技术员展示 */
+.technicianShow-wrap .technicianShow{width: 100%; height: 180px;}
+.technicianShow-wrap .technicianShow-b .technician{float: left;width: 220px; margin-left: 15px; margin-top: 15px;}
+.technicianShow-wrap .technicianShow-b .technician .technician-img{float: left;}
+.technicianShow-wrap .technicianShow-b .technician .technician-description{float: right;width: 116px;}
+.technicianShow-wrap .technicianShow-b .technician .technician-description h5{font-size: 16px; color: #C81623;}
+

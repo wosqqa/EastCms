@@ -1,0 +1,22 @@
+@charset "utf-8";
+/**
+ * 7654流量平台 - 产品详情页样式
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-05
+ */
+/* crumbs */
+.crumbs-wrap .crumbs{height: 41px; line-height: 41px;}
+.crumbs-wrap a.applyfor-qualification{color: white; background-color: #ff5400; border-radius: 5px; padding: 10px 20px;}
+.crumbs-wrap a.applyfor-qualification:hover{color: white; background-color: #E24C03;}
+
+/* table */
+.content-wrap table{width: 100%; border: 1px solid #eee;}
+.content-wrap table th{background-color: #F6F6F6; padding: 15px 0;}
+.content-wrap table tr{border-bottom: 1px solid #eee;}
+.content-wrap table th.software{width: 18%;}
+.content-wrap table th.soft-intro{width: 25%;}
+.content-wrap table th.price{width: 15%;}
+.content-wrap table th.effective-rules{width: 42%;}
+.content-wrap table p{line-height: 1.8em;}
+
+

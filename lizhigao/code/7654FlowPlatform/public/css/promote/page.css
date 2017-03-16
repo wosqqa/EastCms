@@ -1,0 +1,34 @@
+@charset "utf-8";
+/**
+ * 7654流量平台 - 推广业绩页样式
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-05
+ */
+.promote-performance{border: 1px solid #eee; padding: 15px 30px;}
+.promote-performance h4{padding: 5px 0 5px 10px;}
+.promote-performance h4 .tag{position: absolute; left: 0; _left: -10px; top: 6px; _top: 2px; width: 4px; height: 25px; background-color: #ff5400;}
+
+.promote-performance-b .title{position: relative; padding-left: 10px; _zoom: 1;}
+.promote-performance-b .title i.chev{position: absolute; left:0; top:7px; background: url("../../img/chev_r.png") no-repeat; width: 4px; height: 6px;}
+.pp-content{padding-left: 6px;}
+
+/* 选择日期 */
+.radio-wrap input{vertical-align: middle; margin: 0 3px 3px 0;}
+.pp-content form .submit{color: white; background-color: #ff5400; border-radius: 5px; padding: 5px 30px;}
+.pp-content form .submit:hover{background-color: #E24C03;}
+/*.pp-content form .date[disabled],
+.pp-content form .date[disabled]{cursor: not-allowed;}*/
+.pp-content form .date{height: 21px; width: 160px; background: url("../../plugin/My97DatePicker/skin/datePicker.gif") no-repeat 156px center; color: #666;}
+/*.pp-content form .submit[disabled],
+.pp-content form .submit[disabled]:hover{background-color: #FFA375; cursor: not-allowed;}*/
+/* 产品列表 */
+.product-list .product-item input{vertical-align: middle; margin: 0 3px 3px 0;}
+.product-list .product-item select{color: #666;}
+
+/* 推广趋势 */
+.promote-echart{width: 100%; height: 400px;} /* echarts */
+.promote-statistics-table th{background-color: #FFF7EF; padding: 8px 0;}
+.promote-statistics-table th,
+.promote-statistics-table td{border: 1px solid #eee;}
+
+

@@ -1,0 +1,23 @@
+@charset "utf-8";
+/**
+ * 注意：“店铺认证”相关页面使用此样式文件。
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-28
+ */
+i.shopIcon{width: 18px; height: 18px; display: inline-block; background: url("../../../img/user/shopcertification/shop-icon.png") no-repeat; margin: 0 5px 2px; vertical-align: middle;}
+i.shopIcon-unauthorized{background-position: -22px -22px;}
+i.shopIcon-authorized{background-position: -22px 0;}
+.scContent{width: 770px; padding-bottom: 50px;}
+.scRewardInfo{margin-top: 10px;}
+.scStatus{border: 1px solid #e4e4e4; padding: 10px; margin-top: 10px;}
+.scStatus .authorized{color: green;}
+.scStatus .unauthorized{color: red;}
+.scInfo{border: 1px solid #e4e4e4; margin-top: 10px; padding: 10px;}
+.scInfo i{color: red;}
+.scInfo form{ padding-left: 50px;}
+.scStatus p, .scInfo p{color: black;}
+.scInfo .scLink{color: #0068B7; text-decoration: underline;}
+.scInfo .uploadImgHint{color: #FF5A00; font-size: 12px;}
+.scInfo form input[type="text"]{width: 367px;}
+.scInfo form input[type="submit"]{ padding: 10px 70px; border: 0 none; background-color: #3E7FCD; color: white;}
+

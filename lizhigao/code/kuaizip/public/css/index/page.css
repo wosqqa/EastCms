@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*
+    快压官网首页样式
+    @author lizhigao(lizhigao@021.com)
+    @date 2015-09-06
+*/
+.nav-list li a.active,
+.nav-list li a:hover{background-color: #1E64AE;}
+
+/* 活动banner */
+.activity-banner-wrap{font-size: 0; margin-bottom: 20px;}
+.activity-banner{display: inline-block; width: 100%; min-width: 990px; height: 80px; background-image: url("../../img/activity_banner/ac_banner_sm.jpg"); background-repeat: no-repeat; background-position: center center; background-color: #FFD93C;}
+.activity-banner .close{position: absolute; right: 10px; top: 10px; display: inline-block; width: 15px; height: 15px; background-image: url("../../img/activity_banner/close_icon.png");}
+
+.header-wrap{position: absolute; width: 100%; z-index: 2; background: url("../../img/tbg_3.png") repeat-x left top;}
+/* banner */
+.banner-wrap{position: relative; z-index: 1; width: 100%;}
+.banner{width: 100%; height: 550px; overflow: hidden; position: relative;}
+.banner-list{width: 100%; overflow: hidden; height: 550px;}
+.banner-list li{float: left; height: 550px; width: 100%;}
+.banner-list li.banner01{background: url("../../img/banner/banner01.jpg") no-repeat center #278CF8;}
+.banner-list li.banner02{background: url("../../img/banner/banner02.jpg") no-repeat center #278CF8;}
+.banner-list li.banner03{background: url("../../img/banner/banner03.jpg") no-repeat center #278CF8;}
+.banner-list li.banner04{background: url("../../img/banner/banner04.jpg") no-repeat center #278CF8;}
+/* banner上的下载信息 */
+.banner-intro-wrap{margin: 0 auto; width: 990px; height: 100%; position: relative; color: white;}
+.banner-intro{position: absolute; right: 60px; top: 150px;}
+.banner-intro h2{font-size: 50px; color: white; font-weight: bold;}
+.banner-intro a.free-download{background: url("../../img/free_download.png") no-repeat; width: 191px; height: 56px; display: inline-block; margin-top: 20px;}
+.banner-intro p.text-info{font-size: 29px; font-family: "\9ED1\4F53";}
+.banner-intro p.version-info{margin-top: 3px; opacity: 0.8; filter: alpha(opacity=80);}
+/* banner上的左右箭头 */
+.banner .arrow{position: absolute; top: 247.5px; display: inline-block; width: 44px; height: 120px; cursor: pointer;}
+.banner .arrow_l{left: 30px; background-image: url("../../img/banner/arrow_l.png"); background-repeat: no-repeat; background-position: center center; display: none;}
+.banner .arrow_l.active{background-image: url("../../img/banner/arrow_la.png");}
+.banner .arrow_r{right: 30px; background-image: url("../../img/banner/arrow_r.png"); background-repeat: no-repeat; background-position: center center;}
+.banner .arrow_r.active{background-image: url("../../img/banner/arrow_ra.png");}
+
+/* banner下的联动信息 */
+.banner-info{width: 100%; height: 316px; background-color: #F8F9F9;}
+.banner-info-list{width: 990px; margin: 0 auto; padding: 50px 0;}
+.banner-info-list li{float: left; margin-left: 62px; width: 200px; text-align: center;}
+.banner-info-list li.banner-info-item-first{margin-left: 0;}
+.banner-info-list p.img .icon01,
+.banner-info-list p.img .icon02,
+.banner-info-list p.img .icon03,
+.banner-info-list p.img .icon04,
+.banner-info-list p.img .icon01.hover,
+.banner-info-list p.img .icon02.hover,
+.banner-info-list p.img .icon03.hover,
+.banner-info-list p.img .icon04.hover{display: inline-block; background: url('../../img/index/banner_info_srpites.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left;}
+.banner-info-list p.img .icon01 { background-position: -0px -0px; width: 110px; height: 110px; }
+.banner-info-list p.img .icon01.hover { background-position: -110px -0px; width: 110px; height: 110px; }
+.banner-info-list p.img .icon02 { background-position: -0px -110px; width: 110px; height: 110px; }
+.banner-info-list p.img .icon02.hover { background-position: -110px -110px; width: 110px; height: 110px; }
+.banner-info-list p.img .icon03 { background-position: -0px -220px; width: 110px; height: 110px; }
+.banner-info-list p.img .icon03.hover { background-position: -110px -220px; width: 110px; height: 110px; }
+.banner-info-list p.img .icon04 { background-position: -0px -330px; width: 110px; height: 110px; }
+.banner-info-list p.img .icon04.hover { background-position: -110px -330px; width: 110px; height: 110px; }
+
+/* 名人媒体评价 - 行业文章 */
+.tab-header{font-size: 20px; border-bottom: 1px solid #eee;}
+.tab-header a{color: black; display: inline-block; padding: 2px 10px;}
+.tab-header a:hover{color: #0183e2;}
+.tab-header a.active{color: #0183e2; border-bottom: 3px solid #0183E2;}
+/* 名人媒体评价 */
+.evaluation-wrap ul li img{border: 1px solid #eee; margin-right: 10px;}
+.evaluation-wrap ul{width: 450px;}
+.evaluation-wrap ul li{margin: 30px 0;}
+.evaluation-wrap ul li h4 small{color: #999; font-size: 14px;}
+.evaluation-wrap ul li a.details{color: #ff9600;}
+.evaluation-wrap ul li a.details:hover{color: red;}
+.sep-long{display: inline-block; height: 380px; margin: 10px 40px; border-left: 1px solid #eee; width: 0; font-size: 0;}
+.articles-wrap .kuaizip-articles,
+.articles-wrap .skills-share{width: 450px;}
+.articles-wrap h4{line-height: 3em; margin-top: 10px; color: #73BEF5;}
+.articles-wrap ul li{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 450px; line-height: 2.6em; border-bottom: 1px dashed #eee;}
+.articles-wrap ul li.item-last{border-bottom: 0 none;}
+.articles-wrap ul li span{background-color: #C2C2C2; padding: 0 4px; margin-right: 5px; color: white; border-radius: 2px;}
+.articles-wrap ul li span.active{background-color: #ff9600;}
+.articles-wrap ul li a.more{color: #999;}
+.articles-wrap ul li a.more:hover{color: red;}
+

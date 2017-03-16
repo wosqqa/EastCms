@@ -1,0 +1,38 @@
+/**
+ * 找回账号页面样式文件
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-23
+ */
+/* 统一编码格式 */
+@charset "utf-8";
+.redLine{width: 100%; background-color: #CA141D; height: 2px;}
+
+.cRed{color: #E13739;}
+
+.forgotAccountMain{min-height: 630px; _height: 630px;}
+.forgotAccountContent-form-b .forgot-table { width: 650px; margin: 100px auto; }
+.forgot-table td { color: #535353; font-size: 14px; height: 38px; text-align: left; }
+.forgot-table .table-left-title { text-align: right; }
+.forgot-table td span { color: #E3393B; }
+.forgot-table .forgot-code { float: right; height: 40px; width: 150px; }
+.forgot-table td input { height: 30px; line-height: 30px; border: 1px solid #D2D9DC; border-radius: .3em; padding-left: 2px; font-size: 14px; }
+.forgot-table td .forgot-input-a { width: 290px; }
+.forgot-table td .forgot-input-b { width: 130px; }
+.forgot-table td .foc-hint { margin-left: 10px; }
+.forgot-table button { height: 40px; background-color: #E13739; border: none; border-radius: .3em; color: #fff; }
+.forgot-table .forgot-btn-a { background-color: #d2d2d2; width: 150px; }
+.forgot-table .forgot-btn-sub { width: 293px; font-size: 1.4em; height: 48px; margin-top: 40px; cursor: pointer; transition: background-color .3s; -webkit-transition: background-color .3s; -moz-transition: background-color .3s; -ms-transition: background-color .3s; -o-transition: background-color .3s; }
+
+/* 重置密码 */
+.resetPwd-h{  width: 500px; margin: 50px auto; text-align: center;}
+.resetPwd-h p{ font-size: 16px; margin-top: 10px;}
+.resetPwd-b table{margin-left: 200px; margin-bottom: 80px;}
+.resetPwd-b table input[type="password"]{ height: 30px; line-height: 30px; border: 1px solid #D2D9DC; border-radius: .3em; padding-left: 2px; font-size: 14px; width: 290px;}
+.resetPwd-b table input[type="submit"]{   background-color: #E13739; border: none; border-radius: .3em; color: #fff;width: 293px; font-size: 1.4em; height: 48px;
+    cursor: pointer; transition: background-color .3s; -webkit-transition: background-color .3s; -moz-transition: background-color .3s;
+    -ms-transition: background-color .3s; -o-transition: background-color .3s;}
+#loginPwd-error,#loginPwdConfirm-error{color: red; margin-left: 10px;}
+/* 密码重置成功 */
+.resetPwdSuccessList{text-align: center;margin: 50px 0 100px;}
+.resetPwdSuccessItem .colorE13739{color: #E13739;}
+.resetPwdSuccessItem span.colorE13739{font-size: 22px;}

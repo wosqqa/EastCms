@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* 遮罩 */
+/*body{margin: 0; padding: 0; width: 100% !important; height: 100% !important;}*/
+.zg-window-shade{position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.3; filter: alpha(opacity=30); display: none; _position:absolute;}
+/* window */
+.zg-window{position: fixed; _position: absolute; z-index: 100000; left: 50%; top: 50%; margin: 0; padding: 0; min-width: 300px; max-height: 600px; width: 400px; background-color: #fff; -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5); box-shadow: 0 3px 9px rgba(0,0,0,.5); border: 1px solid #C71644; border-radius: 3px; display: none; outline: 0; _bottom:auto; _top:expression(eval(document.documentElement.scrollTop));}
+/* header */
+.zg-window .zg-window-header{background-color: #FE492A; padding: 0 80px 0 20px; font-size: 16px; font-weight: bold; height: 46px; line-height: 46px; border-bottom: 1px solid #FE492A; border-top-left-radius: 3px; border-top-right-radius: 3px; color: #fff;}
+/* body */
+.zg-window .zg-window-body{position: relative; padding: 20px; overflow: auto;}
+/* 关闭按钮 */
+.zg-window .zg-window-close{position: absolute; top: 15px; right: 15px; font-size: 0; line-height: initial;}
+.zg-window .zg-window-close a,
+.zg-window .zg-window-close a:hover{display: inline-block; /* background: url('./img/close_sprites.png') no-repeat; */ overflow: hidden;}
+.zg-window .zg-window-close a{background-position: 0 0; width: 16px; height: 16px; font-size: 16px; color: #fff;}
+.zg-window .zg-window-close a:hover{background-position: 0 -16px; width: 16px; height: 16px; color: yellow;}
+/* footer */
+.zg-window .zg-window-footer{text-align: center; padding: 20px 16px;}
+.zg-window .zg-window-footer .zg-window-btn-ok{background-color: #FF6C55; border: 1px solid #FE492A; border-radius: 3px; color: #fff; font-weight: 400; outline: 0 none; cursor: pointer; height: 28px; line-height: 28px;margin: 0 4px; padding: 0 30px;}
+.zg-window .zg-window-footer .zg-window-btn-ok:hover{background-color: #FE492A; border: 1px solid #FE492A;}
+.zg-window .zg-window-footer .zg-window-btn-cancel{background-color: #bbb; border: 1px solid #aaa; border-radius: 3px; color: #fff; font-weight: 400; outline: 0 none; cursor: pointer; height: 28px; line-height: 28px;margin: 0 4px; padding: 0 15px;}
+.zg-window .zg-window-footer .zg-window-btn-cancel:hover{background-color: #ccc; border: 1px solid #bbb;}

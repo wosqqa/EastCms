@@ -1,0 +1,20 @@
+@charset "utf-8";
+/**
+ * 快压活动首页样式文件
+ * @author Cleam Lee
+ * @date 2015-09-14
+ */
+.ti1p5{text-indent: 1.5em;}
+.ti2{text-indent: 2em;}
+.make-money h3,
+.faq h3,
+.salary h3{color: #005cd3; font-weight: bold; margin-bottom: 5px;}
+.faq-body, .salary-body{border: 1px solid #e7e7e7; border-radius: 2px; padding: 10px; height: 300px;}
+.faq-body span{color: #449fff;}
+.faq, .salary{width: 470px;}
+
+.salary-body{padding: 0; overflow: hidden; height: 320px;}
+.salary-list li{height: 39px; line-height: 39px; border-bottom: 1px dashed #e7e7e7;}
+.salary-list li span{width: 33%; display: inline-block; text-align: center;}
+
+

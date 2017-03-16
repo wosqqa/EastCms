@@ -1,0 +1,48 @@
+@charset "utf-8";
+/**
+ * 注意：user（个人中心）下面公共样式文件。
+ * 页面通用组件样式，禁止修改（此文件最好由一人维护，懂规则的也可一起维护。）
+ * 如需修改某个组件样式，请在各栏目的page.css中修改覆盖此文件样式。
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-27
+ */
+/* 统一样式 */
+*{color: #666666;}
+a:hover{color: #3E7FCD;}
+a{transition:all .3s; -moz-transition:all .3s; /* Firefox 4 */ -webkit-transition:all .3s; /* Safari and Chrome */ -o-transition:all .3s; /* Opera */}
+.container { width: 1000px; margin: 0 auto; overflow: hidden;}
+
+/* 头部 */
+.headerWrap{background-color: #2f6291;}
+.header{width: 1000px; height: 50px; margin: 0 auto;}
+.userOpt{height: 50px; line-height: 50px;}
+.userOpt *{color: white;}
+.userOpt a:hover{color: red;}
+.userOpt .userInfo .userHead{padding: 2px; background-color: white; vertical-align: middle;}
+.userOpt .userInfo .lettersIcon{width: 18px; height: 13px; background: url("../../../Public/img/user/letter.png") no-repeat; vertical-align: middle;}
+.userOpt .signOut{margin-left: 5px;}
+.userOpt .splitLine{color: #A0ADB9;}
+
+/* 个人中心 - 公用面包屑导航样式 start */
+.crumbsWrap{padding: 15px 0;}
+.crumbsWrap .backToUserCenter img{vertical-align: middle; margin-bottom: 2px; *margin-bottom: 0;}
+/* 个人中心 - 公用面包屑导航样式 end */
+
+/* 个人中心 - 公用左侧菜单 start */
+.menuWrap{width: 210px;}
+.menuList .menuHeader{ border-bottom: 1px solid #DBDBEA; height: 40px; line-height: 40px; font-size: 14px; text-indent: 1em; color: #6E6E7A;
+    background: url("../../img/user/arrow-d.png") no-repeat 190px center #F6F6F6; cursor: pointer; font-weight: bold;}
+.menuList .menuItem a{ display: block; height: 35px; line-height: 35px; text-indent: 1em;}
+.menuHeader-active{border-top: 2px solid #3E7FCD;}
+.menuItem-active{color: #3E7FCD;}
+/* 个人中心-公用左侧菜单 end */
+
+/* 个人中心 - 通用panel样式 */
+.userPanel{border: 1px solid #E4E4E4;}
+.userPanel-h{padding: 0 10px; height: 45px; line-height: 45px; border-bottom: 1px solid #E4E4E4; background-color: #F6F6F6;}
+.userPanel-h h4{float: left; font-size: 18px; color: #3885E2;}
+.userPanel-h a{float: right; font-size: 12px; color: #999999;}
+.userPanel-h a:hover{color: #3885E2;}
+.userPanel-b{padding: 10px;}
+
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="7654,流量,流量平台,7654联盟,7654装机联盟,技术员联盟">
+	<meta name="description" content="7654流量平台 - 7654装机联盟 - 7654技术员联盟">
+	<meta name="author" content="Cleam Lee">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>7654流量平台</title>
+	<link rel="stylesheet" href="../../public/css/base.css">
+	<link rel="stylesheet" href="../../public/css/common.css">
+	<link rel="stylesheet" href="../../public/css/promote/page.css">
+</head>
+<body>
+	<!-- header -->
+	<div class="header-wrap">
+		<div class="clearfix bc w1112 header">
+			<a class="fl logo" href="###"><img src="../../public/img/logo.jpg" alt="7654流量平台" /></a>
+			<div class="fr nav-wrap">
+				<!-- <p class="tr logged-out"><a href="###">登录</a><span class="sep">|</span><a href="../index/register.html">注册</a></p> -->
+				<p class="tr logged-in">用户名：<a href="###">lizhigaolizhigao</a><span class="sep">|</span><a href="###">推广业绩</a></p>
+				<ul class="nav-list">
+					<li class="fl ml30"><a class="f18 ib active" href="../index/index.html">首页</a></li>
+					<li class="fl ml30"><a class="f18 ib" href="../productDetails/productDetails.html">产品详情</a></li>
+					<li class="fl ml30"><a class="f18 ib" href="../announcement/announcement.html">联盟公告</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /header -->
+
+	<!-- content -->
+	<div class="content-wrap w1112 bc mt20 mb30">
+		<div class="crumbs-wrap clearfix">
+			<p class="crumbs fl">
+				当前位置：<a href="../index/index.html">首页</a>&nbsp;&gt;&nbsp;推广业绩
+			</p>
+		</div>
+		
+		<div class="mt15 promote-performance">
+			<h4 class="pr"><span class="tag"></span>推广业绩</h4>
+			<div class="mt15 promote-performance-b">
+				<p class="">如果任何疑问，欢迎联系7654大客户主管电话：<span class="clr">021-3625453</span> 或 7654官方QQ：<span class="clr">453925871</span></p>
+
+				<!-- 选择日期 start -->
+				<p class="mt20 f16 clb title"><i class="chev"></i>选择日期：</p>
+				<div class="mt10 pp-content">
+					<div class="radio-wrap" id="J_radioDateWrap">
+						<input id="lastSevenDay" type="radio" name="date" checked="checked"><label class="mr15" for="lastSevenDay">最近7天</label>
+						<input id="lastOneMonth" type="radio" name="date"><label class="mr15" for="lastOneMonth">最近1个月</label>
+						<input id="lastTwoMonth" type="radio" name="date"><label class="mr15" for="lastTwoMonth">最近2个月</label>
+						<input id="customDate" type="radio" name="date"><label class="mr15" for="customDate">自定义查询时间</label>
+					</div>
+					<form class="mt10" action="" id="J_rangeDateForm">
+						<input id="J_startDate" class="input-fixIe6 date" type="text" name="startDate" placeholder="开始日期" onClick="WdatePicker()">
+						<span class="sep">-</span>
+						<input id="J_endDate" class="input-fixIe6 date" type="text" name="endDate" placeholder="结束日期" onClick="WdatePicker()">
+						<input id="J_submit" type="submit" value="查询" class="input-submit-fixIe6 ml10 submit">
+					</form>
+				</div>
+				<!-- 选择日期 end -->
+
+				<!-- 选择产品 start -->
+				<p class="mt20 f16 clb title"><i class="chev"></i>选择产品：</p>
+				<div class="pp-content">
+					<ul class="clearfix product-list">
+						<li class="fl mr15 mt10 product-item">
+							<input id="dh_360" type="checkbox" checked="checked"><label for="dh_360">360导航</label>
+							<select name="dh_360_tn" id="dh_360_tn">
+								<option value="all">全部TN包</option>
+							</select>
+						</li>
+						<li class="fl mr15 mt10 product-item">
+							<input id="dh_sogou" type="checkbox"><label for="dh_sogou">搜狗导航</label>
+							<select name="dh_sogou_tn" id="dh_sogou_tn">
+								<option value="all">全部TN包</option>
+							</select>
+						</li>
+						<li class="fl mr15 mt10 product-item">
+							<input id="baidu_weishi" type="checkbox"><label for="baidu_weishi">百度卫士</label>
+							<select name="baidu_weishi_tn" id="baidu_weishi_tn">
+								<option value="all">全部TN包</option>
+							</select>
+						</li>
+						<li class="fl mr15 mt10 product-item">
+							<input id="baidu_shadu" type="checkbox"><label for="baidu_shadu">百度杀毒</label>
+							<select name="baidu_shadu_tn" id="baidu_shadu_tn">
+								<option value="all">全部TN包</option>
+							</select>
+						</li>
+						<li class="fl mr15 mt10 product-item">
+							<input id="baidu_shadu" type="checkbox"><label for="baidu_shadu">百度杀毒</label>
+							<select name="baidu_shadu_tn" id="baidu_shadu_tn">
+								<option value="all">全部TN包</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				<!-- 选择产品 end -->
+
+				<!-- 推广趋势图 start -->
+				<p class="mt20 f16 clb title"><i class="chev"></i>推广趋势图：</p>
+				<div class="mt10 pp-content">
+					<!-- 推广趋势图 -->
+					<div id="J_promote_echart" class="promote-echart"></div>
+
+					<!-- 推广量统计表 -->
+					<table class="wp100 mt10 promote-statistics-table">
+						<thead>
+							<tr>
+								<th>日期</th><th>360导航</th><th>搜狗导航</th><th>百度卫士</th><th>百度杀毒</th>
+							</tr>
+						</thead>
+						<tbody id="J_promoteStatistics">
+							<tr>
+								<td>7-15</td><td></td><td></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td>7-14</td><td></td><td></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td>7-13</td><td></td><td></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td>7-12</td><td></td><td></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td>7-11</td><td></td><td></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td>7-10</td><td></td><td></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td>7-9</td><td></td><td></td><td></td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 分页 -->
+					<div id="J_promoteStatisticsHolder" class="mt15 tc jpages-holder"></div>
+				</div>
+				<!-- 推广趋势图 end -->
+				
+			</div>
+		</div>
+
+	</div>
+	<!-- /content -->
+
+	<!-- footer -->
+	<div class="footer">
+		<p class="w1112 bc tc footer-content">沪ICP备14004717号-1<span class="sep">|</span>合作伙伴
+			<img class="ml10" src="../../public/img/co_baidu.jpg" alt="baidu.com">
+			<img class="ml10" src="../../public/img/co_sogou.jpg" alt="sogou.com">
+			<img class="ml10" src="../../public/img/co_tencent.jpg" alt="tencent.com">
+			<img class="ml10" src="../../public/img/co_360.jpg" alt="360.cn">
+		</p>
+	</div>
+	<!-- /footer -->
+
+	<script src="../../public/lib/jquery/jquery.min.js"></script>
+	<script src="../../public/plugin/My97DatePicker/WdatePicker.js"></script>
+	<script src="../../public/plugin/jquery.jpages.min.js"></script>
+	<script src="../../public/plugin/jquery.placeholder.min.js"></script>
+	<script src="../../public/plugin/echarts/echarts.js"></script>
+	<script src="../../public/js/promote/page.js"></script>
+
+	<!-- 解决IE6透明图片问题 -->
+	<!--[if lte IE 6]>
+	<script src="../../public/plugin/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>DD_belatedPNG.fix('.png-fixIe6');</script>
+	<![endif]-->
+</body>
+</html>

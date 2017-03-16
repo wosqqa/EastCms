@@ -1,0 +1,14 @@
+@charset "utf-8";
+/**
+ * 注意：帮助指南引用此文件
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-29
+ */
+.mainWrap{width: 1210px; margin: 0 auto;}
+.crumbWrap{margin: 15px 0;}
+/* 帮助指南通用panel样式 */
+.hgPanel-h h4{font-size: 20px; color: #E73646;}
+.hgPanel-b{border: 1px solid #e4e4e4; padding: 10px;}
+.hgPanel-b p{float: left; width: 297px;}
+
+

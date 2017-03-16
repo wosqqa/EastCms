@@ -1,0 +1,55 @@
+@charset "utf-8";
+/**
+ * 7654流量平台首页样式
+ * @author lizhigao(lizhigao@021.com)
+ * @date 2015-08-04
+ */
+.banner-wrap{position: relative; height: 400px;}
+.banner-list{position: relative; overflow: hidden; width: 100%; height: 400px;}
+.banner-list li{position: absolute; height: 400px; width: 100%;}
+.banner-list li a{display: inline-block; height: 400px; width: 100%;}
+.banner-list li a.banner1{background: url("../../img/banner/banner01.jpg") no-repeat center;}
+.banner-list li a.banner2{background: url("../../img/banner/banner02.jpg") no-repeat center;}
+.banner-list li a.banner3{background: url("../../img/banner/banner03.jpg") no-repeat center;}
+.banner-wrap ol{position: absolute; bottom: 15px; left: 50%; margin-left: -45px; filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8;}
+.banner-wrap ol li{float: left; border: 2px solid white; width: 10px; height: 10px; border-radius: 50%; margin-left: 5px; cursor: pointer; _font-size: 1px;}
+.banner-wrap ol li.first{margin-left: 0;}
+.banner-wrap ol li.active{background-color: white;}
+/* 登录表单 - start */
+.login-form{position: absolute; right: 0; bottom: 50px; background: rgba(255, 255, 255, 0.6)!important; filter: Alpha(opacity=60);
+        background: #fff; width: 274px; height: 264px; padding: 20px 20px; border-radius: 5px;}
+.login-form div{position: relative;}  /* 实现IE文字不透明 */
+.login-form .username,
+.login-form .password{width: 211px; height: 20px; padding: 10px 10px 10px 50px;}
+.login-form .username{background: url("../../img/index/input_username.png") no-repeat;}
+.login-form .password{background: url("../../img/index/input_password.png") no-repeat;}
+.login-form .submit{background-color: #FF5400; border-radius: 5px; padding: 10px; color: white; width: 100%; transition: background-color .25s; _border: 0 none; _cursor: pointer;}
+.login-form .submit:hover{background-color: #E24C03;}
+/* 错误信息提示 */
+.error-info{position: absolute; right: 0; top: 10px;}
+/* 登录表单 - end */
+
+.content-wrap{position: relative;}
+.content-left{margin-right: 270px;}
+.content-left h4{padding: 5px 0 5px 10px;}
+.content-left h4 span.tag{position: absolute; left: 0; _left: -10px; top: 17px; width: 4px; height: 25px; background-color: #ff5400;}
+.content-right{width: 260px; position: absolute; right: 0; top: 0;}
+
+.content-left table{width: 100%; height: 498px; border: 1px solid #eee;}
+.content-left table th{background-color: #F6F6F6; padding: 15px 0;}
+.content-left table tr{border-bottom: 1px solid #eee;}
+.content-left table th.software{width: 23%;}
+.content-left table th.price{width: 15%;}
+.content-left table th.clearing-circle{width: 20%;}
+.content-left table th.effective-rules{width: 42%;}
+
+/* 联盟公告 */
+.content-right h4{padding: 18px 0 18px 10px;}
+.content-right h4 span.tag{position: absolute; left: 0; _left: -10px; top: 18px; _top: 15px; width: 4px; height: 25px; background-color: #ff5400;}
+.content-right .announcement{border: 1px solid #eee; padding: 10px; height: 311px;}
+.announcement ul li{line-height: 31px;}
+.announcement ul li a{width: 210px; white-space:nowrap; overflow: hidden; text-overflow:ellipsis;}
+.announcement ul li i.new{background: url("../../img/new_icon.gif") no-repeat; width: 22px; height: 9px; margin-left: 2px; margin-top: 10px;}
+/* 联系我们 */
+.contact-us{background: url("../../img/index/contact_us.jpg") no-repeat; width: 260px; height: 155px;}
+.contact-us ul li{line-height: 25px;}

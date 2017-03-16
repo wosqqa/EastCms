@@ -1,0 +1,100 @@
+#首页
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Index/index.php > /dev/null 2>&1
+#uc内嵌页
+*/30 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Index/index_qd.php uc > /dev/null 2>&1
+*/30 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Index/index_qd.php dn1234 > /dev/null 2>&1
+#首页个人推荐
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Index/personal.php > /dev/null 2>&1
+
+
+#热门推荐存入redis
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php guonei > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php guoji > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php caijing > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php tiyu > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php qiche > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php keji > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php junshi > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php shishang > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php yule > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php shehui > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php xiaohua > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php lishi > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php jiankang > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php youxi > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php xingzuo > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php jiaju > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php weikandian > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_hot_recommend_to_redis.php xinwen > /dev/null 2>&1
+#详情页top50存入redis
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_top50_to_redis.php > /dev/null 2>&1
+
+
+#滚动页
+#排行
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/rank.php  > /dev/null 2>&1
+#生成滚动页
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php guonei  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php guoji  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php caijing  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php tiyu  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php qiche  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php keji  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php junshi  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php shishang  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php yule  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php shehui  > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php xiaohua > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php lishi > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php jiankang > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php youxi > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php xingzuo > /dev/null 2>&1
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php jiaju > /dev/null 2>&1
+
+#生成今天的
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php guonei $(date +"\%Y\%m\%d") > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php guoji $(date +"\%Y\%m\%d")   > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php caijing $(date +"\%Y\%m\%d")   > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php tiyu  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php qiche  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php keji  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php junshi  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php shishang  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php yule  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php shehui  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php xiaohua  $(date +"\%Y\%m\%d")  > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php lishi $(date +"\%Y\%m\%d") > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php jiankang $(date +"\%Y\%m\%d") > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php youxi $(date +"\%Y\%m\%d") > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php xingzuo $(date +"\%Y\%m\%d") > /dev/null 2>&1
+55 23 * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Listpage/index.php jiaju $(date +"\%Y\%m\%d") > /dev/null 2>&1
+
+#搜索页
+#搜索推荐
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Search/tuijian.php > /dev/null 2>&1
+#热搜词
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Search/hotword.php > /dev/null 2>&1
+#今日热点
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Search/hot_daily.php > /dev/null 2>&1
+
+#分页推荐页
+*/15 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Topic/index.php > /dev/null 2>&1
+
+#404新闻替换
+*/3 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Detail/detail_for_404.php > /dev/null 2>&1
+
+#工具类
+#redis 备份队列入库
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/Tools/rowkey/redis2db.php > /dev/null 2>&1
+#快讯
+#*/5 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/kuaixun/index.php  > /dev/null 2>&1
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/kuaixun/qd_kuaixun.php  > /dev/null 2>&1
+
+#首页头条
+*/7 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/Hotedit/hot_top27.php  > /dev/null 2>&1
+#404_iframe页面
+0 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/404/iframe.php > /dev/null 2>&1
+#频道页
+*/10 * * * * chmod +x /data/app/www/eastday-pc/script/channel.sh && /data/app/www/eastday-pc/script/channel.sh > /dev/null 2>&1
+#rss订阅
+*/10 * * * * /opt/php/bin/php /data/app/www/eastday-pc/HtmlBuilder/rss.php  > /dev/null 2>&1

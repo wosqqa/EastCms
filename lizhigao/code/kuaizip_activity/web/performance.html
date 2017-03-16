@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="快压（kuaizip）是一款免费、方便、快速的压缩和解压缩利器。" />
+    <meta name="Keywords" content="快压,快速压缩，快速解压" />
+    <meta name="author" content="Cleam Lee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>快压 - 压缩率最高的压缩和解压缩利器</title>
+    <!--[if lt IE 8]><script>window.location.href='notice/update_ie.html?ref='+location.href;</script><![endif]-->
+    <link rel="stylesheet" href="../public/css/base.css">
+    <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="../public/css/page_performance.css">
+</head>
+<body>
+    <!-- header start -->
+    <div class="banner-wrap">
+        <div class="section">
+            <div class="logo-wrap pa">
+                <img class="vm" src="../public/img/logo.png" alt="快压，十年磨一剑，压缩行业良心之作。">
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    
+    <!-- nav start -->
+    <div class="section nav-wrap clearfix">
+        <ul class="fl">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="performance.html">我的业绩</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="http://www.kuaizip.com/" target="_blank">快压官网</a></li>
+        </ul>
+        <div class="fr"><a id="J_fast_login" class="fast-login" href="javascript:void(0);">快速登录</a></div>
+    </div>
+    <!-- nav end -->
+    <!-- body - start -->
+    <div class="ct">
+        <div class="section content">
+            <div class="pd20">
+                <!-- 历史收入 + 历史业绩 -->
+                <div class="clearfix">
+                    <div class="history-wrap fl">
+                        <p class="total-income">历史总收入：<span class="sp1">xxxx元</span>账户余额：<span>xxxx元</span><label>(本月赚得的钱次月15号可提现)</label></p>
+                        <h3>历史业绩</h3>
+                        <form action="" id="J_search_form"  class="search-form">
+                            <label for="">选择日期：</label>
+                            <input id="J_startDate" class="date" type="text" name="startDate" placeholder="开始日期" onClick="WdatePicker()">
+                            <span class="sep">-</span>
+                            <input id="J_endDate" class="date" type="text" name="endDate" placeholder="结束日期" onClick="WdatePicker()">
+                            <input id="J_search_submit" type="submit" value="查询" class="ml10 search">
+                            <label id="J_search_error_info" class="error"></label>
+                        </form>
+                        <table>
+                            <thead>
+                                <tr><td>日期</td><td>推广有效量</td><td>收入</td></tr>
+                            </thead>
+                            <tbody id="J_pages_performance" class="pages-performance">
+                                <!-- <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr>
+                                <tr><td>xxxx-xx-xx</td><td>xxxxxxx</td><td>xxxxxxx</td></tr> -->
+                            </tbody>
+                        </table>
+                        <div id="J_pages_holder" class="jpages-holder"></div>
+                    </div>
+                    <div class="download-wrap fr">
+                        <p><a href="###"><img src="../public/img/download.png" alt="下载快压安装包"></a></p>
+                        <p>最新版本：V2.7.83.0</p>
+                        <p>大小: 5.5M</p>
+                    </div>
+                </div>
+                <!-- 我要提现 -->
+                <div class="withdraw">
+                    <h3>我要提现</h3>
+                    <div class="withdraw-form-wrap">
+                        <form action="" id="J_withdraw_form" class="withdraw-form" onsubmit="return false;">
+                            <table>
+                                <tr><td class="tr">可提现：</td><td class="tl"><span class="money">xxxx</span>元</td><td></td></tr>
+                                <tr>
+                                    <td class="tr">提现金额：</td>
+                                    <td class="tl"><input name="money" type="text" placeholder="最低提现金额10元" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="tr">支付宝账号：</td>
+                                    <td class="tl"><input name="alipayAccount" type="text" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="tr">手机号码：</td>
+                                    <td class="tl">
+                                        <input name="mobilephone" class="phone" type="text" required>
+                                        <button id="J_get_phone_yzm" type="button" class="get-phone-yzm">发送短信验证码</button>
+                                        <label class="error">&nbsp;</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tr">短信验证码：</td>
+                                    <td class="tl"><input name="phoneYzm" type="text" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="tr"></td>
+                                    <td class="tl"><input id="J_withdraw_submit" type="submit" class="submit" value="确认提现"></td>
+                                </tr>
+                            </table>
+                        </form>
+                        <div class="exchange-info">
+                            <h5>兑现须知</h5>
+                            <ul>
+                                <li>兑现申请提交成功后5个工作日内完成审核发放；</li>
+                                <li>周末、国家法定假日顺延至工作日进行；</li>
+                                <li>若提现失败，请联系客服；</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- /我要提现 -->
+
+            </div>
+        </div>
+    </div>
+    <!-- body - end -->
+
+    <!-- footer start -->
+    <div class="footer-wrap mt30 mb30 tc">
+        <div class="section">
+            <p>客服电话：400-009-8356（工作日接听）</p>
+            <p>Copyright &copy; 2010-2014 by KuaiZip.com All Rights Reserved</p>
+        </div>
+    </div>
+
+    <!-- 登录窗口 -->
+    <div id="J_fast_login_win" class="login-win pa none">
+        <div class="login-hd clearfix">
+            <h3>用户登录</h3><a class="close" href="javascript:void(0);">x</a>
+        </div>
+        <div class="login-bd">
+            <form id="J_login_form" action="" onsubmit="return false;">
+                <table>
+                    <tr>
+                        <td class="label tr">手机号码：</td>
+                        <td class="tl"><input class="phone" name="phone" type="text" placeholder="请输入手机号码"></td>
+                    </tr>
+                    <tr>
+                        <td class="label tr">短信验证码：</td>
+                        <td class="tl">
+                            <input class="yzm" type="text" name="yzm" placeholder="短信验证码">
+                            <button type="button" id="J_get_yzm" class="get-yzm">获取验证码</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label tr">验证码：</td>
+                        <td class="tl"><span class="img-yzm">验证码内容</span>&nbsp;&nbsp;看不清?<a id="J_img_yzm" class="img-yzm-link" href="javascript:void(0);">刷新</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tr"></td>
+                        <td class="tl"><input id="J_login_submit" class="submit" type="submit" value="登录"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="tl"><p id="form_error_info" class="error-info"></p></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="J_login_win_bg_shadow" class="login-win-bg-shadow none"></div>
+
+    <!-- 提现确认窗口 -->
+    <div id="J_confirm_win" class="confirm-win pa none">
+        <div class="confirm-hd clearfix">
+            <h3>信息确认</h3><a class="close" href="javascript:void(0);">x</a>
+        </div>
+        <div class="confirm-bd">
+            <table>
+                <tr><td class="tr label">手机号码：</td><td class="tl mobolephone">xxxxxxxxxx</td></tr>
+                <tr><td class="tr label">提现金额：</td><td class="tl money">xxxxxxxxxx</td></tr>
+                <tr><td class="tr label">支付宝账号：</td><td class="tl alipayAccount">xxxxxxxxxx</td></tr>
+            </table>
+        </div>
+        <div class="confirm-footer">
+            <button class="cancel" type="button">取消</button>
+            <button id="J_confirm_submit" class="ok" type="button">确认提交</button>
+        </div>
+    </div>
+
+
+    <!-- footer end -->
+    <script src="../public/lib/jquery/jquery.min.js"></script>
+    <script src="../public/plugin/My97DatePicker/WdatePicker.js"></script>
+    <script src="../public/plugin/jquery.jpages.min.js"></script>
+    <script src="../public/plugin/validate/jquery.validate.min.js"></script>
+    <script src="../public/plugin/validate/messages_zh.min.js"></script>
+    <script src="../public/plugin/validate/additional-methods.js"></script>
+    <script src="../public/js/common.js"></script>
+    <script src="../public/js/page_performance.js"></script>
+</body>
+</html>

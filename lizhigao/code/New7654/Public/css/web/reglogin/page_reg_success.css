@@ -1,0 +1,16 @@
+/**
+ * 注册成功页面样式文件
+ * @author created by lizhigao(lizhigao@021.com)
+ * @date 2015-05-23
+ */
+/* 统一编码格式 */
+@charset "utf-8";
+.redLine{width: 100%; background-color: #CA141D; height: 2px;}
+input.pulicitem{height: 38px; line-height: 38px\9; transition: all 0.30s ease-in-out; -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out;
+    border: 1px solid #D2D9DC; outline: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background: none;}
+
+.regSuccessMain{min-height: 630px; _height: 630px;}
+.regSuccessBlock{width: 660px; margin: 50px auto; border: 1px solid #EAEAEA;}
+.regSuccessList{margin: 50px auto; width: 320px; text-align: center;}
+.regSuccessItem{line-height: 30px;}
+.regSuccessItem i.regSuccessTimer{margin: 0 5px; color: red;}

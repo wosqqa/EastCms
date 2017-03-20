@@ -1,0 +1,52 @@
+/*
+* @Author: zhanhaitao
+* @Date:   2017-03-20 13:37:08
+* @Last Modified time: 2017-03-20 14:34:38
+*/
+
+@font-face {
+	font-family: 'FZLTHK';
+	src: url(../font/FZLTHK.TTF);
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FZLTZHK';
+	src: url(../font/FZLTZHK.TTF);
+	font-weight: normal;
+	font-style: normal;
+}
+
+.article {
+	text-align: justify;
+	margin: 45px 15px 0;
+}
+#title {
+	text-align: justify;
+	font-family: 'FZLTHK';
+}
+#title .title {
+	font-size: 25px;
+	line-height: 45px;
+	color: #333;
+}
+#title .title:first-line {
+	line-height: 25px;
+}
+.article-src-time {
+	font-size: 10px;
+	color: #aaa;
+}
+.article-src-time .line {
+	margin: 0 3px;
+}
+#content {
+	margin-top: 45px;
+	font-family: 'FZLTZHK';
+}
+#content .content-txt {
+	font-size: 17px;
+	color: #333;
+	line-height: 27px;
+	margin-top: 25px;
+}

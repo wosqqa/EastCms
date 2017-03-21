@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao(zhanhaitao@021.com)
 * @Date:   2017-03-15 19:39:43
-* @Last Modified time: 2017-03-21 16:04:27
+* @Last Modified time: 2017-03-21 19:52:29
 */
 
 /*! Zepto 1.2.0 (generated with Zepto Builder) - zepto event ajax form ie fx data touch stack selector fx_methods detect deferred callbacks - zeptojs.com/license */
@@ -81,17 +81,6 @@ GLOBAL.namespace('Cookie');
 
 //公用的工具方法
 GLOBAL.Util = {
-    /**
-     * 获取url中参数的值
-     * @param  {[type]} name 参数名
-     * @return {[type]}      参数值
-     */
-    getQueryString: function(name){
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return decodeURI(r[2]);
-        return null;
-    },
     /**
      * OS的判断
      * @return {[type]} [description]
@@ -201,8 +190,8 @@ var module = (function(my){
 	// 存储一系列初始化方法
     my.inits = my.inits || [];
 
-    var $body = $('body'),
-        positionUrl = 'https://position.dftoutiao.com/position/get',   // 获取用户位置
+    var $_dftt_teachertu_container = $(_dftt_teachertu_container);
+    	positionUrl = 'https://position.dftoutiao.com/position/get',   // 获取用户位置
     	dspUrl = 'http://106.75.73.203/dfdsp/dfwapadv';  //dsp广告测试接口
 
     /**
@@ -213,8 +202,8 @@ var module = (function(my){
         var params = 'qid='+ GLOBAL.Et.qid +''
             '&uid=' + GLOBAL.Et.uid + 
             '&cnurl=' + GLOBAL.Util.getUrlNoParams() + 
-            '&pgtype='+ teachertu_adposition +'';   // 首页传list，详情页传detail
-        $body.append('<div class="wnwifigg-wrap"><iframe src="http://s.dftoutiao.com/wnwifi/wnwifi.html?' + params + '" frameborder="0" scrolling="no" width="100%" height="153"></iframe></div>');
+            '&pgtype='+ _dftt_teachertu_adposition +'';   // 首页传list，详情页传detail
+        $_dftt_teachertu_container.append('<div class="wnwifigg-wrap"><iframe src="http://s.dftoutiao.com/wnwifi/wnwifi.html?' + params + '" frameborder="0" scrolling="no" width="100%" height="153"></iframe></div>');
     };
 
     /**
@@ -224,7 +213,7 @@ var module = (function(my){
     	var script = document.createElement('script');
     		script.type = 'text/javascript';
     		script.src = 'http://a1.liuxue86.com/wk3a1ecf94f3cbf638db1f23c5adf722f740e7855275e13eef.js';
-    	$body.append(script)
+    	$_dftt_teachertu_container.append(script)
     };
 
     /**
@@ -232,8 +221,8 @@ var module = (function(my){
      * @param  {[type]} data 广告数据
      */
     function loadSanGg(data){
-        $body.append('<div class="gg-item">' +
-                            '<a href="'+ data.url +'" class="gg_link">' +
+        $_dftt_teachertu_container.html('<div class="gg-item">' +
+                            '<a data-src="'+ data.url +'" class="gg_link" data-clickurl="'+ data.clickbackurl +'">' +
                                 '<div class="news-wrap clearfix">' +
                                     '<h3 class="news-title">'+ data.topic +'</h3>' +
                                     '<div class="imgs-wrap clearfix">' +
@@ -250,32 +239,33 @@ var module = (function(my){
                                 '</div>' +
                            ' </a>' +
                         '</div>');
+        new Image().src = data.showbackurl;
     };
 
     /**
      * 渲染单图广告
      * @param  {[type]} data 广告数据
      */
-    function loadDanGg(data){
-        $body.append('<div class="gg-item">' +
+    /*function loadDanGg(data){
+        $_dftt_teachertu_container.html('<div class="gg-item">' +
                             '<a href="'+ data.url +'" class="gg_link">' +
                                 '<div class="news-wrap clearfix">' +
                                     '<div class="txt-wrap fl">' +
-                                        '<h3 class="txt-title">啊啊啊啊啊啊</h3>' +
+                                        '<h3 class="txt-title">'+ data.topic +'</h3>' +
                                         '<p class="tags clearfix">' +
                                             '<em class="tag tag-time">' +
                                                 '<i class="tag tag-gg">广告</i>' +
                                             '</em>' +
-                                            '<em class="tag tag-src">詹海涛</em>' +
+                                            '<em class="tag tag-src">'+ data.source +'</em>' +
                                         '</p>' +
                                     '</div>' +
                                     '<div class="img-wrap fr">' +
-                                        '<img src="img/g1.jpg">' +
+                                        '<img src="'+ data.miniimg[0].src +'">' +
                                     '</div>' +
                                 '</div>' +
                             '</a>' +
                         '</div>');
-    };
+    };*/
 
     /**
      * 获取dsp广告
@@ -292,11 +282,10 @@ var module = (function(my){
                 adnum: 1,     // 广告数量
                 adtype: 3,    // 1：大图 2：单图 3：三图
                 os: GLOBAL.Util.getOsType().split(' ')[0].toLowerCase(),
-                adposition: teachertu_adposition  //广告位 由图老师控制 list || detail
+                adposition: _dftt_teachertu_adposition  //广告位 由图老师控制 list || detail
             },
     		timeout: 3000,
     		success: function(res){
-    			console.info(res)
     			var dlen = res && res.data.length,
     				data = res && res.data[0];
     			if(dlen > 0){
@@ -403,4 +392,11 @@ $(function(){
             }
         }
     });
+
+    $('body').on('click','.gg_link',function(){
+    	var clickurl = $(this).attr('data-clickurl'),
+    		href = $(this).attr('data-src');
+    	new Image().src = clickurl;
+    	window.location.href = href;
+    })
 });

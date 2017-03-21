@@ -1,0 +1,68 @@
+@charset "utf-8";
+/*
+* @Author: zhanhaitao
+* @Date:   2017-03-15 19:39:51
+* @Last Modified time: 2017-03-21 17:15:54
+*/
+
+/* 三图样式 */
+.gg-item {
+	padding: 16px;
+}
+.gg_link {
+	display: block;
+}
+.news-wrap {
+	position: relative;
+	padding-bottom: 12px;
+}
+.news-wrap .news-title {
+	font-size: 17px;
+	line-height: 1.2em;
+	overflow: hidden;
+	width: 100%;
+	max-height: 40px;
+	margin-bottom: 7px;
+}
+.news-wrap .imgs {
+	width: 33.33%;
+	padding-right: 2px;
+}
+.news-wrap .imgs img {
+	width: 100%;
+}
+.tags {
+	margin-top:7px;
+	color:#999;
+	font-size:0;
+}
+.tags .tag {
+	display:inline-block;
+	font-size:10px;
+	line-height:12px;
+	margin-right:5px;
+}
+.tags .tag-gg{
+	border: 1px solid #ddd;
+}
+.tags .tag-src{
+	margin-right:0;
+}
+
+/* 单图样式 */
+.txt-wrap {
+	position:relative;
+	width:67%;
+}
+.img-wrap {
+	width:33%;
+}
+.img-wrap img {
+	width:100%;
+}
+.txt-title {
+	font-size:17px;
+	line-height:1.2em;
+	margin-right:12px;
+	min-height:40px;
+}

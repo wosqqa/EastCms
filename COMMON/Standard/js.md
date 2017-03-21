@@ -423,8 +423,9 @@ var result = condition
 
 ### 7. 语句【待讨论】
 
-* __不得省略语句结束的分号。__
-* __在 `if`  `else`  `for`  `do`  `while` 语句中，即使只有一行，也不得省略块 `{...}`。__
+* __优先使用单引号`''`包裹字符串__
+* __不可以省略语句结束的分号__【建议】
+* __在 `if`  `else`  `for`  `do`  `while` 语句中，即使只有一行，也不得省略块 `{...}`__
 
 ```javascript
 // Good
@@ -438,7 +439,7 @@ if (condition)
     callFunc();
 ```
 
-* __函数定义结束不允许添加分号。__【待讨论，觉得这里很混乱。p.s.我喜欢完全无分号   -yaoweijian】
+* __函数定义结束不添加分号__【待讨论】
 
 ```javascript
 // Good
@@ -476,4 +477,58 @@ var func = (function () {
 
 ### 附录：eslint配置
 
-（待完善...）
+```javascript
+module.exports = {
+    root: true,
+
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "jsx": true
+        },
+        "sourceType": "module"
+    },
+
+    "env": {
+        "es6": true,
+        "node": true
+    },
+
+    "globals": {
+        "document": true,
+        "navigator": true,
+        "window": true
+    },
+
+    // custom rules here
+    'rules': {
+        // allow paren-less arrow functions
+        'arrow-parens': 1,
+
+        //禁止使用多余的圆括号
+       "no-extra-parens": 2,
+       //禁止多余的冒号
+       "no-extra-semi": 2,
+       //禁止重复的函数声明
+       "no-func-assign": 2,
+       //禁止在块语句中声明变量或函数
+       "no-inner-declarations": 2,
+        // default: [2, "all"] 全都需要{ }包围
+        "curly": 2,
+        //所有的switch语句都必须要有一个default分支
+        "default-case": 2,
+
+        "indent": [1, 4, { "SwitchCase": 1 }], // 警告非4个空格tab
+        "key-spacing": [2, { "beforeColon": false, "afterColon": true }], // 该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
+        "no-mixed-spaces-and-tabs": 1, // 警告混用tab和空格
+        "no-unused-vars": [1, { "vars": "all", "args": "none" }], // 警告未使用的变量
+        "quotes": [2, "single", "avoid-escape"], // 字符串必须用单引号包裹
+        "semi": [0, "never"], // 无分号
+        "space-before-blocks": [2, "always"], // {}前必须一个单空格
+
+        // allow debugger during development
+        'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    }
+}
+```

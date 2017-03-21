@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao
 * @Date:   2017-03-20 13:37:08
-* @Last Modified time: 2017-03-20 14:59:20
+* @Last Modified time: 2017-03-20 16:18:15
 */
 
 @font-face {
@@ -16,14 +16,10 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-.article {
-	text-align: justify;
-	margin: 45px 15px 0;
-}
 #title {
 	text-align: justify;
 	font-family: 'FZLTZHK';
+	margin: 45px 15px 0;
 }
 #title .title {
 	font-size: 25px;
@@ -33,15 +29,15 @@
 #title .title:first-line {
 	line-height: 25px;
 }
-.article-src-time {
+#title .article-src-time {
 	font-size: 10px;
 	color: #aaa;
 }
-.article-src-time .line {
+#title .article-src-time .line {
 	margin: 0 3px;
 }
 #content {
-	margin-top: 45px;
+	margin: 45px 15px 0;
 	font-family: 'FZLTHK';
 }
 #content .content-txt {

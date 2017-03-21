@@ -108,7 +108,7 @@ clean-css是一个CSS压缩工具，为了保留CSS文件的版权信息等特�
 .foo {
     background: #ccc;
     color: #00f;
-    border-color: #F00; /* 红色 */
+    border-color: #f00; /* red 红色 */
     transform: translateX(20px);
 }
 
@@ -138,6 +138,7 @@ clean-css是一个CSS压缩工具，为了保留CSS文件的版权信息等特�
 ```
 
 * 每个声明前保留一级缩进。
+
 ```css
 /* Good */
 h3 {
@@ -191,7 +192,7 @@ h3 {
 }
 ```
 
-### 6. 选择器
+### 6. 选择器【建议】
 
 * 当一个样式规则包含多个选择器时，每个选择器声明必须独占一行。
 
@@ -340,7 +341,7 @@ h3 {
 
 请使用 `base.css` 中定义的清除浮动的类（`clearfix`）来清除浮动，请不要使用增加空标签的形式来清除浮动。
 
-### 11. !important
+### 11. !important【建议】
 
 非必要情况下，请不要使用`!important`。
 
@@ -360,7 +361,7 @@ input[type='text']{ /*...*/ }
 .selector { background-image: url('xxxx.png'); }
 ```
 
-### 13. 字体命名
+### 13. 字体命名【必须】
 
 * `font-family` 属性中的字体族名称应使用字体的英文 `Family Name`，其中如有空格，须放置在引号中。
 

@@ -438,7 +438,7 @@ if (condition)
     callFunc();
 ```
 
-* __函数定义结束不允许添加分号。__【待讨论，觉得这里很混乱。p.s.我喜欢完全无分号 -yaoweijian】
+* __函数定义结束不允许添加分号。__【待讨论，觉得这里很混乱。p.s.我喜欢完全无分号   -yaoweijian】
 
 ```javascript
 // Good
@@ -454,7 +454,7 @@ var funcName = function () {
 };
 ```
 
-* `立即执行函数表达式（IIFE）`必须在函数表达式外添加 `(`，非`IIFE`不得在函数表达式外添加 `(`。（IIFE = Immediately-Invoked Function Expression）
+* `立即执行函数表达式（IIFE）`必须在函数表达式外添加 `()`，非`IIFE`不得在函数表达式外添加 `()`。（IIFE = Immediately-Invoked Function Expression）
 
 ```javascript
 // Good

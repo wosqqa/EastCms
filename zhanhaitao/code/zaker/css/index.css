@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao
 * @Date:   2017-03-20 13:37:08
-* @Last Modified time: 2017-03-22 10:10:40
+* @Last Modified time: 2017-03-22 10:42:22
 */
 
 @font-face {
@@ -18,11 +18,11 @@
 }
 #title {
 	text-align: justify;
-	font-family: 'FZLTZHK';
-	margin: 39px 15px 0;
+	margin: 52px 15px 0;
 }
 #title .title {
 	font-size: 25px;
+	font-family: 'FZLTZHK';
 	line-height: 45px;
 	color: #333;
 }
@@ -30,6 +30,7 @@
 	line-height: 25px;
 }
 #title .article-src-time {
+	font-family: 'FZLTHK';
 	font-size: 10px;
 	color: #aaa;
 }

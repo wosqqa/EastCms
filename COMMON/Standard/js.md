@@ -121,6 +121,10 @@ function trim(str){
 
 在 JavaScript 中变量和方法定义会自动提升到执行之前。JavaScript 只有 `function` 级的定义域，而无其他很多编程语言中的块定义域，所以使得你在某一 `function` 内的某语句和循环体中定义了一个变量，此变量可作用于整个 `function` 内，而不仅仅是在此语句或循环体中，因为它们的声明被 JavaScript 自动提升了。
 
+* __函数作用域内变量统一声明。__
+
+一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
+
 ```javascript
 // Good
 (function(log) {
@@ -208,6 +212,7 @@ function func() {
 ```
 
 * __`switch` 下的 `case` 和 `default` 必须增加一个缩进层级。__
+
 ```javascript
 // Good
 switch (variable) {
@@ -423,8 +428,29 @@ var result = condition
 
 ### 7. 语句【待讨论】
 
+* 分号：以下几种情况后需加分号
+1. 变量声明
+2. 表达式
+3. return
+4. throw
+5. break
+6. continue
+7. do-while
+
+```javascript
+/* var declaration */
+var x = 1;
+
+/* expression statemen */
+x++;
+
+/* do-while */
+do {
+    x++;
+} while (x < 10);
+```
+
 * __优先使用单引号`''`包裹字符串__
-* __不可以省略语句结束的分号__【建议】
 * __在 `if`  `else`  `for`  `do`  `while` 语句中，即使只有一行，也不得省略块 `{...}`__
 
 ```javascript
@@ -439,21 +465,6 @@ if (condition)
     callFunc();
 ```
 
-* __函数定义结束不添加分号__【待讨论】
-
-```javascript
-// Good
-function funcName() {
-}
-
-// Bad
-function funcName() {
-};
-
-// 如果是函数表达式，分号是不允许省略的。
-var funcName = function () {
-};
-```
 
 * `立即执行函数表达式（IIFE）`必须在函数表达式外添加 `()`，非`IIFE`不得在函数表达式外添加 `()`。（IIFE = Immediately-Invoked Function Expression）
 
@@ -507,24 +518,24 @@ module.exports = {
         'arrow-parens': 1,
 
         //禁止使用多余的圆括号
-       "no-extra-parens": 2,
-       //禁止多余的冒号
-       "no-extra-semi": 2,
-       //禁止重复的函数声明
-       "no-func-assign": 2,
-       //禁止在块语句中声明变量或函数
-       "no-inner-declarations": 2,
-        // default: [2, "all"] 全都需要{ }包围
+        "no-extra-parens": 2,
+        //禁止多余的冒号
+        "no-extra-semi": 2,
+        //禁止重复的函数声明
+        "no-func-assign": 2,
+        //禁止在块语句中声明变量或函数
+        "no-inner-declarations": 2,
+        //全都需要{ }包围
         "curly": 2,
         //所有的switch语句都必须要有一个default分支
         "default-case": 2,
 
-        "indent": [1, 4, { "SwitchCase": 1 }], // 警告非4个空格tab
+        "indent": [1, 4, { "SwitchCase": 1 }], // 警告非4个空格缩进
         "key-spacing": [2, { "beforeColon": false, "afterColon": true }], // 该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
-        "no-mixed-spaces-and-tabs": 1, // 警告混用tab和空格
+        "no-mixed-spaces-and-tabs": 1, // 警告混用tab制表符和空格
         "no-unused-vars": [1, { "vars": "all", "args": "none" }], // 警告未使用的变量
         "quotes": [2, "single", "avoid-escape"], // 字符串必须用单引号包裹
-        "semi": [0, "never"], // 无分号
+        "semi": [1, "always"], // 无分号时提示
         "space-before-blocks": [2, "always"], // {}前必须一个单空格
 
         // allow debugger during development

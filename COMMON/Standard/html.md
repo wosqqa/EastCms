@@ -72,7 +72,7 @@
 </ul>
 ```
 
-### 2. 命名【建议，待讨论】
+### 2. class和id命名【建议，待讨论】
 
 * `class`必须单词全字母小写，单词间以中横线`-`分隔（为了方便代码阅读与维护,用于js操作的class，建议新增一个以`J-`开头作为class名，该class只用于js操作）;
 * `id`建议单词全字母小写，单词间以下划线`_`分隔，（为了方便代码阅读与维护,用于js操作的id，建议以`J_`开头作为id名）。
@@ -171,7 +171,7 @@ HTML 标签的使用应该遵循标签的语义（`开发过程中一定要尽�
 ### 4. 属性【必须】
 
 * 属性名必须使用`小写字母`。
-* 属性值必须用双引号（`""`）包围。
+* 属性值必须用双引号（`""`）包围，不要使用单引号。
 
 ```html
 <!-- Good -->
@@ -193,6 +193,20 @@ HTML 标签的使用应该遵循标签的语义（`开发过程中一定要尽�
 ```html
 <img src="xxx.png" alt="test img" data-width="400" data-height="300">
 ```
+
+* 属性应该按照特定的顺序出现以保证易读性；
+    - class
+    - id
+    - name
+    - data-
+    - src, for, type, href, value , max-length, max, min, pattern
+    - placeholder, title, alt
+    - aria-, role
+    - required, readonly, disabled
+
+class是为高可复用组件设计的，所以应处在第一位；
+
+id更加具体且应该尽量少使用，所以将它放在第二位。
 
 ### 5. 注释【建议】
 

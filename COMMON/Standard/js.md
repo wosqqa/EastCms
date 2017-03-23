@@ -72,13 +72,12 @@ var hasMoreCommands = false;
 * __`多行注释`：避免使用 `/*...*/` 这样的多行注释。有多行注释内容时，使用多个单行注释。__
 
 * __`文档化注释`：为了便于代码阅读和自文档化，以下内容建议包含以 `/**...*/` 形式的块注释中。__
-
-1. 文件
-2. 类
-3. 函数或方法
-4. 事件
-5. 常量
-6. 全局变量
+    1. 文件
+    2. 类
+    3. 函数或方法
+    4. 事件
+    5. 常量
+    6. 全局变量
 
 * __文档注释前必须空一行。__
 
@@ -121,6 +120,10 @@ function trim(str){
 
 在 JavaScript 中变量和方法定义会自动提升到执行之前。JavaScript 只有 `function` 级的定义域，而无其他很多编程语言中的块定义域，所以使得你在某一 `function` 内的某语句和循环体中定义了一个变量，此变量可作用于整个 `function` 内，而不仅仅是在此语句或循环体中，因为它们的声明被 JavaScript 自动提升了。
 
+* __函数作用域内变量统一声明。__
+
+一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
+
 ```javascript
 // Good
 (function(log) {
@@ -128,10 +131,10 @@ function trim(str){
 
     var a = 10,
         b = 10,
-        c,
+        c = 0,
         d = 100,
-        i,
-        x;
+        i = '',
+        x = [];
 
     function f() {
 
@@ -208,6 +211,7 @@ function func() {
 ```
 
 * __`switch` 下的 `case` 和 `default` 必须增加一个缩进层级。__
+
 ```javascript
 // Good
 switch (variable) {
@@ -264,7 +268,7 @@ function funcName(){
 }
 ```
 
-* __`if`  `else`  `for`  `while`  `function`  `switch`  `do`  `try`  `catch`  `finally` 关键字后，必须有一个空格。__【function 待讨论】
+* __`if`  `else`  `for`  `while`  `function`  `switch`  `do`  `try`  `catch`  `finally` 关键字后，必须有一个空格。__
 
 ```javascript
 // Good
@@ -423,8 +427,25 @@ var result = condition
 
 ### 7. 语句【待讨论】
 
+* __分号：以下几种情况后需加分号__
+
+变量声明、表达式、return、throw、break、continue、do-while
+
+```javascript
+/* var declaration */
+var x = 1;
+
+/* expression statemen */
+x++;
+
+/* do-while */
+do {
+    x++;
+} while (x < 10);
+```
+
 * __优先使用单引号`''`包裹字符串__
-* __不可以省略语句结束的分号__【建议】
+
 * __在 `if`  `else`  `for`  `do`  `while` 语句中，即使只有一行，也不得省略块 `{...}`__
 
 ```javascript
@@ -439,23 +460,8 @@ if (condition)
     callFunc();
 ```
 
-* __函数定义结束不添加分号__【待讨论】
 
-```javascript
-// Good
-function funcName() {
-}
-
-// Bad
-function funcName() {
-};
-
-// 如果是函数表达式，分号是不允许省略的。
-var funcName = function () {
-};
-```
-
-* `立即执行函数表达式（IIFE）`必须在函数表达式外添加 `()`，非`IIFE`不得在函数表达式外添加 `()`。（IIFE = Immediately-Invoked Function Expression）
+* __`立即执行函数表达式（IIFE）`必须在函数表达式外添加 `()`，非`IIFE`不得在函数表达式外添加 `()`。（IIFE = Immediately-Invoked Function Expression）__
 
 ```javascript
 // Good
@@ -507,25 +513,31 @@ module.exports = {
         'arrow-parens': 1,
 
         //禁止使用多余的圆括号
-       "no-extra-parens": 2,
-       //禁止多余的冒号
-       "no-extra-semi": 2,
-       //禁止重复的函数声明
-       "no-func-assign": 2,
-       //禁止在块语句中声明变量或函数
-       "no-inner-declarations": 2,
-        // default: [2, "all"] 全都需要{ }包围
+        "no-extra-parens": 2,
+        //禁止多余的冒号
+        "no-extra-semi": 2,
+        //禁止重复的函数声明
+        "no-func-assign": 2,
+        //禁止在块语句中声明变量或函数
+        "no-inner-declarations": 2,
+        //全都需要{ }包围
         "curly": 2,
         //所有的switch语句都必须要有一个default分支
         "default-case": 2,
-
-        "indent": [1, 4, { "SwitchCase": 1 }], // 警告非4个空格tab
-        "key-spacing": [2, { "beforeColon": false, "afterColon": true }], // 该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
-        "no-mixed-spaces-and-tabs": 1, // 警告混用tab和空格
-        "no-unused-vars": [1, { "vars": "all", "args": "none" }], // 警告未使用的变量
-        "quotes": [2, "single", "avoid-escape"], // 字符串必须用单引号包裹
-        "semi": [0, "never"], // 无分号
-        "space-before-blocks": [2, "always"], // {}前必须一个单空格
+         //警告非4个空格缩进
+        "indent": [1, 4, { "SwitchCase": 1 }],
+        //该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
+        "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+         //警告混用tab制表符和空格
+        "no-mixed-spaces-and-tabs": 1,
+         //警告未使用但以声明的变量
+        "no-unused-vars": [1, { "vars": "all", "args": "none" }],
+        //字符串必须用单引号包裹
+        "quotes": [2, "single", "avoid-escape"],
+        //无分号时提示
+        "semi": [1, "always"],
+         //{}前必须一个单空格
+        "space-before-blocks": [2, "always"],
 
         // allow debugger during development
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0

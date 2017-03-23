@@ -132,10 +132,10 @@ function trim(str){
 
     var a = 10,
         b = 10,
-        c,
+        c = 0,
         d = 100,
-        i,
-        x;
+        i = '',
+        x = [];
 
     function f() {
 
@@ -428,7 +428,8 @@ var result = condition
 
 ### 7. 语句【待讨论】
 
-* 分号：以下几种情况后需加分号
+* __分号：以下几种情况后需加分号__
+
 1. 变量声明
 2. 表达式
 3. return
@@ -451,6 +452,7 @@ do {
 ```
 
 * __优先使用单引号`''`包裹字符串__
+
 * __在 `if`  `else`  `for`  `do`  `while` 语句中，即使只有一行，也不得省略块 `{...}`__
 
 ```javascript
@@ -466,7 +468,7 @@ if (condition)
 ```
 
 
-* `立即执行函数表达式（IIFE）`必须在函数表达式外添加 `()`，非`IIFE`不得在函数表达式外添加 `()`。（IIFE = Immediately-Invoked Function Expression）
+* __`立即执行函数表达式（IIFE）`必须在函数表达式外添加 `()`，非`IIFE`不得在函数表达式外添加 `()`。（IIFE = Immediately-Invoked Function Expression）__
 
 ```javascript
 // Good

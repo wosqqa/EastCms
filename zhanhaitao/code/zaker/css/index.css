@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao
 * @Date:   2017-03-20 13:37:08
-* @Last Modified time: 2017-03-22 10:42:22
+* @Last Modified time: 2017-03-22 10:48:48
 */
 
 @font-face {
@@ -39,6 +39,7 @@
 }
 #content {
 	margin: 45px 15px 0;
+	text-align: justify;
 	font-family: 'FZLTHK';
 }
 #content .content-txt {

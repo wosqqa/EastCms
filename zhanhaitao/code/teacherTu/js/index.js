@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao(zhanhaitao@021.com)
 * @Date:   2017-03-15 19:39:43
-* @Last Modified time: 2017-03-21 19:52:29
+* @Last Modified time: 2017-03-23 15:42:25
 */
 
 /*! Zepto 1.2.0 (generated with Zepto Builder) - zepto event ajax form ie fx data touch stack selector fx_methods detect deferred callbacks - zeptojs.com/license */
@@ -190,7 +190,9 @@ var module = (function(my){
 	// 存储一系列初始化方法
     my.inits = my.inits || [];
 
-    var $_dftt_teachertu_container = $(_dftt_teachertu_container);
+    var $_dftt_teachertu_container = $('.dftt_teachertu'),
+    	_dftt_adnum = $_dftt_teachertu_container.length,
+    	curProvname = null,
     	positionUrl = 'https://position.dftoutiao.com/position/get',   // 获取用户位置
     	dspUrl = 'http://106.75.73.203/dfdsp/dfwapadv';  //dsp广告测试接口
 
@@ -198,30 +200,30 @@ var module = (function(my){
      * 加载wnwifi广告（wnwifi广告打底）
      * @return {[type]} [description]
      */
-    function loadWifiGg(){
+    function loadWifiGg(index){
         var params = 'qid='+ GLOBAL.Et.qid +''
             '&uid=' + GLOBAL.Et.uid + 
             '&cnurl=' + GLOBAL.Util.getUrlNoParams() + 
-            '&pgtype='+ _dftt_teachertu_adposition +'';   // 首页传list，详情页传detail
-        $_dftt_teachertu_container.append('<div class="wnwifigg-wrap"><iframe src="http://s.dftoutiao.com/wnwifi/wnwifi.html?' + params + '" frameborder="0" scrolling="no" width="100%" height="153"></iframe></div>');
+            '&pgtype='+ _dftt_teachertu_adposition +'';   // 列表页传list，详情页传detail
+        $_dftt_teachertu_container.eq(index).append('<div class="wnwifigg-wrap"><iframe src="http://s.dftoutiao.com/wnwifi/wnwifi.html?' + params + '" frameborder="0" scrolling="no" width="100%" height="153"></iframe></div>');
     };
 
     /**
      * 加载百度打底广告
      */
-    function loadBaiduGg(){
+    function loadBaiduGg(index){
     	var script = document.createElement('script');
     		script.type = 'text/javascript';
     		script.src = 'http://a1.liuxue86.com/wk3a1ecf94f3cbf638db1f23c5adf722f740e7855275e13eef.js';
-    	$_dftt_teachertu_container.append(script)
+    	$_dftt_teachertu_container.eq(index).append(script);
     };
 
     /**
      * 渲染三图广告
      * @param  {[type]} data 广告数据
      */
-    function loadSanGg(data){
-        $_dftt_teachertu_container.html('<div class="gg-item">' +
+    function loadSanGg(data,index){
+        $_dftt_teachertu_container.eq(index).append('<div class="gg-item">' +
                             '<a data-src="'+ data.url +'" class="gg_link" data-clickurl="'+ data.clickbackurl +'">' +
                                 '<div class="news-wrap clearfix">' +
                                     '<h3 class="news-title">'+ data.topic +'</h3>' +
@@ -243,31 +245,6 @@ var module = (function(my){
     };
 
     /**
-     * 渲染单图广告
-     * @param  {[type]} data 广告数据
-     */
-    /*function loadDanGg(data){
-        $_dftt_teachertu_container.html('<div class="gg-item">' +
-                            '<a href="'+ data.url +'" class="gg_link">' +
-                                '<div class="news-wrap clearfix">' +
-                                    '<div class="txt-wrap fl">' +
-                                        '<h3 class="txt-title">'+ data.topic +'</h3>' +
-                                        '<p class="tags clearfix">' +
-                                            '<em class="tag tag-time">' +
-                                                '<i class="tag tag-gg">广告</i>' +
-                                            '</em>' +
-                                            '<em class="tag tag-src">'+ data.source +'</em>' +
-                                        '</p>' +
-                                    '</div>' +
-                                    '<div class="img-wrap fr">' +
-                                        '<img src="'+ data.miniimg[0].src +'">' +
-                                    '</div>' +
-                                '</div>' +
-                            '</a>' +
-                        '</div>');
-    };*/
-
-    /**
      * 获取dsp广告
      */
     function getDsp(callback){
@@ -276,55 +253,94 @@ var module = (function(my){
             dataType: 'jsonp',
             jsonp: 'jsonpcallback',
     		data: {
-                type: 'null',
+                type: 'toutiao',
                 qid: GLOBAL.Et.qid,
                 uid: GLOBAL.Et.uid,
-                adnum: 1,     // 广告数量
+                adnum: _dftt_adnum,     // 广告数量
                 adtype: 3,    // 1：大图 2：单图 3：三图
-                os: GLOBAL.Util.getOsType().split(' ')[0].toLowerCase(),
+                os: GLOBAL.Util.getOsType(),
                 adposition: _dftt_teachertu_adposition  //广告位 由图老师控制 list || detail
             },
     		timeout: 3000,
     		success: function(res){
-    			var dlen = res && res.data.length,
-    				data = res && res.data[0];
-    			if(dlen > 0){
-    				loadSanGg(data);
-    			}else {
-    				callback && callback();
-    			}
+    			loadDsp(res,callback);
     		},
     		error: function(e){
-                callback && callback();
+    			console.error(e)
+                loadDsp([],callback);
     		}
     	})
     };
 
     /**
-     * 城市过滤（过滤北上广深湖南）
-     * @param  {Function} callback 回调方法
+     * 加载dsp广告
+     * @param  {[type]} dspData 广告数据
      */
-    function filterLocation(callback){
-        $.ajax({
-            url : positionUrl,
-            dataType : 'jsonp',
-            jsonp : 'jsonpcallback',
-            success: function(res){
-                var specialCiryArr = ['北京', '上海', '广州', '深圳', '湖南'],
-                    isSpecialCity = true,
-                    pos = res.position,
-                    cityname = pos.cityname;
-                if(!specialCiryArr.contains(cityname)){
-                    isSpecialCity = false;
+    function loadDsp(dspData,callback){
+    	var data = (dspData && dspData.data) || null,
+    		dlen = (data instanceof Array) ? data.length : 0,
+    		dsp = {
+    			pos0: null,
+    			pos1: null,
+    			pos2: null,
+    			pos3: null
+    		},
+    		di = 0;
+    	if(dlen){
+    		for(di = 0;di < dlen;di++){
+    			if(Number(data[di].idx) === 1){
+    				dsp.pos0 = data[di];
+    			}
+    			if(Number(data[di].idx) === 2){
+    				dsp.pos1 = data[di];
+    			}
+    			if(Number(data[di].idx) === 3){
+    				dsp.pos2 = data[di];
+    			}
+    			if(Number(data[di].idx) === 4){
+    				dsp.pos3 = data[di];
+    			}
+    		}
+
+    		for(di = 0; di < $_dftt_teachertu_container.length; di++){
+    			if(dsp['pos' + di]) {
+    				loadSanGg(dsp['pos' + di], di)
+    			} else {
+    				callback && callback(di);
+    			}
+    		}
+    	} else {
+    		for(di = 0; di < $_dftt_teachertu_container.length; di++) {
+    			callback && callback(di);
+    		}
+    	}
+    }
+
+    /**
+     * 省过滤
+     * @param  {[type]}   provArr 需过滤的省数组
+     * @param  {Function} callback    回调方法
+     * @return {[type]}               true：表示在过滤的省中；false：表示不在过滤的省中。
+     */
+    function filterProv(provArr, callback){
+        if(curProvname){
+            callback && callback(!!provArr.contains(curProvname));    // jshint ignore:line
+        } else {
+            $.ajax({
+                url : positionUrl,
+                dataType : 'jsonp',
+                jsonp : 'jsonpcallback',
+                success: function(res){
+                    curProvname = (res.position ? res.position.provname : null);
+                    callback && callback(!!provArr.contains(curProvname));    // jshint ignore:line
+                },
+                error: function(jqXHR,textStatus){
+                    // 地理位置获取失败就认为是特殊城市
+                    callback && callback(true); // jshint ignore:line
+                    console.error(textStatus);
                 }
-                callback && callback(isSpecialCity);    // jshint ignore:line
-            },
-            error: function(jqXHR,textStatus){
-                // 地理位置获取失败就认为是特殊城市
-                callback && callback(true); // jshint ignore:line
-                console.error(textStatus);
-            }
-        });
+            });
+        }
     };
 
     my.inits.push(function(){
@@ -332,21 +348,20 @@ var module = (function(my){
             os = osType.split(' ')[0];
         // ios用户
         if(os === 'ios'){
-            getDsp(function(){
-                loadBaiduGg();
+            getDsp(function(di){
+            	loadBaiduGg(di);
             });
         // 安卓用户
         }else if(os === 'android'){
-            getDsp(function(){
-                // 过滤城市
-                filterLocation(function(isSpecialCity){
-                    if(!isSpecialCity){
-                        loadWifiGg();
-                    }else {
-                    	loadBaiduGg();
-                    }
-                })
-            })
+            getDsp(function(di){
+            	filterProv(['北京','上海','广东','湖南'],function(isSpecialCity){
+	                if(!isSpecialCity){
+	                    loadWifiGg(di);
+	                }else {
+	                	loadBaiduGg(di);
+	                }
+	            })
+            });
         }
     });
 

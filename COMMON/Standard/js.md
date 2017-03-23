@@ -72,13 +72,12 @@ var hasMoreCommands = false;
 * __`多行注释`：避免使用 `/*...*/` 这样的多行注释。有多行注释内容时，使用多个单行注释。__
 
 * __`文档化注释`：为了便于代码阅读和自文档化，以下内容建议包含以 `/**...*/` 形式的块注释中。__
-
-1. 文件
-2. 类
-3. 函数或方法
-4. 事件
-5. 常量
-6. 全局变量
+    1. 文件
+    2. 类
+    3. 函数或方法
+    4. 事件
+    5. 常量
+    6. 全局变量
 
 * __文档注释前必须空一行。__
 
@@ -269,7 +268,7 @@ function funcName(){
 }
 ```
 
-* __`if`  `else`  `for`  `while`  `function`  `switch`  `do`  `try`  `catch`  `finally` 关键字后，必须有一个空格。__【function 待讨论】
+* __`if`  `else`  `for`  `while`  `function`  `switch`  `do`  `try`  `catch`  `finally` 关键字后，必须有一个空格。__
 
 ```javascript
 // Good
@@ -430,13 +429,7 @@ var result = condition
 
 * __分号：以下几种情况后需加分号__
 
-1. 变量声明
-2. 表达式
-3. return
-4. throw
-5. break
-6. continue
-7. do-while
+变量声明、表达式、return、throw、break、continue、do-while
 
 ```javascript
 /* var declaration */
@@ -531,14 +524,20 @@ module.exports = {
         "curly": 2,
         //所有的switch语句都必须要有一个default分支
         "default-case": 2,
-
-        "indent": [1, 4, { "SwitchCase": 1 }], // 警告非4个空格缩进
-        "key-spacing": [2, { "beforeColon": false, "afterColon": true }], // 该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
-        "no-mixed-spaces-and-tabs": 1, // 警告混用tab制表符和空格
-        "no-unused-vars": [1, { "vars": "all", "args": "none" }], // 警告未使用的变量
-        "quotes": [2, "single", "avoid-escape"], // 字符串必须用单引号包裹
-        "semi": [1, "always"], // 无分号时提示
-        "space-before-blocks": [2, "always"], // {}前必须一个单空格
+         //警告非4个空格缩进
+        "indent": [1, 4, { "SwitchCase": 1 }],
+        //该规则规定了在对象字面量语法中key和value之间的空白，冒号前不要留空格，冒号后面需留一个空格
+        "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+         //警告混用tab制表符和空格
+        "no-mixed-spaces-and-tabs": 1,
+         //警告未使用但以声明的变量
+        "no-unused-vars": [1, { "vars": "all", "args": "none" }],
+        //字符串必须用单引号包裹
+        "quotes": [2, "single", "avoid-escape"],
+        //无分号时提示
+        "semi": [1, "always"],
+         //{}前必须一个单空格
+        "space-before-blocks": [2, "always"],
 
         // allow debugger during development
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0

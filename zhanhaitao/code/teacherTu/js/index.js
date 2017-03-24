@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao(zhanhaitao@021.com)
 * @Date:   2017-03-15 19:39:43
-* @Last Modified time: 2017-03-23 15:42:25
+* @Last Modified time: 2017-03-24 17:18:14
 */
 
 /*! Zepto 1.2.0 (generated with Zepto Builder) - zepto event ajax form ie fx data touch stack selector fx_methods detect deferred callbacks - zeptojs.com/license */
@@ -81,6 +81,51 @@ GLOBAL.namespace('Cookie');
 
 //公用的工具方法
 GLOBAL.Util = {
+	/**
+	 * browser的判断
+	 * @return {[type]} [description]
+	 */
+	getBrowserType: function() {
+	    var agent = navigator.userAgent.toLowerCase();
+	    var browser_type = "";
+	    if (agent.indexOf("msie") > 0) {
+	        browser_type = "IE";
+	    }
+	    if (agent.indexOf("firefox") > 0) {
+	        browser_type = "firefox";
+	    }
+	    if (agent.indexOf("chrome") > 0 && agent.indexOf("mb2345browser") < 0 && agent.indexOf("360 aphone browser") < 0) {
+	        browser_type = "chrome";
+	    }
+	    if (agent.indexOf("360 aphone browser") > 0 || agent.indexOf("qhbrowser") > 0) {
+	        browser_type = "360";
+	    }
+	    if (agent.indexOf("ucbrowser") > 0) {
+	        browser_type = "UC";
+	    }
+	    if (agent.indexOf("micromessenger") > 0) {
+	        browser_type = "WeChat";
+	    }
+	    if ((agent.indexOf("mqqbrowser") > 0 || agent.indexOf("qq") > 0) && agent.indexOf("micromessenger") < 0) {
+	        browser_type = "QQ";
+	    }
+	    if (agent.indexOf("miuibrowser") > 0) {
+	        browser_type = "MIUI";
+	    }
+	    if (agent.indexOf("mb2345browser") > 0) {
+	        browser_type = "2345";
+	    }
+	    if (agent.indexOf("sogoumobilebrowser") > 0) {
+	        browser_type = "sogou";
+	    }
+	    if (agent.indexOf("liebaofast") > 0) {
+	        browser_type = "liebao";
+	    }
+	    if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0 && agent.indexOf("ucbrowser") < 0 && agent.indexOf("micromessenger") < 0 && agent.indexOf("mqqbrowser") < 0 && agent.indexOf("miuibrowser") < 0 && agent.indexOf("mb2345browser") < 0 && agent.indexOf("sogoumobilebrowser") < 0 && agent.indexOf("liebaofast") < 0 && agent.indexOf("qhbrowser") < 0) {
+	        browser_type = "safari";
+	    }
+	    return browser_type;
+	},
     /**
      * OS的判断
      * @return {[type]} [description]
@@ -140,7 +185,30 @@ GLOBAL.Util = {
             //执行回调
             callback && callback();
         }
+    },
+
+    /**
+     * 获取当前手机屏幕分辨率的高宽
+     * @return {json} {w: xxx, h: xxx}
+     */
+    getPixel: function(){
+        var width = window.screen.width;
+        var height = window.screen.height;
+        return {w: width, h: height};
     }
+    /**
+     * 加载图片 主要用于dsp广告的点击日志
+     * @param  {[type]}   url  一般为后台返回的clickbackurl
+     * @param  {Function} callback  回调 一般进行广告的链接地址跳转
+     */
+    /*loadImage: function(url, href){
+    	var img = new Image();
+    	img.src = url;
+    	img.onload = function(){
+    		console.info(href)
+    		window.location.href = href; 
+    	}
+    }*/
 }
 
 /* cookie扩展 */
@@ -224,7 +292,7 @@ var module = (function(my){
      */
     function loadSanGg(data,index){
         $_dftt_teachertu_container.eq(index).append('<div class="gg-item">' +
-                            '<a data-src="'+ data.url +'" class="gg_link" data-clickurl="'+ data.clickbackurl +'">' +
+                            '<a data-src="'+ data.url +'" class="gg_link" data-clickurl="'+ data.clickbackurl +'" data-isclickurl="'+ data.isclickbackurl +'">' +
                                 '<div class="news-wrap clearfix">' +
                                     '<h3 class="news-title">'+ data.topic +'</h3>' +
                                     '<div class="imgs-wrap clearfix">' +
@@ -241,13 +309,20 @@ var module = (function(my){
                                 '</div>' +
                            ' </a>' +
                         '</div>');
-        new Image().src = data.showbackurl;
+       	if( Number(data.isshowbackurl) === 1 ){
+       		var showUrlArr = data.showbackurl.split('@@');
+       		for(var k = 0; k < showUrlArr.length; k++){
+       			new Image().src = showUrlArr[k];
+       		}
+       		
+       	};
     };
 
     /**
      * 获取dsp广告
      */
     function getDsp(callback){
+    	var pixel = GLOBAL.Util.getPixel();
     	$.ajax({
     		url: dspUrl,
             dataType: 'jsonp',
@@ -256,13 +331,21 @@ var module = (function(my){
                 type: 'toutiao',
                 qid: GLOBAL.Et.qid,
                 uid: GLOBAL.Et.uid,
+                pgnum: 1,
                 adnum: _dftt_adnum,     // 广告数量
                 adtype: 3,    // 1：大图 2：单图 3：三图
-                os: GLOBAL.Util.getOsType(),
+                os: GLOBAL.Util.getOsType() || 'null',
+                softtype: 'news',
+                softname: 'teachertu',
+                newstype: 'ad',
+                browser_type: GLOBAL.Util.getBrowserType() || 'null',
+                pixel: pixel.w + '*' + pixel.h,
+                fr_url: GLOBAL.Util.getUrlNoParams() || 'null',
                 adposition: _dftt_teachertu_adposition  //广告位 由图老师控制 list || detail
             },
     		timeout: 3000,
     		success: function(res){
+    			console.info(res)
     			loadDsp(res,callback);
     		},
     		error: function(e){
@@ -408,10 +491,33 @@ $(function(){
         }
     });
 
+    // 注册点击日志事件
     $('body').on('click','.gg_link',function(){
-    	var clickurl = $(this).attr('data-clickurl'),
-    		href = $(this).attr('data-src');
-    	new Image().src = clickurl;
-    	window.location.href = href;
+    	var clickUrlArr = ['http://106.75.73.203/dspdatalog/advclick?type=toutiao&qid=teachertu&uid=14902538329965578&url=http%3A%2F%2Fmini.eastday.com&idx=1&pgnum=1&deliveryid=170321150214857&os=ios&originalcost=700&realcost=508&pgtype=list&backurl=&platform=dongfang&softtype=null&softname=null&newstype=null&browser_type=null&pixel=null&fr_url=null&dspversion=10001&jsonpcallback=jsonpcallback148_13456', 'http://106.75.73.203/dspdatalog/advclick?type=toutiao&qid=teachertu&uid=14902538329965579&url=http%3A%2F%2Fmini.eastday.com&idx=1&pgnum=1&deliveryid=170321150214858&os=ios&originalcost=700&realcost=508&pgtype=list&backurl=&platform=dongfang&softtype=null&softname=null&newstype=null&browser_type=null&pixel=null&fr_url=null&dspversion=10001&jsonpcallback=jsonpcallback148_13456', 'http://106.75.73.203/dspdatalog/advclick?type=toutiao&qid=teachertu&uid=14902538329965580&url=http%3A%2F%2Fmini.eastday.com&idx=1&pgnum=1&deliveryid=170321150214859&os=ios&originalcost=700&realcost=508&pgtype=list&backurl=&platform=dongfang&softtype=null&softname=null&newstype=null&browser_type=null&pixel=null&fr_url=null&dspversion=10001&jsonpcallback=jsonpcallback148_13456'],
+    		// clickUrlArr = $(this).attr('data-clickurl').split('@@'),
+    		isClickUrl = $(this).attr('data-isclickurl'),
+    		href = $(this).attr('data-src'),
+    		count = 0,
+    		ggImg = null;
+    	if( Number(isClickUrl) === 1 ){
+    		for(var i = 0; i < clickUrlArr.length; i++){
+    			ggImg = new Image();
+    			ggImg.src = clickUrlArr[i];
+    			ggImg.onerror = function(){
+    				count++;
+    				if(count === clickUrlArr.length){
+    					window.location.href = href;
+    				}
+    			};
+    			ggImg.onload = function(){
+    				count++;
+    				if(count === clickUrlArr.length){
+    					window.location.href = href;
+    				}
+    			};
+    		}
+    	}else {
+    		window.location.href = href;
+    	}
     })
 });

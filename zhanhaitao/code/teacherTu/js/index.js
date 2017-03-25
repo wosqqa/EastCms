@@ -171,7 +171,7 @@ GLOBAL.Util = {
         }
         return locaUrl;
     },
-
+    
     createStyle: function(style, callback, element){
         if(style){
             var head = document.getElementsByTagName('head')[0],
@@ -196,19 +196,6 @@ GLOBAL.Util = {
         var height = window.screen.height;
         return {w: width, h: height};
     }
-    /**
-     * 加载图片 主要用于dsp广告的点击日志
-     * @param  {[type]}   url  一般为后台返回的clickbackurl
-     * @param  {Function} callback  回调 一般进行广告的链接地址跳转
-     */
-    /*loadImage: function(url, href){
-    	var img = new Image();
-    	img.src = url;
-    	img.onload = function(){
-    		console.info(href)
-    		window.location.href = href; 
-    	}
-    }*/
 }
 
 /* cookie扩展 */

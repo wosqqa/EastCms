@@ -171,7 +171,7 @@ GLOBAL.Util = {
         }
         return locaUrl;
     },
-
+    
     createStyle: function(style, callback, element){
         if(style){
             var head = document.getElementsByTagName('head')[0],

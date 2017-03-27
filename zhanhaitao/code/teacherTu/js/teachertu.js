@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao(zhanhaitao@021.com)
 * @Date:   2017-03-15 19:39:43
-* @Last Modified time: 2017-03-24 17:18:14
+* @Last Modified time: 2017-03-27 10:38:46
 */
 
 /*! Zepto 1.2.0 (generated with Zepto Builder) - zepto event ajax form ie fx data touch stack selector fx_methods detect deferred callbacks - zeptojs.com/license */
@@ -196,19 +196,6 @@ GLOBAL.Util = {
         var height = window.screen.height;
         return {w: width, h: height};
     }
-    /**
-     * 加载图片 主要用于dsp广告的点击日志
-     * @param  {[type]}   url  一般为后台返回的clickbackurl
-     * @param  {Function} callback  回调 一般进行广告的链接地址跳转
-     */
-    /*loadImage: function(url, href){
-    	var img = new Image();
-    	img.src = url;
-    	img.onload = function(){
-    		console.info(href)
-    		window.location.href = href; 
-    	}
-    }*/
 }
 
 /* cookie扩展 */
@@ -262,7 +249,8 @@ var module = (function(my){
     	_dftt_adnum = $_dftt_teachertu_container.length,
     	curProvname = null,
     	positionUrl = 'https://position.dftoutiao.com/position/get',   // 获取用户位置
-    	dspUrl = 'http://106.75.73.203/dfdsp/dfwapadv';  //dsp广告测试接口
+    	// dspUrl = 'http://106.75.73.203/dfdsp/dfwapadv';             // dsp广告测试接口
+    	dspUrl = 'http://dfdsp.dftoutiao.com/dfdsp/dfwapadv';          // dsp广告正式接口
 
     /**
      * 加载wnwifi广告（wnwifi广告打底）
@@ -314,7 +302,6 @@ var module = (function(my){
        		for(var k = 0; k < showUrlArr.length; k++){
        			new Image().src = showUrlArr[k];
        		}
-       		
        	};
     };
 
@@ -345,7 +332,6 @@ var module = (function(my){
             },
     		timeout: 3000,
     		success: function(res){
-    			console.info(res)
     			loadDsp(res,callback);
     		},
     		error: function(e){
@@ -493,8 +479,7 @@ $(function(){
 
     // 注册点击日志事件
     $('body').on('click','.gg_link',function(){
-    	var clickUrlArr = ['http://106.75.73.203/dspdatalog/advclick?type=toutiao&qid=teachertu&uid=14902538329965578&url=http%3A%2F%2Fmini.eastday.com&idx=1&pgnum=1&deliveryid=170321150214857&os=ios&originalcost=700&realcost=508&pgtype=list&backurl=&platform=dongfang&softtype=null&softname=null&newstype=null&browser_type=null&pixel=null&fr_url=null&dspversion=10001&jsonpcallback=jsonpcallback148_13456', 'http://106.75.73.203/dspdatalog/advclick?type=toutiao&qid=teachertu&uid=14902538329965579&url=http%3A%2F%2Fmini.eastday.com&idx=1&pgnum=1&deliveryid=170321150214858&os=ios&originalcost=700&realcost=508&pgtype=list&backurl=&platform=dongfang&softtype=null&softname=null&newstype=null&browser_type=null&pixel=null&fr_url=null&dspversion=10001&jsonpcallback=jsonpcallback148_13456', 'http://106.75.73.203/dspdatalog/advclick?type=toutiao&qid=teachertu&uid=14902538329965580&url=http%3A%2F%2Fmini.eastday.com&idx=1&pgnum=1&deliveryid=170321150214859&os=ios&originalcost=700&realcost=508&pgtype=list&backurl=&platform=dongfang&softtype=null&softname=null&newstype=null&browser_type=null&pixel=null&fr_url=null&dspversion=10001&jsonpcallback=jsonpcallback148_13456'],
-    		// clickUrlArr = $(this).attr('data-clickurl').split('@@'),
+    	var clickUrlArr = $(this).attr('data-clickurl').split('@@'),
     		isClickUrl = $(this).attr('data-isclickurl'),
     		href = $(this).attr('data-src'),
     		count = 0,

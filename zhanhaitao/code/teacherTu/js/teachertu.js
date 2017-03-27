@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao(zhanhaitao@021.com)
 * @Date:   2017-03-15 19:39:43
-* @Last Modified time: 2017-03-27 13:48:26
+* @Last Modified time: 2017-03-27 17:20:01
 */
 
 /*! Zepto 1.2.0 (generated with Zepto Builder) - zepto event ajax form ie fx data touch stack selector fx_methods detect deferred callbacks - zeptojs.com/license */
@@ -250,7 +250,7 @@ var module = (function(my){
     	curProvname = null,
     	positionUrl = 'https://position.dftoutiao.com/position/get',   // 获取用户位置
     	// dspUrl = 'http://106.75.73.203/dfdsp/dfwapadv';             // dsp广告测试接口
-    	dspUrl = 'http://dfdsp.dftoutiao.com/dfdsp/dfwapadv';          // dsp广告正式接口
+    	dspUrl = 'http://dfdsp.dftoutiao.com/dfdsp/dfwapadv';    // dsp广告正式接口
 
     /**
      * 加载wnwifi广告（wnwifi广告打底）
@@ -458,7 +458,7 @@ var module = (function(my){
 
     // 广告样式
     try {
-        GLOBAL.Util.createStyle('.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.fl{float:left;}.gg-item{padding:16px}.gg_link{display:block}.news-wrap{position:relative;padding-bottom:12px}.news-wrap .news-title{font-size:17px;line-height:1.2em;overflow:hidden;width:100%;max-height:40px;margin-bottom:7px}.news-wrap .imgs{width:33.33%;padding-right:2px}.news-wrap .imgs img{width:100%}.tags{margin-top:7px;color:#999;font-size:0}.tags .tag{display:inline-block;font-size:10px;line-height:12px;margin-right:5px}.tags .tag-gg{border:1px solid #ddd}.tags .tag-src{margin-right:0}.txt-wrap{position:relative;width:67%}.img-wrap{width:33%}.img-wrap img{width:100%}.txt-title{font-size:17px;line-height:1.2em;margin-right:12px;min-height:40px}')
+        GLOBAL.Util.createStyle('.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.fl{float:left;}.gg-item{padding:16px}.gg_link{display:block}.news-wrap{position:relative;padding-bottom:12px}.news-wrap .news-title{font-size:17px;line-height:1.2em;overflow:hidden;width:100%;max-height:40px;margin-bottom:7px}.news-wrap .imgs{width:33%;margin-right:0.3%}.imgs:last-child{margin-right:0;}.news-wrap .imgs img{width:100%}.tags{margin-top:7px;color:#999;font-size:0}.tags .tag{display:inline-block;font-size:10px;line-height:12px;margin-right:5px}.tags .tag-gg{border:1px solid #ddd}.tags .tag-src{margin-right:0}.txt-wrap{position:relative;width:67%}.img-wrap{width:33%}.img-wrap img{width:100%}.txt-title{font-size:17px;line-height:1.2em;margin-right:12px;min-height:40px}')
     } catch (e) { console.error(e) }
 }());
 

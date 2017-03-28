@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao(zhanhaitao@021.com)
 * @Date:   2017-03-15 19:39:43
-* @Last Modified time: 2017-03-27 17:20:01
+* @Last Modified time: 2017-03-28 09:37:01
 */
 
 /*! Zepto 1.2.0 (generated with Zepto Builder) - zepto event ajax form ie fx data touch stack selector fx_methods detect deferred callbacks - zeptojs.com/license */
@@ -451,14 +451,9 @@ var module = (function(my){
         }
     } catch (e) { console.error(e); }
 
-    // 基本样式
-    /*try {
-    	GLOBAL.Util.createStyle('body,html{-webkit-tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-touch-callout:none;-webkit-overflow-scrolling:touch;-moz-overflow-scrolling:touch;-o-overflow-scrolling:touch;overflow-scrolling:touch}body{font-size:62.5%}article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}body,button,input,select,textarea{font-family:"Hiragino Sans GB","Helvetica Neue",Helvetica,STHeiTi,"Microsoft Yahei",sans-serif;color:#666;background-color:#fff;position:relative}h1,h2,h3,h4,h5,h6{font-weight:400}textarea{resize:none}input[type=button],input[type=submit]{cursor:pointer}input[type=button]{-webkit-appearance:none;outline:0}input::-webkit-input-placeholder{color:#F0F0F0}textarea::-webkit-input-placeholder{color:#F0F0F0}table{border-collapse:collapse;border-spacing:0}th{text-align:inherit}fieldset,img{border:0 none}img{vertical-align:middle}abbr,acronym{border:none;font-variant:normal}del{text-decoration:line-through}hr{border:0;height:1px;background-color:#D9D9D9}li,ol,ul{list-style:none}input,select,textarea{font-family:inherit;font-size:inherit;font-weight:inherit}button,input{border:0;background:0;-webkit-appearance:none;outline:0}a{-webkit-touch-callout:none;text-decoration:none;color:#666;outline:0;cursor:pointer}a:hover{text-decoration:none}:focus,a:focus{outline:0}em,i{font-style:normal}label{cursor:pointer}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-ms-word-break:break-all;word-break:break-all;-ms-word-wrap:break-word;word-wrap:break-word}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.clear{clear:both;display:block;font-size:0;height:0;line-height:0;overflow:hidden}.fl{float:left;}')
-    } catch (e) { console.error(e) }*/
-
     // 广告样式
     try {
-        GLOBAL.Util.createStyle('.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.fl{float:left;}.gg-item{padding:16px}.gg_link{display:block}.news-wrap{position:relative;padding-bottom:12px}.news-wrap .news-title{font-size:17px;line-height:1.2em;overflow:hidden;width:100%;max-height:40px;margin-bottom:7px}.news-wrap .imgs{width:33%;margin-right:0.3%}.imgs:last-child{margin-right:0;}.news-wrap .imgs img{width:100%}.tags{margin-top:7px;color:#999;font-size:0}.tags .tag{display:inline-block;font-size:10px;line-height:12px;margin-right:5px}.tags .tag-gg{border:1px solid #ddd}.tags .tag-src{margin-right:0}.txt-wrap{position:relative;width:67%}.img-wrap{width:33%}.img-wrap img{width:100%}.txt-title{font-size:17px;line-height:1.2em;margin-right:12px;min-height:40px}')
+        GLOBAL.Util.createStyle('em,i{font-style: normal}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.fl{float:left;}.gg-item{padding:16px}.gg_link{display:block}.news-wrap{position:relative;}.news-wrap .news-title{font-size:17px;line-height:1.2em;overflow:hidden;width:100%;max-height:40px;margin-bottom:7px}.news-wrap .imgs{width:33%;margin-right:0.3%}.imgs:last-child{margin-right:0;}.news-wrap .imgs img{width:100%}.tags{margin-top:7px;color:#999;font-size:0}.tags .tag{display:inline-block;font-size:10px;line-height:12px;margin-right:5px}.tags .tag-gg{border:1px solid #ddd}.tags .tag-src{margin-right:0}.txt-wrap{position:relative;width:67%}.img-wrap{width:33%}.img-wrap img{width:100%}.txt-title{font-size:17px;line-height:1.2em;margin-right:12px;min-height:40px}')
     } catch (e) { console.error(e) }
 }());
 

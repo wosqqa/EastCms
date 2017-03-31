@@ -1,18 +1,12 @@
 /*
 * @Author: zhanhaitao
 * @Date:   2017-03-20 13:37:08
-* @Last Modified time: 2017-03-22 10:48:48
+* @Last Modified time: 2017-03-31 11:39:42
 */
 
 @font-face {
 	font-family: 'FZLTHK';
 	src: url(../font/FZLTHK.TTF);
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'FZLTZHK';
-	src: url(../font/FZLTZHK.TTF);
 	font-weight: normal;
 	font-style: normal;
 }
@@ -22,9 +16,10 @@
 }
 #title .title {
 	font-size: 25px;
-	font-family: 'FZLTZHK';
+	font-family: 'FZLTHK';
 	line-height: 45px;
 	color: #333;
+	font-weight: 600;
 }
 #title .title:first-line {
 	line-height: 25px;

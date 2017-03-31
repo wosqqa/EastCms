@@ -1,7 +1,7 @@
 /*
 * @Author: zhanhaitao(zhanhaitao@021.com)
-* @Date:   2017-03-15 19:39:43
-* @Last Modified time: 2017-03-31 11:45:27
+* @Date:   2017-03-29 20:10:00
+* @Last Modified time: 2017-03-31 11:46:17
 */
 
 /*! Zepto 1.2.0 (generated with Zepto Builder) - zepto event ajax form ie fx data touch stack selector fx_methods detect deferred callbacks - zeptojs.com/license */
@@ -245,23 +245,23 @@ var module = (function(my){
 	// 存储一系列初始化方法
     my.inits = my.inits || [];
 
-    var $_dftt_teachertu_container = $('.dftt_teachertu'),
-    	_dftt_adnum = $_dftt_teachertu_container.length,
+    var $_dftt_qbaobei_wrap = $('.dftt_qbaobei'),
+    	_dftt_adnum = $_dftt_qbaobei_wrap.length,
     	curProvname = null,
     	positionUrl = 'https://position.dftoutiao.com/position/get',   // 获取用户位置
-    	// dspUrl = 'http://106.75.73.203/dfdsp/dfwapadv';             // dsp广告测试接口
-    	dspUrl = 'http://dfdsp.dftoutiao.com/dfdsp/dfwapadv';    // dsp广告正式接口
+    	dspUrl = 'http://106.75.73.203/dfdsp/dfwapadv';             // dsp广告测试接口
+    	// dspUrl = 'http://dfdsp.dftoutiao.com/dfdsp/dfwapadv';    // dsp广告正式接口
 
     /**
      * 加载wnwifi广告（wnwifi广告打底）
      * @return {[type]} [description]
      */
-    function loadWifiGg(){
+    function loadWifiGg(index){
         var params = 'qid='+ GLOBAL.Et.qid +
             '&uid=' + GLOBAL.Et.uid + 
             '&cnurl=' + GLOBAL.Util.getUrlNoParams() + 
-            '&pgtype='+ _dftt_teachertu_adposition;   // 列表页传list，详情页传detail
-        $('body').append('<div class="wnwifigg-wrap"><iframe src="http://s.dftoutiao.com/wnwifi/wnwifi.html?' + params + '" frameborder="0" scrolling="no" width="100%" height="153"></iframe></div>');
+            '&pgtype='+ _dftt_qbaobei_adposition;   // 列表页传list，详情页传detail
+        $_dftt_qbaobei_wrap.eq(index).append('<div class="wnwifigg-wrap"><iframe src="http://s.dftoutiao.com/wnwifi/wnwifi.html?' + params + '" frameborder="0" scrolling="no" width="100%" height="153"></iframe></div>');
     };
 
     /**
@@ -270,8 +270,11 @@ var module = (function(my){
     function loadBaiduGg(index){
     	var script = document.createElement('script');
     		script.type = 'text/javascript';
-    		script.src = 'http://a1.liuxue86.com/wk3a1ecf94f3cbf638db1f23c5adf722f740e7855275e13eef.js';
-    	$_dftt_teachertu_container.eq(index).append(script);
+    		script.src = 'http://cp.jfcdns.com/ma3a1ecf93f2ccf238db0b7e81b2b03de956e6d31775e13eef.js';
+    		div = document.createElement('div');
+    		div.style.margin = '0 -10px';
+    		div.append(script)
+    	$_dftt_qbaobei_wrap.eq(index).append(div);
     };
 
     /**
@@ -279,7 +282,7 @@ var module = (function(my){
      * @param  {[type]} data 广告数据
      */
     function loadSanGg(data,index){
-        $_dftt_teachertu_container.eq(index).append('<div class="gg-item">' +
+        $_dftt_qbaobei_wrap.eq(index).append('<div class="gg-item">' +
                             '<a data-src="'+ data.url +'" class="gg_link" data-clickurl="'+ data.clickbackurl +'" data-isclickurl="'+ data.isclickbackurl +'">' +
                                 '<div class="news-wrap clearfix">' +
                                     '<h3 class="news-title">'+ data.topic +'</h3>' +
@@ -315,7 +318,7 @@ var module = (function(my){
             dataType: 'jsonp',
             jsonp: 'jsonpcallback',
     		data: {
-                type: 'toutiao',
+                type: 'null',
                 qid: GLOBAL.Et.qid,
                 uid: GLOBAL.Et.uid,
                 pgnum: 1,
@@ -323,15 +326,16 @@ var module = (function(my){
                 adtype: 3,    // 1：大图 2：单图 3：三图
                 os: GLOBAL.Util.getOsType() || 'null',
                 softtype: 'news',
-                softname: 'teachertu',
+                softname: GLOBAL.Et.qid,
                 newstype: 'ad',
                 browser_type: GLOBAL.Util.getBrowserType() || 'null',
                 pixel: pixel.w + '*' + pixel.h,
                 fr_url: GLOBAL.Util.getUrlNoParams() || 'null',
-                adposition: _dftt_teachertu_adposition  //广告位 由图老师控制 list || detail
+                adposition: _dftt_qbaobei_adposition  //广告位 由对方控制 list || detail
             },
     		timeout: 3000,
     		success: function(res){
+    			console.info(res)
     			loadDsp(res,callback);
     		},
     		error: function(e){
@@ -371,7 +375,7 @@ var module = (function(my){
     			}
     		}
 
-    		for(di = 0; di < $_dftt_teachertu_container.length; di++){
+    		for(di = 0; di < $_dftt_qbaobei_wrap.length; di++){
     			if(dsp['pos' + di]) {
     				loadSanGg(dsp['pos' + di], di)
     			} else {
@@ -379,7 +383,7 @@ var module = (function(my){
     			}
     		}
     	} else {
-    		for(di = 0; di < $_dftt_teachertu_container.length; di++) {
+    		for(di = 0; di < $_dftt_qbaobei_wrap.length; di++) {
     			callback && callback(di);
     		}
     	}
@@ -443,7 +447,7 @@ var module = (function(my){
 (function(){
     try {
         GLOBAL.namespace('Et');
-        GLOBAL.Et.qid = 'teachertu';
+        GLOBAL.Et.qid = 'ssp_qbaobei';
         GLOBAL.Et.uid = GLOBAL.Cookie.get('user_id');
         if (!GLOBAL.Et.uid) {
             GLOBAL.Et.uid = (+new Date()) + Math.random().toString(10).substring(2, 6);
@@ -453,7 +457,7 @@ var module = (function(my){
 
     // 广告样式
     try {
-        GLOBAL.Util.createStyle('em,i{font-style: normal}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.fl{float:left;}.gg-item{padding:16px}.gg_link{display:block}.news-wrap{position:relative;}.news-wrap .news-title{font-size:17px;line-height:1.2em;overflow:hidden;width:100%;max-height:40px;margin-bottom:7px}.news-wrap .imgs{width:33%;margin-right:0.3%}.imgs:last-child{margin-right:0;}.news-wrap .imgs img{width:100%}.tags{margin-top:7px;color:#999;font-size:0}.tags .tag{display:inline-block;font-size:10px;line-height:12px;margin-right:5px}.tags .tag-gg{border:1px solid #ddd}.tags .tag-src{margin-right:0}.txt-wrap{position:relative;width:67%}.img-wrap{width:33%}.img-wrap img{width:100%}.txt-title{font-size:17px;line-height:1.2em;margin-right:12px;min-height:40px}')
+        GLOBAL.Util.createStyle('html,body,div{margin:0;padding:0;}em,i{font-style: normal}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}.clearfix{zoom:1}.fl{float:left;}.gg-item{padding:16px}.gg_link{display:block}.news-wrap{position:relative;}.news-wrap .news-title{font-size:17px;line-height:1.2em;overflow:hidden;width:100%;max-height:40px;margin-bottom:7px}.news-wrap .imgs{width:33%;margin-right:0.3%}.imgs:last-child{margin-right:0;}.news-wrap .imgs img{width:100%}.tags{margin-top:7px;color:#999;font-size:0}.tags .tag{display:inline-block;font-size:10px;line-height:12px;margin-right:5px}.tags .tag-gg{border:1px solid #ddd}.tags .tag-src{margin-right:0}.txt-wrap{position:relative;width:67%}.img-wrap{width:33%}.img-wrap img{width:100%}.txt-title{font-size:17px;line-height:1.2em;margin-right:12px;min-height:40px}')
     } catch (e) { console.error(e) }
 }());
 
